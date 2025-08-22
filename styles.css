@@ -503,6 +503,123 @@ body {
     }
 }
 
+/* Dynamic Fire Effect */
+.fire-effect {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.fire-base {
+    width: 20px;
+    height: 8px;
+    background: linear-gradient(45deg, #ff4500, #ff8c00);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fireBase 2s ease-in-out infinite;
+}
+
+.fire-flame {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: fireFlicker 1.5s ease-in-out infinite;
+}
+
+.flame-1 {
+    width: 16px;
+    height: 24px;
+    background: linear-gradient(180deg, #ff4500, #ff6347, #ff8c00);
+    animation-delay: 0s;
+}
+
+.flame-2 {
+    width: 12px;
+    height: 18px;
+    background: linear-gradient(180deg, #ff6347, #ff8c00, #ffa500);
+    animation-delay: 0.3s;
+}
+
+.flame-3 {
+    width: 8px;
+    height: 12px;
+    background: linear-gradient(180deg, #ff8c00, #ffa500, #ffd700);
+    animation-delay: 0.6s;
+}
+
+.fire-spark {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #ffd700;
+    border-radius: 50%;
+    animation: fireSpark 2s ease-in-out infinite;
+}
+
+.spark-1 {
+    bottom: 32px;
+    left: 45%;
+    animation-delay: 0.2s;
+}
+
+.spark-2 {
+    bottom: 28px;
+    left: 55%;
+    animation-delay: 0.7s;
+}
+
+.spark-3 {
+    bottom: 30px;
+    left: 50%;
+    animation-delay: 1.2s;
+}
+
+@keyframes fireBase {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.1); }
+}
+
+@keyframes fireFlicker {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1) rotate(0deg);
+        filter: brightness(1);
+    }
+    25% { 
+        transform: translateX(-50%) scale(1.1) rotate(2deg);
+        filter: brightness(1.2);
+    }
+    50% { 
+        transform: translateX(-50%) scale(0.9) rotate(-1deg);
+        filter: brightness(0.8);
+    }
+    75% { 
+        transform: translateX(-50%) scale(1.05) rotate(1deg);
+        filter: brightness(1.1);
+    }
+}
+
+@keyframes fireSpark {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.3);
+    }
+}
+
 
 
 /* Services Section */
