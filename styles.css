@@ -458,8 +458,9 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
+    white-space: nowrap;
 }
 
 .tagline-word {
