@@ -507,7 +507,7 @@ body {
 /* Fire Effect - Single unified flame with natural flickering */
 .fire-effect {
     position: absolute;
-    top: 30px; /* Position lower behind the logo */
+    top: 40px; /* Position 10px lower */
     left: 50%;
     transform: translateX(-50%); /* Only center horizontally */
     z-index: 5; /* Behind the logo but above background */
@@ -523,7 +523,7 @@ body {
     transform: translateX(-50%);
     width: 24px;
     height: 60px;
-    background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
+    background: linear-gradient(to top, #ff4500, #ff6347, #ff8c00); /* Red-orange only, no yellow */
     border-radius: 50% 50% 30% 30%;
     animation: unifiedFire 4s ease-in-out infinite;
     filter: brightness(1.2);
