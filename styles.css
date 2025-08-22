@@ -546,14 +546,7 @@ body {
 
 /* Left flame strand - curves left */
 .fire-flame.flame-2 {
-    width: 14px;
-    height: 50px;
-    bottom: 18px;
-    left: 42%;
-    animation-delay: 0.8s;
-    animation-duration: 3.2s;
-    border-radius: 60% 40% 0% 0%;
-    transform: translateX(-50%) rotate(-15deg);
+    display: none; /* Remove weird left flame */
 }
 
 /* Right flame strand - curves right */
