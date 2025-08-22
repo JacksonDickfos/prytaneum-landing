@@ -509,7 +509,7 @@ body {
     top: 0; /* Position at the very top */
     left: 50%;
     transform: translateX(-50%); /* Only center horizontally */
-    z-index: 1; /* Behind the logo */
+    z-index: -1; /* Behind the logo */
     width: 60px;
     height: 80px;
 }
