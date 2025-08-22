@@ -544,29 +544,23 @@ body {
     filter: brightness(1.4);
 }
 
-/* Left teardrop flame */
+/* Right teardrop flame - closer to center */
 .fire-flame.flame-2 {
     width: 16px;
     height: 45px;
     bottom: 20px;
-    left: 38%;
+    left: 58%;
     animation-delay: 0.8s;
     animation-duration: 3.2s;
-    border-radius: 45% 55% 35% 25%;
-}
-
-/* Right teardrop flame */
-.fire-flame.flame-3 {
-    width: 14px;
-    height: 40px;
-    bottom: 25px;
-    left: 62%;
-    animation-delay: 1.5s;
-    animation-duration: 2.8s;
     border-radius: 55% 45% 25% 35%;
 }
 
-/* Small flame tongues for detail */
+/* Remove left flame - it was disconnected */
+.fire-flame.flame-3 {
+    display: none;
+}
+
+/* Small flame tongues for detail - centered */
 .fire-tongue {
     position: absolute;
     width: 8px;
@@ -578,13 +572,13 @@ body {
 
 .fire-tongue:nth-child(4) {
     bottom: 50px;
-    left: 45%;
+    left: 48%;
     animation-delay: 0.3s;
 }
 
 .fire-tongue:nth-child(5) {
     bottom: 45px;
-    left: 55%;
+    left: 52%;
     animation-delay: 0.7s;
 }
 
