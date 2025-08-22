@@ -506,9 +506,9 @@ body {
 /* Fire Effect - Organic, flowing flames positioned behind logo */
 .fire-effect {
     position: absolute;
-    top: 50%;
+    top: 0; /* Position at the very top */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); /* Only center horizontally */
     z-index: 1; /* Behind the logo */
     width: 60px;
     height: 80px;
