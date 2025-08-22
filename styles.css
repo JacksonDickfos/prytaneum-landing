@@ -506,10 +506,10 @@ body {
 /* Dynamic Fire Effect */
 .fire-effect {
     position: absolute;
-    top: -40px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .fire-base {
@@ -529,27 +529,27 @@ body {
     bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
-    clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
     animation: fireFlicker 1.5s ease-in-out infinite;
 }
 
 .flame-1 {
-    width: 18px;
-    height: 28px;
+    width: 16px;
+    height: 32px;
     background: linear-gradient(180deg, #ff4500, #ff6347, #ff8c00);
     animation-delay: 0s;
 }
 
 .flame-2 {
-    width: 14px;
-    height: 22px;
+    width: 12px;
+    height: 24px;
     background: linear-gradient(180deg, #ff6347, #ff8c00, #ffa500);
     animation-delay: 0.3s;
 }
 
 .flame-3 {
-    width: 10px;
-    height: 16px;
+    width: 8px;
+    height: 18px;
     background: linear-gradient(180deg, #ff8c00, #ffa500, #ffd700);
     animation-delay: 0.6s;
 }
