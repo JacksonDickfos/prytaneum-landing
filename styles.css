@@ -573,23 +573,23 @@ body {
 
 .fire-tongue:nth-child(4) {
     bottom: 45px;
-    left: 46%;
+    left: 50%;
     animation-delay: 0.3s;
-    transform: rotate(-8deg);
+    transform: translateX(-50%) rotate(-8deg);
 }
 
 .fire-tongue:nth-child(5) {
     bottom: 40px;
-    left: 54%;
+    left: 50%;
     animation-delay: 0.7s;
-    transform: rotate(8deg);
+    transform: translateX(-50%) rotate(8deg);
 }
 
 .fire-tongue:nth-child(6) {
     bottom: 35px;
     left: 50%;
     animation-delay: 1.1s;
-    transform: rotate(0deg);
+    transform: translateX(-50%) rotate(0deg);
 }
 
 /* Remove old spark elements */
