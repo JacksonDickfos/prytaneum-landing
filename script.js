@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initMobileMenu();
     initScrollEffects();
+    initFireCursorTracking();
 });
 
 // Parallax Effects
@@ -465,3 +466,56 @@ window.addEventListener('load', () => {
         document.head.appendChild(style);
     }
 }); 
+
+// Fire cursor tracking and direction effects
+function initFireCursorTracking() {
+    const logoArea = document.querySelector('.rotating-logo');
+    const fireEffect = document.querySelector('.fire-effect');
+    
+    if (!logoArea || !fireEffect) return;
+    
+    logoArea.addEventListener('mousemove', (e) => {
+        const rect = logoArea.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        // Calculate cursor position relative to logo center
+        const cursorX = e.clientX - centerX;
+        const cursorY = e.clientY - centerY;
+        
+        // Calculate distance from center
+        const distance = Math.sqrt(cursorX * cursorX + cursorY * cursorY);
+        const maxDistance = Math.sqrt((rect.width / 2) * (rect.width / 2) + (rect.height / 2) * (rect.height / 2));
+        
+        // Normalize distance (0 to 1)
+        const normalizedDistance = Math.min(distance / maxDistance, 1);
+        
+        // Calculate angle for fire direction
+        const angle = Math.atan2(cursorY, cursorX) * (180 / Math.PI);
+        
+        // Apply fire direction and intensity based on cursor
+        if (fireEffect) {
+            // Fire blows in cursor direction
+            const tiltX = (cursorX / maxDistance) * 15; // Max 15px tilt
+            const tiltY = (cursorY / maxDistance) * 15;
+            
+            // Scale fire based on cursor distance (closer = bigger)
+            const scale = 1 + (1 - normalizedDistance) * 0.5; // 1x to 1.5x scale
+            
+            // Apply transforms
+            fireEffect.style.transform = `translateX(-50%) translate(${tiltX}px, ${tiltY}px) scale(${scale})`;
+            
+            // Adjust fire brightness based on cursor proximity
+            const brightness = 1.2 + (1 - normalizedDistance) * 0.8; // 1.2x to 2x brightness
+            fireEffect.style.filter = `brightness(${brightness})`;
+        }
+    });
+    
+    // Reset fire position when cursor leaves logo area
+    logoArea.addEventListener('mouseleave', () => {
+        if (fireEffect) {
+            fireEffect.style.transform = 'translateX(-50%)';
+            fireEffect.style.filter = 'brightness(1.2)';
+        }
+    });
+} 
