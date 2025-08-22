@@ -503,160 +503,175 @@ body {
     }
 }
 
-/* Dynamic Fire Effect */
+/* Fire Effect - Organic, flowing flames positioned behind logo */
 .fire-effect {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 1; /* Behind the logo */
+    width: 60px;
+    height: 80px;
 }
 
+/* Base fire shape - organic, flowing */
 .fire-base {
-    width: 20px;
-    height: 8px;
-    background: linear-gradient(45deg, #ff4500, #ff8c00);
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    animation: fireBase 2s ease-in-out infinite;
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700);
+    border-radius: 50% 50% 20% 20%;
+    animation: fireBase 3s ease-in-out infinite;
+    filter: brightness(1.2);
 }
 
+/* Main flame - organic, teardrop shape */
 .fire-flame {
     position: absolute;
-    bottom: 8px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
-    animation: fireFlicker 1.5s ease-in-out infinite;
-}
-
-.flame-1 {
     width: 16px;
-    height: 32px;
-    background: linear-gradient(180deg, #ff4500, #ff6347, #ff8c00);
-    animation-delay: 0s;
+    height: 40px;
+    background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
+    border-radius: 50% 50% 20% 20%;
+    animation: fireFlicker 2.5s ease-in-out infinite;
+    filter: brightness(1.4);
 }
 
-.flame-2 {
+/* Secondary flame - smaller, organic */
+.fire-flame.flame-2 {
     width: 12px;
-    height: 24px;
-    background: linear-gradient(180deg, #ff6347, #ff8c00, #ffa500);
-    animation-delay: 0.3s;
+    height: 32px;
+    bottom: 30px;
+    left: 45%;
+    animation-delay: 0.5s;
+    animation-duration: 2.8s;
 }
 
-.flame-3 {
+/* Tertiary flame - smallest, organic */
+.fire-flame.flame-3 {
     width: 8px;
-    height: 18px;
-    background: linear-gradient(180deg, #ff8c00, #ffa500, #ffd700);
-    animation-delay: 0.6s;
+    height: 24px;
+    bottom: 35px;
+    left: 55%;
+    animation-delay: 1s;
+    animation-duration: 3.2s;
 }
 
+/* Fire sparks for realism */
 .fire-spark {
     position: absolute;
     width: 3px;
     height: 3px;
-    background: #ffd700;
+    background: #ffff00;
     border-radius: 50%;
-    animation: fireSpark 2s ease-in-out infinite;
+    animation: fireSpark 1.5s ease-out infinite;
 }
 
-.spark-1 {
-    bottom: 32px;
-    left: 45%;
-    animation-delay: 0.2s;
+.fire-spark:nth-child(4) {
+    bottom: 60px;
+    left: 40%;
+    animation-delay: 0.3s;
 }
 
-.spark-2 {
-    bottom: 28px;
-    left: 55%;
+.fire-spark:nth-child(5) {
+    bottom: 55px;
+    left: 60%;
     animation-delay: 0.7s;
 }
 
-.spark-3 {
-    bottom: 30px;
+.fire-spark:nth-child(6) {
+    bottom: 50px;
     left: 50%;
-    animation-delay: 1.2s;
+    animation-delay: 1.1s;
 }
 
+/* Organic fire animations */
 @keyframes fireBase {
-    0%, 100% { transform: translateX(-50%) scale(1); }
-    25% { transform: translateX(-50%) scale(1.15); }
-    50% { transform: translateX(-50%) scale(0.95); }
-    75% { transform: translateX(-50%) scale(1.2); }
+    0%, 100% { 
+        transform: translateX(-50%) scale(1) rotate(0deg);
+        filter: brightness(1.2);
+    }
+    25% { 
+        transform: translateX(-50%) scale(1.1) rotate(1deg);
+        filter: brightness(1.4);
+    }
+    50% { 
+        transform: translateX(-50%) scale(0.95) rotate(-1deg);
+        filter: brightness(1.1);
+    }
+    75% { 
+        transform: translateX(-50%) scale(1.05) rotate(0.5deg);
+        filter: brightness(1.3);
+    }
 }
 
 @keyframes fireFlicker {
-    0% { 
+    0%, 100% { 
         transform: translateX(-50%) scale(1) rotate(0deg);
-        filter: brightness(1);
+        filter: brightness(1.4);
+        border-radius: 50% 50% 20% 20%;
     }
     15% { 
-        transform: translateX(-50%) scale(1.3) rotate(3deg);
-        filter: brightness(1.4);
+        transform: translateX(-50%) scale(1.15) rotate(2deg);
+        filter: brightness(1.6);
+        border-radius: 45% 55% 25% 15%;
     }
     30% { 
-        transform: translateX(-50%) scale(0.8) rotate(-2deg);
-        filter: brightness(0.7);
+        transform: translateX(-50%) scale(0.9) rotate(-1deg);
+        filter: brightness(1.2);
+        border-radius: 55% 45% 15% 25%;
     }
     45% { 
-        transform: translateX(-50%) scale(1.2) rotate(1deg);
-        filter: brightness(1.3);
+        transform: translateX(-50%) scale(1.1) rotate(1deg);
+        filter: brightness(1.5);
+        border-radius: 50% 50% 20% 20%;
     }
     60% { 
-        transform: translateX(-50%) scale(0.9) rotate(-1deg);
-        filter: brightness(0.8);
+        transform: translateX(-50%) scale(0.95) rotate(-0.5deg);
+        filter: brightness(1.3);
+        border-radius: 40% 60% 30% 10%;
     }
     75% { 
-        transform: translateX(-50%) scale(1.4) rotate(2deg);
-        filter: brightness(1.5);
+        transform: translateX(-50%) scale(1.05) rotate(1.5deg);
+        filter: brightness(1.4);
+        border-radius: 60% 40% 10% 30%;
     }
     90% { 
-        transform: translateX(-50%) scale(0.85) rotate(-1deg);
-        filter: brightness(0.75);
-    }
-    100% { 
-        transform: translateX(-50%) scale(1) rotate(0deg);
-        filter: brightness(1);
+        transform: translateX(-50%) scale(1.08) rotate(0.8deg);
+        filter: brightness(1.5);
+        border-radius: 50% 50% 20% 20%;
     }
 }
 
 @keyframes fireSpark {
-    0% {
-        opacity: 0;
-        transform: translateY(0) scale(0.5);
-    }
-    50% {
+    0% { 
         opacity: 1;
-        transform: translateY(-10px) scale(1);
+        transform: translateY(0) scale(1);
     }
-    100% {
+    50% { 
+        opacity: 0.8;
+        transform: translateY(-10px) scale(1.2);
+    }
+    100% { 
         opacity: 0;
-        transform: translateY(-20px) scale(0.3);
+        transform: translateY(-20px) scale(0.5);
     }
 }
 
-/* Hover Effects */
+/* Hover effects for interactive fire */
 .fire-effect:hover .fire-base {
-    transform: translateX(-50%) scale(1.5);
-    transition: transform 0.3s ease;
+    animation-duration: 1.5s;
+    filter: brightness(1.6);
 }
 
-.fire-effect:hover .flame-1 {
-    transform: translateX(-50%) scale(1.8);
-    transition: transform 0.3s ease;
-}
-
-.fire-effect:hover .flame-2 {
-    transform: translateX(-50%) scale(1.6);
-    transition: transform 0.3s ease;
-}
-
-.fire-effect:hover .flame-3 {
-    transform: translateX(-50%) scale(1.4);
-    transition: transform 0.3s ease;
+.fire-effect:hover .fire-flame {
+    animation-duration: 1.8s;
+    filter: brightness(1.8);
 }
 
 .fire-effect:hover .fire-spark {
