@@ -504,210 +504,54 @@ body {
     }
 }
 
-/* Fire Effect - Emoji-style fire with multiple curved flame strands */
+/* Fire Effect - Single clean flame */
 .fire-effect {
     position: absolute;
     top: 80px; /* Position 20px lower */
     left: 50%;
     transform: translateX(-50%); /* Only center horizontally */
     z-index: 5; /* Behind the logo but above background */
-    width: 60px;
-    height: 80px;
+    width: 40px;
+    height: 70px;
     transition: all 0.3s ease;
 }
 
-/* Base fire - wider foundation like emoji */
+/* Single clean flame - no weird pieces */
 .fire-base {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
-    height: 25px;
-    background: linear-gradient(to top, #8B0000, #B22222, #DC143C);
-    border-radius: 50% 50% 0% 0%;
-    animation: emojiFire 3s ease-in-out infinite;
+    width: 30px;
+    height: 70px;
+    background: linear-gradient(to top, #8B0000, #B22222, #DC143C, #FF4500);
+    border-radius: 50% 50% 20% 20%;
+    animation: cleanFire 3s ease-in-out infinite;
     filter: brightness(1.2);
 }
 
-/* Center flame strand - tallest and main */
-.fire-flame {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 16px;
-    height: 60px;
-    background: linear-gradient(to top, #B22222, #DC143C, #FF4500, #FF6347);
-    border-radius: 50% 50% 0% 0%;
-    animation: emojiFlame 2.5s ease-in-out infinite;
-    filter: brightness(1.4);
+/* Hide all other flame elements */
+.fire-flame, .fire-tongue, .fire-spark {
+    display: none !important;
 }
 
-/* Left flame strand - curves left */
-.fire-flame.flame-2 {
-    display: none; /* Remove weird left flame */
-}
-
-/* Right flame strand - curves right */
-.fire-flame.flame-3 {
-    width: 12px;
-    height: 45px;
-    bottom: 22px;
-    left: 58%;
-    animation-delay: 1.5s;
-    animation-duration: 2.8s;
-    border-radius: 40% 60% 0% 0%;
-    transform: translateX(-50%) rotate(15deg);
-}
-
-/* Small flame tongues for detail - emoji style */
-.fire-tongue {
-    position: absolute;
-    width: 6px;
-    height: 20px;
-    background: linear-gradient(to top, #FF4500, #FF6347);
-    border-radius: 50% 50% 0% 0%;
-    animation: emojiTongue 1.8s ease-in-out infinite;
-}
-
-.fire-tongue:nth-child(4) {
-    bottom: 45px;
-    left: 50%;
-    animation-delay: 0.3s;
-    transform: translateX(-50%) rotate(-8deg);
-}
-
-.fire-tongue:nth-child(5) {
-    bottom: 40px;
-    left: 50%;
-    animation-delay: 0.7s;
-    transform: translateX(-50%) rotate(8deg);
-}
-
-.fire-tongue:nth-child(6) {
-    bottom: 35px;
-    left: 50%;
-    animation-delay: 1.1s;
-    transform: translateX(-50%) rotate(0deg);
-}
-
-/* Remove old spark elements */
-.fire-spark {
-    display: none;
-}
-
-/* Emoji-style fire animations */
-@keyframes emojiFire {
+/* Clean fire animation */
+@keyframes cleanFire {
     0%, 100% { 
         transform: translateX(-50%) scale(1) rotate(0deg);
         filter: brightness(1.2);
-        border-radius: 50% 50% 0% 0%;
     }
     25% { 
         transform: translateX(-50%) scale(1.1) rotate(1deg);
         filter: brightness(1.4);
-        border-radius: 45% 55% 0% 0%;
     }
     50% { 
         transform: translateX(-50%) scale(0.95) rotate(-1deg);
         filter: brightness(1.1);
-        border-radius: 55% 45% 0% 0%;
     }
     75% { 
         transform: translateX(-50%) scale(1.05) rotate(0.5deg);
         filter: brightness(1.3);
-        border-radius: 40% 60% 0% 0%;
-    }
-}
-
-@keyframes emojiFlame {
-    0%, 100% { 
-        transform: translateX(-50%) scale(1) rotate(0deg);
-        filter: brightness(1.4);
-        border-radius: 50% 50% 0% 0%;
-    }
-    20% { 
-        transform: translateX(-50%) scale(1.15) rotate(2deg);
-        filter: brightness(1.6);
-        border-radius: 45% 55% 0% 0%;
-    }
-    40% { 
-        transform: translateX(-50%) scale(0.9) rotate(-1.5deg);
-        filter: brightness(1.2);
-        border-radius: 55% 45% 0% 0%;
-    }
-    60% { 
-        transform: translateX(-50%) scale(1.1) rotate(1deg);
-        filter: brightness(1.5);
-        border-radius: 40% 60% 0% 0%;
-    }
-    80% { 
-        transform: translateX(-50%) scale(0.95) rotate(-0.8deg);
-        filter: brightness(1.3);
-        border-radius: 50% 50% 0% 0%;
-    }
-}
-
-@keyframes emojiTongue {
-    0%, 100% { 
-        transform: scale(1) rotate(0deg);
-        filter: brightness(1.2);
-        border-radius: 50% 50% 0% 0%;
-    }
-    33% { 
-        transform: scale(1.2) rotate(3deg);
-        filter: brightness(1.5);
-        border-radius: 45% 55% 0% 0%;
-    }
-    66% { 
-        transform: scale(0.8) rotate(-2deg);
-        filter: brightness(1.0);
-        border-radius: 55% 45% 0% 0%;
-    }
-}
-
-/* Crazy hover effects when hovering over the logo */
-.rotating-logo:hover .fire-effect {
-    animation: fireCrazy 1.2s ease-in-out infinite;
-}
-
-.rotating-logo:hover .fire-base {
-    animation: fireCrazy 1.2s ease-in-out infinite;
-    filter: brightness(1.8);
-}
-
-.rotating-logo:hover .fire-flame {
-    animation: fireCrazy 1.2s ease-in-out infinite;
-    filter: brightness(2.0);
-}
-
-.rotating-logo:hover .fire-tongue {
-    animation: fireCrazy 1.2s ease-in-out infinite;
-    filter: brightness(2.2);
-}
-
-/* Crazy fire animation for hover state - contained and red-orange only */
-@keyframes fireCrazy {
-    0%, 100% { 
-        transform: translateX(-50%) scale(1) rotate(0deg);
-        filter: brightness(1.8);
-        border-radius: 50% 50% 0% 0%;
-    }
-    25% { 
-        transform: translateX(-50%) scale(1.3) rotate(2deg);
-        filter: brightness(2.0);
-        border-radius: 45% 55% 0% 0%;
-    }
-    50% { 
-        transform: translateX(-50%) scale(0.9) rotate(-1deg);
-        filter: brightness(1.6);
-        border-radius: 55% 45% 0% 0%;
-    }
-    75% { 
-        transform: translateX(-50%) scale(1.4) rotate(1.5deg);
-        filter: brightness(2.2);
-        border-radius: 40% 60% 0% 0%;
     }
 }
 
