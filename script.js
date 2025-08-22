@@ -495,18 +495,18 @@ function initFireCursorTracking() {
         
         // Apply fire direction and intensity based on cursor
         if (fireEffect) {
-            // Fire blows in cursor direction
-            const tiltX = (cursorX / maxDistance) * 15; // Max 15px tilt
-            const tiltY = (cursorY / maxDistance) * 15;
+            // Fire blows in cursor direction - limited movement
+            const tiltX = (cursorX / maxDistance) * 8; // Reduced from 15px to 8px max tilt
+            const tiltY = (cursorY / maxDistance) * 8;
             
-            // Scale fire based on cursor distance (closer = bigger)
-            const scale = 1 + (1 - normalizedDistance) * 0.5; // 1x to 1.5x scale
+            // Scale fire based on cursor distance (closer = bigger) - contained within logo
+            const scale = 1 + (1 - normalizedDistance) * 0.3; // Reduced from 0.5 to 0.3 for more contained scaling
             
             // Apply transforms
             fireEffect.style.transform = `translateX(-50%) translate(${tiltX}px, ${tiltY}px) scale(${scale})`;
             
-            // Adjust fire brightness based on cursor proximity
-            const brightness = 1.2 + (1 - normalizedDistance) * 0.8; // 1.2x to 2x brightness
+            // Adjust fire brightness based on cursor proximity - moderate increase
+            const brightness = 1.2 + (1 - normalizedDistance) * 0.4; // Reduced from 0.8 to 0.4 for moderate brightness
             fireEffect.style.filter = `brightness(${brightness})`;
         }
     });

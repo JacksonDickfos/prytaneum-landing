@@ -582,35 +582,35 @@ body {
 
 /* Crazy hover effects when hovering over the logo */
 .rotating-logo:hover .fire-effect {
-    animation: fireCrazy 0.8s ease-in-out infinite;
+    animation: fireCrazy 1.2s ease-in-out infinite;
 }
 
 .rotating-logo:hover .fire-base {
-    animation: fireCrazy 0.8s ease-in-out infinite;
-    filter: brightness(2.0);
+    animation: fireCrazy 1.2s ease-in-out infinite;
+    filter: brightness(1.8);
 }
 
-/* Crazy fire animation for hover state */
+/* Crazy fire animation for hover state - contained and red-orange only */
 @keyframes fireCrazy {
     0%, 100% { 
         transform: translateX(-50%) scale(1) rotate(0deg);
-        filter: brightness(2.0);
+        filter: brightness(1.8);
         border-radius: 50% 50% 30% 30%;
     }
     25% { 
-        transform: translateX(-50%) scale(1.8) rotate(5deg);
-        filter: brightness(2.5);
-        border-radius: 30% 70% 50% 10%;
+        transform: translateX(-50%) scale(1.3) rotate(2deg);
+        filter: brightness(2.0);
+        border-radius: 45% 55% 35% 25%;
     }
     50% { 
-        transform: translateX(-50%) scale(0.7) rotate(-3deg);
-        filter: brightness(1.8);
-        border-radius: 70% 30% 10% 50%;
+        transform: translateX(-50%) scale(0.9) rotate(-1deg);
+        filter: brightness(1.6);
+        border-radius: 55% 45% 25% 35%;
     }
     75% { 
-        transform: translateX(-50%) scale(2.2) rotate(4deg);
-        filter: brightness(3.0);
-        border-radius: 20% 80% 60% 5%;
+        transform: translateX(-50%) scale(1.4) rotate(1.5deg);
+        filter: brightness(2.2);
+        border-radius: 40% 60% 40% 20%;
     }
 }
 
