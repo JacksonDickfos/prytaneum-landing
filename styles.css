@@ -507,7 +507,7 @@ body {
 /* Fire Effect - Single unified flame with natural flickering */
 .fire-effect {
     position: absolute;
-    top: 60px; /* Position 20px lower */
+    top: 80px; /* Position 20px lower */
     left: 50%;
     transform: translateX(-50%); /* Only center horizontally */
     z-index: 5; /* Behind the logo but above background */
