@@ -422,17 +422,18 @@ body {
     height: 400px;
 }
 
+/* Logo positioning to ensure it's above the fire */
 .logo-core-img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.1);
     width: 240px;
     height: 240px;
     object-fit: contain;
+    z-index: 10; /* Ensure logo is above fire */
     animation: logoExpand 1.5s ease-out forwards;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.1);
 }
 
 @keyframes logoExpand {
@@ -506,10 +507,10 @@ body {
 /* Fire Effect - Organic, flowing flames positioned behind logo */
 .fire-effect {
     position: absolute;
-    top: 0; /* Position at the very top */
+    top: -20px; /* Position slightly above the logo top */
     left: 50%;
     transform: translateX(-50%); /* Only center horizontally */
-    z-index: -1; /* Behind the logo */
+    z-index: 5; /* Behind the logo but above background */
     width: 60px;
     height: 80px;
 }
