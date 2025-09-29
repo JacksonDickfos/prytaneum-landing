@@ -219,7 +219,7 @@ function initScrollEffects() {
             } else {
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
-                navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
+                navbar.style.borderBottom = 'none';
                 navbar.style.boxShadow = 'none';
             }
         }
