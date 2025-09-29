@@ -985,3 +985,90 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--pp-hearth-gold-deep);
 }
+
+/* Light theme section overrides: alternate white and cream backgrounds */
+/* Set base page background to white */
+body {
+    background: var(--pp-white);
+}
+
+/* 1) Hero: white */
+.hero {
+    background: var(--pp-white);
+    color: var(--pp-charcoal);
+}
+.hero .hero-text,
+.hero .hero-description,
+.hero .section-header p {
+    color: var(--pp-charcoal);
+}
+
+/* 2) About: cream */
+.about {
+    background: var(--pp-parchment);
+    color: var(--pp-charcoal);
+}
+.about .about-text p,
+.about .section-header p,
+.about .stat,
+.about .stat-label {
+    color: var(--pp-charcoal);
+}
+
+/* 3) Services: white */
+.services {
+    background: var(--pp-white);
+    color: var(--pp-charcoal);
+}
+.services .section-header p,
+.services .service-card h3,
+.services .service-card p {
+    color: var(--pp-charcoal);
+}
+
+/* 4) Resources: cream */
+.resources {
+    background: var(--pp-parchment);
+    color: var(--pp-charcoal);
+}
+.resources .section-header p,
+.resources .linkedin-embed,
+.resources .fund-links,
+.resources .linkedin-placeholder p,
+.resources .fund-card p {
+    color: var(--pp-charcoal);
+}
+
+/* 5) Valkyrie Fund: white */
+.valkyrie-fund {
+    background: var(--pp-white);
+    color: var(--pp-charcoal);
+}
+.valkyrie-fund .section-header h2,
+.valkyrie-fund .valkyrie-text p {
+    color: var(--pp-charcoal);
+}
+
+/* 6) Contact: cream */
+.contact {
+    background: var(--pp-parchment);
+    color: var(--pp-charcoal);
+}
+.contact .section-header p,
+.contact .contact-form,
+.contact .contact-form label,
+.contact .contact-info,
+.contact .contact-info h4,
+.contact .contact-info p {
+    color: var(--pp-charcoal);
+}
+
+/* 7) Footer: white */
+.footer {
+    background: var(--pp-white);
+    color: var(--pp-charcoal);
+}
+.footer .footer-nav a,
+.footer .footer-bottom p {
+    color: var(--pp-charcoal);
+}
