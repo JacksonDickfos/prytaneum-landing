@@ -59,7 +59,7 @@ function initFormHandling() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
@@ -79,14 +79,28 @@ function initFormHandling() {
                 return;
             }
             
-            // Simulate form submission
-            showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
-            
-            // Reset form
-            this.reset();
-            
-            // In a real application, you would send this data to your server
-            console.log('Form data:', data);
+            // Submit to Formspree
+            try {
+                const response = await fetch('https://formspree.io/f/mblzgbyy', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    body: new FormData(this)
+                });
+                
+                if (response.ok) {
+                    showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+                    this.reset();
+                } else {
+                    const result = await response.json().catch(() => ({}));
+                    const errorMsg = result.errors && result.errors.length ? result.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again later.';
+                    showNotification(errorMsg, 'error');
+                }
+            } catch (err) {
+                console.error('Form submission error:', err);
+                showNotification('Network error. Please try again later.', 'error');
+            }
         });
     }
 }
