@@ -1072,3 +1072,15 @@ body {
 .footer .footer-bottom p {
     color: var(--pp-charcoal);
 }
+
+/* Typography: use logo font for all headings and nav brand text */
+.nav-logo,
+.nav-logo span {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-header h2 {
+    font-family: 'Cinzel', serif;
+}
