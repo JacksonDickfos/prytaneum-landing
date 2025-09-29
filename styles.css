@@ -261,11 +261,12 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    color: var(--pp-white);
 }
 
 .btn-primary {
     background: var(--pp-hearth-gold);
-    color: var(--pp-obsidian-olive);
+    color: var(--pp-white);
     box-shadow: 0 4px 15px rgba(209, 173, 92, 0.4);
 }
 
@@ -277,8 +278,9 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: var(--pp-hearth-gold);
+    color: var(--pp-white);
     border: 2px solid var(--pp-hearth-gold);
+    background-color: var(--pp-hearth-gold);
 }
 
 .btn-secondary:hover {
