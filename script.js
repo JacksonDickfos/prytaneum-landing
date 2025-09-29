@@ -212,14 +212,14 @@ function initScrollEffects() {
         // Navbar background effect
         if (navbar) {
             if (scrolled > 50) {
-                navbar.style.background = 'rgba(47, 47, 33, 0.95)';
-                navbar.style.backdropFilter = 'blur(20px)';
-                navbar.style.borderBottom = '1px solid rgba(209, 173, 92, 0.2)';
-                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
-            } else {
-                navbar.style.background = 'transparent';
+                navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
-                navbar.style.borderBottom = '1px solid transparent';
+                navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
+                navbar.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+            } else {
+                navbar.style.background = '#FFFFFF';
+                navbar.style.backdropFilter = 'none';
+                navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
                 navbar.style.boxShadow = 'none';
             }
         }
