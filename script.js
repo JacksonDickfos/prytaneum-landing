@@ -306,11 +306,11 @@ function enhanceFloatingShapes() {
     shapes.forEach((shape, index) => {
         // Add more complex animation
         const keyframes = [
-            { transform: 'translateY(0px) rotate(0deg) scale(1)', opacity: 0.6 },
-            { transform: 'translateY(-30px) rotate(90deg) scale(1.1)', opacity: 0.6 },
-            { transform: 'translateY(-60px) rotate(180deg) scale(1)', opacity: 0.6 },
-            { transform: 'translateY(-30px) rotate(270deg) scale(0.9)', opacity: 0.6 },
-            { transform: 'translateY(0px) rotate(360deg) scale(1)', opacity: 0.6 }
+            { transform: 'translateY(0px) rotate(0deg) scale(1)' },
+            { transform: 'translateY(-30px) rotate(90deg) scale(1.1)' },
+            { transform: 'translateY(-60px) rotate(180deg) scale(1)' },
+            { transform: 'translateY(-30px) rotate(270deg) scale(0.9)' },
+            { transform: 'translateY(0px) rotate(360deg) scale(1)' }
         ];
         
         const options = {

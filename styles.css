@@ -161,6 +161,7 @@ body {
     border-radius: 50%;
     background: rgba(209, 173, 92, 0.1);
     animation: float 6s ease-in-out infinite;
+    opacity: 1;
 }
 
 .shape-1 {
