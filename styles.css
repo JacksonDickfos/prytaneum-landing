@@ -836,8 +836,8 @@ body {
 }
 
 .company-name {
-    color: var(--pp-white);
-    font-family: 'Cinzel', serif;
+    color: var(--pp-hearth-gold);
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
 }
