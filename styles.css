@@ -504,62 +504,6 @@ body {
     }
 }
 
-/* Fire Effect - Single clean flame */
-.fire-effect {
-    position: absolute;
-    top: 80px; /* Position 20px lower */
-    left: 50%;
-    transform: translateX(-50%); /* Only center horizontally */
-    z-index: 5; /* Behind the logo but above background */
-    width: 40px;
-    height: 70px;
-    transition: all 0.3s ease;
-}
-
-/* Single clean flame - no weird pieces */
-.fire-base {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 70px;
-    background: linear-gradient(to top, #8B0000, #B22222, #DC143C, #FF4500);
-    border-radius: 50% 50% 20% 20%;
-    animation: cleanFire 3s ease-in-out infinite;
-    filter: brightness(1.2);
-}
-
-/* Hide all other flame elements */
-.fire-flame, .fire-tongue, .fire-spark {
-    display: none !important;
-}
-
-/* Clean fire animation */
-@keyframes cleanFire {
-    0%, 100% { 
-        transform: translateX(-50%) scale(1) rotate(0deg);
-        filter: brightness(1.2);
-    }
-    25% { 
-        transform: translateX(-50%) scale(1.1) rotate(1deg);
-        filter: brightness(1.4);
-    }
-    50% { 
-        transform: translateX(-50%) scale(0.95) rotate(-1deg);
-        filter: brightness(1.1);
-    }
-    75% { 
-        transform: translateX(-50%) scale(1.05) rotate(0.5deg);
-        filter: brightness(1.3);
-    }
-}
-
-/* Hover effects for interactive fire */
-.fire-effect:hover .fire-base {
-    animation-duration: 2s;
-    filter: brightness(1.8);
-}
 
 
 
