@@ -883,19 +883,19 @@ body {
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(209, 173, 92, 0.1);
+    background: var(--pp-hearth-gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--pp-parchment);
+    color: var(--pp-white);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    background: var(--pp-hearth-gold);
-    color: var(--pp-obsidian-olive);
+    background: var(--pp-hearth-gold-deep);
+    color: var(--pp-white);
     transform: translateY(-2px);
 }
 
