@@ -1074,13 +1074,16 @@ body {
 }
 
 /* Typography: use logo font for all headings and nav brand text */
-.nav-logo,
-.nav-logo span {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
+/* Correction: use the logo font (Inter) for all headings; restore nav logo to inherit */
+.nav-logo, .nav-logo span {
+    font-family: inherit;
+    font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6,
-.section-header h2 {
-    font-family: 'Cinzel', serif;
+.section-header h2,
+.hero-title,
+.hero-subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
 }
