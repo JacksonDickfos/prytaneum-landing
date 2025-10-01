@@ -244,7 +244,7 @@ body {
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     line-height: 1.7;
 }
 
@@ -365,7 +365,7 @@ body {
 
 .section-header p {
     font-size: 1.2rem;
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
 }
 
 /* About Section */
@@ -385,7 +385,7 @@ body {
 }
 
 .about-text p {
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.7;
@@ -414,7 +414,7 @@ body {
 
 .stat-label {
     font-size: 0.9rem;
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -585,7 +585,7 @@ body {
 }
 
 .service-card p {
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     line-height: 1.6;
 }
 
@@ -634,7 +634,7 @@ body {
 }
 
 .linkedin-placeholder p {
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -664,14 +664,14 @@ body {
 }
 
 .fund-card p {
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
 /* Valkyrie Revival Fund Section */
 .valkyrie-fund {
-    padding: 6rem 0 4rem 0;
+    padding: 6rem 0 6rem 0;
     background: var(--pp-white);
     position: relative;
 }
@@ -695,7 +695,7 @@ body {
 
 .valkyrie-text p {
     font-size: 1.3rem;
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     margin-bottom: 3rem;
     line-height: 1.7;
 }
@@ -724,7 +724,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 6rem 0 4rem 0;
+    padding: 6rem 0 6rem 0;
     background: var(--pp-white);
 }
 
@@ -753,7 +753,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     font-weight: 500;
 }
 
@@ -810,7 +810,7 @@ body {
 }
 
 .info-item p {
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
 }
 
 .info-item:last-child {
@@ -869,7 +869,7 @@ body {
 }
 
 .footer-nav a {
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
@@ -913,7 +913,7 @@ body {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(209, 173, 92, 0.2);
-    color: var(--pp-parchment);
+    color: var(--pp-charcoal);
 }
 
 .footer-logo-img {
