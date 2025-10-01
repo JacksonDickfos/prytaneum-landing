@@ -327,28 +327,6 @@ function enhanceFloatingShapes() {
 setTimeout(enhanceFloatingShapes, 2000);
 
 // Typing effect for hero title
-function initTypingEffect() {
-    const heroTitle = document.querySelector('.hero-title .gradient-text');
-    if (!heroTitle) return;
-    
-    const text = heroTitle.textContent;
-    heroTitle.textContent = '';
-    
-    let i = 0;
-    const typeWriter = () => {
-        if (i < text.length) {
-            heroTitle.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    };
-    
-    // Start typing effect after a delay
-    setTimeout(typeWriter, 1000);
-}
-
-// Initialize typing effect
-setTimeout(initTypingEffect, 500);
 
 // Add CSS for mobile menu
 const mobileMenuStyles = `
