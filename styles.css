@@ -62,7 +62,7 @@ body {
     gap: 12px;
     font-weight: 600;
     font-size: 1.2rem;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .logo-link {
@@ -215,7 +215,7 @@ body {
 }
 
 .hero-text {
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .hero-title {
@@ -264,31 +264,31 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .btn-primary {
     background: var(--pp-hearth-gold);
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     box-shadow: 0 4px 15px rgba(209, 173, 92, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(209, 173, 92, 0.6);
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     border: 2px solid var(--pp-hearth-gold);
     background-color: var(--pp-hearth-gold);
 }
 
 .btn-secondary:hover {
     background: var(--pp-hearth-gold);
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     transform: translateY(-2px);
 }
 
@@ -311,7 +311,7 @@ body {
     border-radius: 16px;
     padding: 2rem;
     text-align: center;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     backdrop-filter: blur(20px);
     transition: all 0.3s ease;
     animation: fadeInUp 0.8s ease-out forwards;
@@ -401,7 +401,7 @@ body {
 
 .stat {
     text-align: center;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .stat-number {
@@ -534,7 +534,7 @@ body {
     border-radius: 16px;
     padding: 2rem;
     text-align: center;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     backdrop-filter: blur(20px);
     transition: all 0.3s ease;
     position: relative;
@@ -581,7 +581,7 @@ body {
 .service-card h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .service-card p {
@@ -608,7 +608,7 @@ body {
 }
 
 .linkedin-embed, .fund-links {
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .linkedin-embed h3, .fund-links h3 {
@@ -710,7 +710,7 @@ body {
 	white-space: nowrap;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     letter-spacing: 3px;
 }
 
@@ -735,7 +735,7 @@ body {
 }
 
 .contact-form {
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .contact-form form {
@@ -764,7 +764,7 @@ body {
     border: 1px solid rgba(209, 173, 92, 0.3);
     border-radius: 8px;
     background: rgba(209, 173, 92, 0.05);
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     font-size: 1rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(20px);
@@ -783,7 +783,7 @@ body {
 }
 
 .contact-info {
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
 }
 
 .info-item {
@@ -820,7 +820,7 @@ body {
 /* Footer */
 .footer {
     background: var(--pp-temple-bronze);
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     padding: 1rem 0 1rem;
     margin-top: -18rem;
 }
@@ -898,14 +898,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     background: var(--pp-hearth-gold-deep);
-    color: var(--pp-white);
+    color: var(--pp-charcoal);
     transform: translateY(-2px);
 }
 
