@@ -25,7 +25,7 @@ body {
     line-height: 1.6;
     color: var(--pp-charcoal);
     overflow-x: hidden;
-    background: var(--pp-obsidian-olive);
+    background: var(--pp-white);
 }
 
 /* Container */
@@ -138,7 +138,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    background: var(--pp-obsidian-olive);
+    background: var(--pp-white);
     overflow: hidden;
 }
 
@@ -519,7 +519,7 @@ body {
 /* Services Section */
 .services {
     padding: 6rem 0;
-    background: var(--pp-obsidian-olive);
+    background: var(--pp-white);
 }
 
 .services-grid {
@@ -671,8 +671,8 @@ body {
 
 /* Valkyrie Revival Fund Section */
 .valkyrie-fund {
-    padding: 6rem 0 2rem 0;
-    background: var(--pp-obsidian-olive);
+    padding: 6rem 0 4rem 0;
+    background: var(--pp-white);
     position: relative;
 }
 
@@ -724,8 +724,8 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 6rem 0 2rem 0;
-    background: var(--pp-obsidian-olive);
+    padding: 6rem 0 4rem 0;
+    background: var(--pp-white);
 }
 
 .contact-content {
