@@ -1060,19 +1060,6 @@ body {
 }
 
 /* 6) Contact: cream */
-.contact {
-    background: var(--pp-parchment);
-    color: var(--pp-charcoal);
-}
-.contact .section-header p,
-.contact .contact-form,
-.contact .contact-form label,
-.contact .contact-info,
-.contact .contact-info h4,
-.contact .contact-info p {
-    color: var(--pp-charcoal);
-}
-
 /* 7) Footer: white */
 .footer {
     background: var(--pp-white);
