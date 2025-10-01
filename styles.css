@@ -257,6 +257,7 @@ body {
 }
 
 .btn-primary, .btn-secondary {
+    color: #FFFFFF !important;
     color: var(--pp-white);
     padding: 12px 24px;
     border-radius: 8px;
@@ -271,6 +272,7 @@ body {
 }
 
 .btn-primary {
+    color: #FFFFFF !important;
     color: var(--pp-white);
     background: var(--pp-hearth-gold);
     color: var(--pp-charcoal);
@@ -284,6 +286,7 @@ body {
 }
 
 .btn-secondary {
+    color: #FFFFFF !important;
     color: var(--pp-white);
     background: transparent;
     color: var(--pp-charcoal);
@@ -900,6 +903,7 @@ body {
 }
 
 .social-links a {
+    color: #FFFFFF !important;
     width: 40px;
     height: 40px;
     background: var(--pp-hearth-gold);
@@ -913,6 +917,7 @@ body {
 }
 
 .social-links a:hover {
+    color: #FFFFFF !important;
     background: var(--pp-hearth-gold-deep);
     color: var(--pp-charcoal);
     transform: translateY(-2px);
@@ -1186,6 +1191,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .contact-form .btn-primary {
+    color: #FFFFFF !important;
     color: var(--pp-white);
 	width: 100%;
 }
