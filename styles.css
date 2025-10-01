@@ -216,6 +216,8 @@ body {
 
 .hero-text {
     color: var(--pp-charcoal);
+    color: var(--pp-charcoal);
+    color: var(--pp-charcoal);
 }
 
 .hero-title {
@@ -255,6 +257,7 @@ body {
 }
 
 .btn-primary, .btn-secondary {
+    color: var(--pp-white);
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -268,6 +271,7 @@ body {
 }
 
 .btn-primary {
+    color: var(--pp-white);
     background: var(--pp-hearth-gold);
     color: var(--pp-charcoal);
     box-shadow: 0 4px 15px rgba(209, 173, 92, 0.4);
@@ -280,6 +284,7 @@ body {
 }
 
 .btn-secondary {
+    color: var(--pp-white);
     background: transparent;
     color: var(--pp-charcoal);
     border: 2px solid var(--pp-hearth-gold);
@@ -400,6 +405,7 @@ body {
 }
 
 .stat {
+    color: var(--pp-charcoal);
     text-align: center;
     color: var(--pp-charcoal);
 }
@@ -529,6 +535,7 @@ body {
 }
 
 .service-card {
+    color: var(--pp-charcoal);
     background: rgba(209, 173, 92, 0.05);
     border: 1px solid rgba(209, 173, 92, 0.2);
     border-radius: 16px;
@@ -736,6 +743,7 @@ body {
 
 .contact-form {
     color: var(--pp-charcoal);
+    color: var(--pp-charcoal);
 }
 
 .contact-form form {
@@ -783,6 +791,7 @@ body {
 }
 
 .contact-info {
+    color: var(--pp-charcoal);
     color: var(--pp-charcoal);
 }
 
@@ -1177,6 +1186,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .contact-form .btn-primary {
+    color: var(--pp-white);
 	width: 100%;
 }
 
