@@ -16,6 +16,7 @@ function initParallax() {
     const hero = document.querySelector('.hero');
     
     window.addEventListener('scroll', () => {
+        console.log('Scroll event triggered');
         const scrolled = window.pageYOffset;
         const rate = scrolled * -0.5;
         
@@ -93,9 +94,9 @@ function initFormHandling() {
                     showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
                     this.reset();
                 } else {
-                navbar.classList.remove('scrolled');
+                document.body.classList.remove('scrolled');
                 document.body.classList.add('at-top');
-                navbar.classList.remove('scrolled');
+                document.body.classList.remove('scrolled');
                     const result = await response.json().catch(() => ({}));
                     const errorMsg = result.errors && result.errors.length ? result.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again later.';
                     showNotification(errorMsg, 'error');
@@ -206,6 +207,7 @@ function initMobileMenu() {
 
 // Scroll Effects
 function initScrollEffects() {
+    console.log('initScrollEffects called');
     let ticking = false;
     
     function updateOnScroll() {
@@ -217,18 +219,18 @@ function initScrollEffects() {
         // Navbar background effect
         if (navbar) {
             if (scrolled > 50) {
-                navbar.classList.add('scrolled');
+                document.body.classList.add('scrolled');
                 console.log('Adding shadow to navbar');
                 document.body.classList.remove('at-top');
-                navbar.classList.add('scrolled');
+                document.body.classList.add('scrolled');
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
                 navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
                 navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)';
             } else {
-                navbar.classList.remove('scrolled');
+                document.body.classList.remove('scrolled');
                 document.body.classList.add('at-top');
-                navbar.classList.remove('scrolled');
+                document.body.classList.remove('scrolled');
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
                 navbar.style.borderBottom = 'none';
@@ -240,6 +242,7 @@ function initScrollEffects() {
     }
     
     window.addEventListener('scroll', () => {
+        console.log('Scroll event triggered');
         if (!ticking) {
             requestAnimationFrame(updateOnScroll);
             ticking = true;
