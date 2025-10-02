@@ -215,6 +215,7 @@ function initScrollEffects() {
         // Navbar background effect
         if (navbar) {
             if (scrolled > 50) {
+                console.log('Adding shadow to navbar');
                 document.body.classList.remove('at-top');
                 navbar.classList.add('scrolled');
                 navbar.style.background = '#FFFFFF';
