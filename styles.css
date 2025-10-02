@@ -220,7 +220,7 @@ body {
     text-align: center;
     width: 100%;
     gap: 1.5rem;
-    transform: translateY(10px);
+    transform: translateY(30px);
 }.hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
