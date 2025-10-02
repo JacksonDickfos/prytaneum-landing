@@ -292,3 +292,16 @@ function initFireCursorTracking() {
         }
     });
 } 
+
+
+// Simple scroll handler - just add/remove body class
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+        document.body.classList.remove('at-top');
+    } else {
+        document.body.classList.add('at-top');
+    }
+});
+
+// Set initial state
+document.body.classList.add('at-top');
