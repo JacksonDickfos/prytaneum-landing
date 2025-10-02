@@ -249,14 +249,14 @@ body {
     margin-bottom: 2rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
+    transform: translateY(-100px);
 }
-
 .hero-cta {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    transform: translateY(-100px);
 }
-
 .btn-primary, .btn-secondary {
     color: #FFFFFF !important;
     color: var(--pp-white);
@@ -990,10 +990,12 @@ body {
         text-align: center;
     }
     
-    .hero-cta {
-        justify-content: center;
-    }
-}
+.hero-cta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    transform: translateY(-100px);
+}}
 
 /* Parallax Effects */
 .parallax {
@@ -1335,11 +1337,13 @@ body:not(.at-top) .navbar::after {
     line-height: 1.1;
     transform: translateY(-100px);
 }    
-    .hero-description {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--pp-charcoal);
+    line-height: 1.7;
+    transform: translateY(-100px);
+}    
     .rotating-logo {
         width: 200px;
         height: 200px;
@@ -1373,11 +1377,13 @@ body:not(.at-top) .navbar::after {
     line-height: 1.1;
     transform: translateY(-100px);
 }    
-    .hero-description {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--pp-charcoal);
+    line-height: 1.7;
+    transform: translateY(-100px);
+}    
     .rotating-logo {
         width: 200px;
         height: 200px;
