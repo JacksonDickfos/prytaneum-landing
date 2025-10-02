@@ -42,11 +42,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: transparent;
+    background: #FFFFFF;
     backdrop-filter: none;
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid transparent;
+    border-bottom: none;
 }
 
 .nav-container {
@@ -290,7 +290,7 @@ body {
 .btn-secondary {
     color: #FFFFFF !important;
     color: var(--pp-white);
-    background: transparent;
+    background: #FFFFFF;
     color: var(--pp-charcoal);
     border: 2px solid var(--pp-hearth-gold);
     background-color: var(--pp-hearth-gold);
@@ -1105,7 +1105,7 @@ h1, h2, h3, h4, h5, h6,
     .navbar {
     background: #FFFFFF;
     border-bottom: none;
-        background: transparent !important;
+        background: #FFFFFF !important;
         backdrop-filter: none !important;
         border-bottom: none !important;
         box-shadow: none !important;
