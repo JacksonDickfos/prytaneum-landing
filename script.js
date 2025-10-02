@@ -93,6 +93,7 @@ function initFormHandling() {
                     showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
                     this.reset();
                 } else {
+                navbar.classList.remove('scrolled');
                     const result = await response.json().catch(() => ({}));
                     const errorMsg = result.errors && result.errors.length ? result.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again later.';
                     showNotification(errorMsg, 'error');
@@ -212,11 +213,13 @@ function initScrollEffects() {
         // Navbar background effect
         if (navbar) {
             if (scrolled > 50) {
+                navbar.classList.add('scrolled');
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
                 navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
                 navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)';
             } else {
+                navbar.classList.remove('scrolled');
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
                 navbar.style.borderBottom = 'none';
