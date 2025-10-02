@@ -203,6 +203,7 @@ function initScrollEffects() {
     if (!navbar) return;
     
     window.addEventListener('scroll', function() {
+    console.log('Scroll detected, scrollY:' + window.scrollY);
         if (window.scrollY > 50) {
             navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
         } else {
@@ -276,6 +277,7 @@ function initFireCursorTracking() {
 
 // Simple scroll handler - change shadow color from white to dark
 window.addEventListener('scroll', function() {
+    console.log('Scroll detected, scrollY:' + window.scrollY);
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
         navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
