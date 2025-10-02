@@ -228,7 +228,7 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }
 .gradient-text {
     color: var(--pp-hearth-gold);
@@ -249,13 +249,13 @@ body {
     margin-bottom: 2rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }
 .hero-cta {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }
 .btn-primary, .btn-secondary {
     color: #FFFFFF !important;
@@ -307,7 +307,7 @@ body {
     align-items: center;
     width: 100%;
     margin-bottom: 1rem;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }.tech-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -968,7 +968,7 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }    
     .about-content,
     .contact-content,
@@ -994,7 +994,7 @@ body {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }}
 
 /* Parallax Effects */
@@ -1195,7 +1195,7 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }}
 
 
@@ -1335,14 +1335,14 @@ body:not(.at-top) .navbar::after {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }    
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }    
     .rotating-logo {
         width: 200px;
@@ -1375,14 +1375,14 @@ body:not(.at-top) .navbar::after {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }    
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }    
     .rotating-logo {
         width: 200px;
