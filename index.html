@@ -256,8 +256,10 @@ document.body.classList.add('at-top');
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
+        console.log('Removing at-top class');
         document.body.classList.remove('at-top');
     } else {
+        console.log('Adding at-top class');
         document.body.classList.add('at-top');
     }
 });
