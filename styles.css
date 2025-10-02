@@ -88,7 +88,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .nav-menu a {
@@ -207,7 +207,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -303,14 +303,15 @@ body {
 
 .hero-visual {
     display: flex;
-    justify-content: center;n    align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin-bottom: 1rem;
-}
-.tech-grid {
+    transform: translateY(-100px);
+}.tech-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     max-width: 500px;
 }
 
@@ -387,7 +388,7 @@ body {
 .about-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-items: center;
     text-align: center;
@@ -403,7 +404,7 @@ body {
 .about-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 3rem;
     justify-items: center;
 }
@@ -535,7 +536,7 @@ body {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .service-card {
@@ -653,7 +654,7 @@ body {
 .fund-links {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .fund-card {
@@ -877,7 +878,7 @@ body {
 .footer-nav {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -954,7 +955,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -968,7 +969,7 @@ body {
     .contact-content,
     .resources-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
     }
     
     .tech-grid {
@@ -1310,7 +1311,7 @@ body:not(.at-top) .navbar::after {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
