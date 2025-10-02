@@ -215,7 +215,7 @@ function initScrollEffects() {
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
                 navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
-                navbar.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+                navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)';
             } else {
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
