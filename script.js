@@ -89,7 +89,6 @@ function initFormHandling() {
                 showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
                 this.reset();
             } else {
-        console.log('Adding at-top class');
                 const result = await response.json().catch(() => ({}));
                 const errorMsg = result.errors && result.errors.length ? result.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again later.';
                 showNotification(errorMsg, 'error');
@@ -198,37 +197,16 @@ function initMobileMenu() {
     });
 }
 
-// Scroll Effects
+// Scroll Effects - SIMPLE WORKING VERSION
 function initScrollEffects() {
-    let ticking = false;
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
     
-    function updateOnScroll() {
-        const scrolled = window.pageYOffset;
-        const navbar = document.querySelector('.navbar');
-        
-        // Navbar background effect
-        if (navbar) {
-            if (scrolled > 50) {
-                navbar.style.background = '#FFFFFF';
-                navbar.style.backdropFilter = 'none';
-                navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
-                navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-            } else {
-        console.log('Adding at-top class');
-                navbar.style.background = '#FFFFFF';
-                navbar.style.backdropFilter = 'none';
-                navbar.style.borderBottom = 'none';
-                navbar.style.boxShadow = 'none';
-            }
-        }
-        
-        ticking = false;
-    }
-    
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(updateOnScroll);
-            ticking = true;
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        } else {
+            navbar.style.boxShadow = 'none';
         }
     });
 }
@@ -296,27 +274,12 @@ function initFireCursorTracking() {
 } 
 
 
-// Simple scroll handler - just add/remove body class
+// Simple scroll handler - change shadow color from white to dark
 window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        console.log('Removing at-top class');
-        document.body.classList.remove('at-top');
+        navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
     } else {
-        console.log('Adding at-top class');
-        document.body.classList.add('at-top');
-    }
-});
-
-// Set initial state
-document.body.classList.add('at-top');
-
-
-// Simple scroll handler using CSS variables
-window.addEventListener('scroll', function() {
-    const root = document.documentElement;
-    if (window.scrollY > 50) {
-        root.style.setProperty('--navbar-shadow', '0 2px 8px rgba(0,0,0,0.1)');
-    } else {
-        root.style.setProperty('--navbar-shadow', 'none');
+        navbar.style.boxShadow = '0 2px 8px rgba(255,255,255,1)';
     }
 });
