@@ -251,18 +251,14 @@
     </footer>
 
 <script>
-document.body.classList.add('at-top');
-// Direct scroll handler for navbar shadow
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
+// Simple scroll handler using CSS variables
+window.addEventListener("scroll", function() {
+    const root = document.documentElement;
     if (window.scrollY > 50) {
-        console.log('Removing at-top class');
-        document.body.classList.remove('at-top');
+        root.style.setProperty("--navbar-shadow", "0 2px 8px rgba(0,0,0,0.1)");
     } else {
-        console.log('Adding at-top class');
-        document.body.classList.add('at-top');
+        root.style.setProperty("--navbar-shadow", "none");
     }
 });
-</script>
-</body>
+</script></body>
 </html> 

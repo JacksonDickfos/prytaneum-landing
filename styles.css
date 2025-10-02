@@ -45,7 +45,7 @@ body {
     z-index: 1000;
     transition: all 0.3s ease;
     border-bottom: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    box-shadow: var(--navbar-shadow, none) !important;
 }
 .nav-container {
     display: flex;
@@ -1241,4 +1241,10 @@ h1, h2, h3, h4, h5, h6,
 
 body:not(.at-top) .navbar::after {
     opacity: 1;
+}
+
+
+/* CSS Variables for navbar shadow */
+:root {
+    --navbar-shadow: none;
 }
