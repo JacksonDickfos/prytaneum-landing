@@ -212,55 +212,15 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    padding: 0 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
-
 .hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: var(--pp-charcoal);
-    color: var(--pp-charcoal);
-    color: var(--pp-charcoal);
+    gap: 1.5rem;
 }
-
 .hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
@@ -343,21 +303,10 @@ body {
 
 .hero-visual {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;n    align-items: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 1rem;
 }
-
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1000,7 +949,7 @@ body {
         display: none;
     }
     
-    .hero-content {
+.hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1010,34 +959,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
-    
+}    
     .hero-title {
         font-size: 2.5rem;
     }
@@ -1383,35 +1305,47 @@ body:not(.at-top) .navbar::after {
 
 /* Mobile hero section fixes */
 @media (max-width: 768px) {
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .rotating-logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logo-core-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-tagline {
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+}
+
+
+/* Mobile hero section fixes */
+@media (max-width: 768px) {
     .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-        padding: 2rem 1rem;
+        padding: 1rem;
         gap: 1.5rem;
     }
     
