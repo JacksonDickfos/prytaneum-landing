@@ -93,6 +93,7 @@ function initFormHandling() {
                     showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
                     this.reset();
                 } else {
+                navbar.classList.remove('scrolled');
                 document.body.classList.add('at-top');
                 navbar.classList.remove('scrolled');
                     const result = await response.json().catch(() => ({}));
@@ -208,6 +209,7 @@ function initScrollEffects() {
     let ticking = false;
     
     function updateOnScroll() {
+        console.log('Scroll function called, scrolled:' + scrolled);
         console.log('Scroll detected, scrolled:' + scrolled);
         const scrolled = window.pageYOffset;
         const navbar = document.querySelector('.navbar');
@@ -215,6 +217,7 @@ function initScrollEffects() {
         // Navbar background effect
         if (navbar) {
             if (scrolled > 50) {
+                navbar.classList.add('scrolled');
                 console.log('Adding shadow to navbar');
                 document.body.classList.remove('at-top');
                 navbar.classList.add('scrolled');
@@ -223,6 +226,7 @@ function initScrollEffects() {
                 navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
                 navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)';
             } else {
+                navbar.classList.remove('scrolled');
                 document.body.classList.add('at-top');
                 navbar.classList.remove('scrolled');
                 navbar.style.background = '#FFFFFF';
