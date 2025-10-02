@@ -88,7 +88,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
 .nav-menu a {
@@ -207,7 +207,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.5rem;
+    gap: 2rem;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -253,7 +253,7 @@ body {
 
 .hero-cta {
     display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -311,7 +311,7 @@ body {
 }.tech-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 2rem;
     max-width: 500px;
 }
 
@@ -388,7 +388,7 @@ body {
 .about-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 2rem;
     align-items: center;
     justify-items: center;
     text-align: center;
@@ -404,7 +404,7 @@ body {
 .about-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: 2rem;
     margin-top: 3rem;
     justify-items: center;
 }
@@ -478,7 +478,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
     flex-wrap: nowrap;
     justify-content: center;
     white-space: nowrap;
@@ -536,7 +536,7 @@ body {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
 .service-card {
@@ -654,7 +654,7 @@ body {
 .fund-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
 .fund-card {
@@ -803,7 +803,7 @@ body {
 .info-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
     margin-bottom: 1rem;
     padding: 1.5rem;
     background: rgba(209, 173, 92, 0.05);
@@ -848,7 +848,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -856,7 +856,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
 .company-name {
@@ -878,7 +878,7 @@ body {
 .footer-nav {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -900,7 +900,7 @@ body {
 
 .social-links {
     display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -955,7 +955,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.5rem;
+    gap: 2rem;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -969,7 +969,7 @@ body {
     .contact-content,
     .resources-content {
         grid-template-columns: 1fr;
-        gap: 0.5rem;
+        gap: 2rem;
     }
     
     .tech-grid {
@@ -1311,7 +1311,7 @@ body:not(.at-top) .navbar::after {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.5rem;
+    gap: 2rem;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -1338,7 +1338,7 @@ body:not(.at-top) .navbar::after {
     
     .hero-tagline {
         font-size: 0.9rem;
-        gap: 0.5rem;
+        gap: 2rem;
     }
 }
 
@@ -1371,6 +1371,6 @@ body:not(.at-top) .navbar::after {
     
     .hero-tagline {
         font-size: 0.9rem;
-        gap: 0.5rem;
+        gap: 2rem;
     }
 }
