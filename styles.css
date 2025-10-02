@@ -203,6 +203,11 @@ body {
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -215,6 +220,10 @@ body {
 }
 
 .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: var(--pp-charcoal);
     color: var(--pp-charcoal);
     color: var(--pp-charcoal);
@@ -301,6 +310,9 @@ body {
 }
 
 .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -947,6 +959,11 @@ body {
     }
     
     .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
