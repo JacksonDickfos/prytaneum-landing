@@ -148,7 +148,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
 }
 
 .floating-shapes {
@@ -163,8 +163,8 @@ body {
     background: rgba(209, 173, 92, 0.1);
     animation: float 6s ease-in-out infinite;
     opacity: 1;
+    pointer-events: none;
 }
-
 .shape-1 {
     width: 100px;
     height: 100px;
@@ -212,8 +212,9 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-}
-.hero-text {
+    position: relative;
+    z-index: 10;
+}.hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -958,8 +959,9 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-}    
-.hero-title {
+    position: relative;
+    z-index: 10;
+}.hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
     white-space: nowrap;
@@ -1325,8 +1327,9 @@ body:not(.at-top) .navbar::after {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-}    
-.hero-title {
+    position: relative;
+    z-index: 10;
+}.hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
     white-space: nowrap;
@@ -1361,11 +1364,19 @@ body:not(.at-top) .navbar::after {
 
 /* Mobile hero section fixes */
 @media (max-width: 768px) {
-    .hero-content {
-        padding: 1rem;
-        gap: 1.5rem;
-    }
-    
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}    
 .hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
