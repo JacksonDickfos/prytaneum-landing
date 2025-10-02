@@ -218,6 +218,15 @@ body {
     text-align: center;
     gap: 2rem;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
@@ -238,6 +247,11 @@ body {
 }
 
 .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -328,6 +342,10 @@ body {
 }
 
 .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -998,6 +1016,15 @@ body {
     text-align: center;
     gap: 2rem;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
@@ -1357,6 +1384,15 @@ body:not(.at-top) .navbar::after {
 /* Mobile hero section fixes */
 @media (max-width: 768px) {
     .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
