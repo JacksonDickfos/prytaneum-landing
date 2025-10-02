@@ -307,9 +307,8 @@ body {
     align-items: center;
     width: 100%;
     margin-bottom: 1rem;
-    transform: translateY(-180px);
-}.tech-grid {
-    display: grid;
+    transform: translateY(50px);
+}    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 500px;
