@@ -89,6 +89,7 @@ function initFormHandling() {
                 showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
                 this.reset();
             } else {
+        console.log('Adding at-top class');
                 const result = await response.json().catch(() => ({}));
                 const errorMsg = result.errors && result.errors.length ? result.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again later.';
                 showNotification(errorMsg, 'error');
@@ -213,6 +214,7 @@ function initScrollEffects() {
                 navbar.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
                 navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
             } else {
+        console.log('Adding at-top class');
                 navbar.style.background = '#FFFFFF';
                 navbar.style.backdropFilter = 'none';
                 navbar.style.borderBottom = 'none';
@@ -297,8 +299,10 @@ function initFireCursorTracking() {
 // Simple scroll handler - just add/remove body class
 window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
+        console.log('Removing at-top class');
         document.body.classList.remove('at-top');
     } else {
+        console.log('Adding at-top class');
         document.body.classList.add('at-top');
     }
 });
