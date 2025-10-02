@@ -37,6 +37,8 @@ body {
 
 /* Navigation */
 .navbar {
+    background: #FFFFFF;
+    border-bottom: none;
     position: fixed;
     top: 0;
     width: 100%;
@@ -1101,6 +1103,8 @@ h1, h2, h3, h4, h5, h6,
 /* Mobile hamburger menu styles */
 @media (max-width: 768px) {
     .navbar {
+    background: #FFFFFF;
+    border-bottom: none;
         background: transparent !important;
         backdrop-filter: none !important;
         border-bottom: none !important;
