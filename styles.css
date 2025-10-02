@@ -307,7 +307,7 @@ body {
     align-items: center;
     width: 100%;
     margin-bottom: 1rem;
-    transform: translateY(-110px);
+    transform: translateY(-27.5px);
 }    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -328,7 +328,7 @@ body {
 }
 
 .grid-item:hover {
-    transform: translateY(-110px);
+    transform: translateY(-27.5px);
     background: rgba(209, 173, 92, 0.1);
     border-color: var(--pp-hearth-gold);
 }
@@ -568,7 +568,7 @@ body {
 }
 
 .service-card:hover {
-    transform: translateY(-110px);
+    transform: translateY(-27.5px);
     border-color: var(--pp-hearth-gold);
     box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
