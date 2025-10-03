@@ -24,17 +24,31 @@
   list.className = 'feed-list';
   container.appendChild(list);
 
+  const toEmbedUrl = (url) => {
+    // Accept full LinkedIn share URLs and convert to official embed URL
+    // Examples:
+    // https://www.linkedin.com/posts/..._activity-7378805658780930048-...
+    // -> https://www.linkedin.com/embed/feed/update/urn:li:activity:7378805658780930048
+    try {
+      const idMatch = url.match(/activity-(\d+)/);
+      if (idMatch && idMatch[1]) {
+        return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${idMatch[1]}?compact=1`;
+      }
+    } catch (_) {}
+    return null;
+  };
+
   for (const postUrl of feedPosts) {
     const post = document.createElement('div');
     post.className = 'linkedin-post';
 
-    // LinkedIn supports oEmbed for public posts via iframe embed endpoints in limited contexts.
-    // We will use a generic iframe. Many public post URLs allow embedding via <iframe src=postUrl> when X-Frame-Options permit.
-    // If a post blocks embedding, replace with screenshot or use a third-party service.
     const iframe = document.createElement('iframe');
-    iframe.src = postUrl;
+    const embedUrl = toEmbedUrl(postUrl);
+    iframe.src = embedUrl || postUrl;
     iframe.loading = 'lazy';
     iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.setAttribute('title', 'LinkedIn Post');
+    iframe.setAttribute('allow', 'encrypted-media; clipboard-write; picture-in-picture; web-share');
 
     post.appendChild(iframe);
     list.appendChild(post);
