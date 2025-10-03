@@ -260,5 +260,34 @@ window.addEventListener("scroll", function() {
     }
 });
 </script>
-<script src="linkedin-feed.js"></script></body>
+<script src="linkedin-feed.js"></script>
+<script>
+// Remove any automatically injected "Open on LinkedIn" buttons while preserving "Follow on LinkedIn"
+(function () {
+    function removeOpenButtons(root) {
+        var container = root || document;
+        var links = container.querySelectorAll('.linkedin-placeholder a, .linkedin-embed a');
+        links.forEach(function(link){
+            var text = (link.textContent || '').trim().toLowerCase();
+            if (text === 'open on linkedin') {
+                link.remove();
+            }
+        });
+    }
+    // Initial pass after DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function(){ removeOpenButtons(); });
+    } else {
+        removeOpenButtons();
+    }
+    // Observe dynamic injections into the LinkedIn card
+    var placeholder = document.querySelector('.linkedin-placeholder');
+    if (placeholder && 'MutationObserver' in window) {
+        var observer = new MutationObserver(function(mutations){
+            mutations.forEach(function(m){ removeOpenButtons(m.target); });
+        });
+        observer.observe(placeholder, { childList: true, subtree: true });
+    }
+})();
+</script></body>
 </html> 
