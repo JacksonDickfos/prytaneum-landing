@@ -1,3 +1,54 @@
+// Inject a mobile-friendly LinkedIn company page iframe with a graceful fallback
+// Note: LinkedIn may block embedding via X-Frame-Options. We always render an "Open on LinkedIn" button.
+
+(function initLinkedInEmbed() {
+    var container = document.getElementById('linkedin-feed');
+    if (!container) return;
+
+    var companyUrl = 'https://www.linkedin.com/company/prytaneum-partners/?viewAsMember=true';
+
+    // Create action row with a primary button to open LinkedIn natively
+    var actions = document.createElement('div');
+    actions.style.display = 'flex';
+    actions.style.justifyContent = 'center';
+    actions.style.marginBottom = '1rem';
+
+    var openBtn = document.createElement('a');
+    openBtn.href = companyUrl;
+    openBtn.target = '_blank';
+    openBtn.rel = 'noopener noreferrer';
+    openBtn.className = 'btn-secondary';
+    openBtn.textContent = 'Open on LinkedIn';
+    actions.appendChild(openBtn);
+
+    // Attempt to embed via iframe (may be blocked by LinkedIn)
+    var iframeWrapper = document.createElement('div');
+    iframeWrapper.style.width = '100%';
+
+    var iframe = document.createElement('iframe');
+    iframe.className = 'linkedin-iframe';
+    iframe.title = 'Prytaneum Partners on LinkedIn';
+    iframe.loading = 'lazy';
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.setAttribute('allow', 'encrypted-media; clipboard-write');
+    iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms');
+    iframe.src = companyUrl;
+
+    iframeWrapper.appendChild(iframe);
+
+    // Compose
+    container.appendChild(actions);
+    container.appendChild(iframeWrapper);
+
+    // Responsive height tweak for mobile
+    function setHeight() {
+        var isMobile = window.matchMedia('(max-width: 768px)').matches;
+        iframe.style.height = isMobile ? '620px' : '520px';
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight);
+})();
+
 // Minimal client-side LinkedIn post embed renderer (no API keys). 
 // Provide full public post URLs in the 'feedPosts' array.
 

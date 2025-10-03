@@ -639,6 +639,14 @@ body {
     height: 420px;
     border: 0;
 }
+/* LinkedIn iframe styling */
+.linkedin-iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
 
 .linkedin-embed h3, .fund-links h3 {
     font-size: 1.5rem;
