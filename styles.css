@@ -309,9 +309,6 @@ body {
     width: 100%;
     margin-bottom: 1rem;
     transform: translateY(-110px);
-}    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    max-width: 500px;
 }
 
 .grid-item {
@@ -620,6 +617,27 @@ body {
 
 .linkedin-embed, .fund-links {
     color: var(--pp-charcoal);
+}
+
+/* LinkedIn feed */
+.linkedin-feed {
+    margin: 1rem 0 1.5rem;
+}
+.linkedin-feed .feed-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.linkedin-post {
+    background: rgba(209, 173, 92, 0.06);
+    border: 1px solid rgba(209, 173, 92, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.linkedin-post iframe {
+    width: 100%;
+    height: 420px;
+    border: 0;
 }
 
 .linkedin-embed h3, .fund-links h3 {
