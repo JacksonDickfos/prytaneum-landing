@@ -5,11 +5,11 @@
   const container = document.getElementById('linkedin-feed');
   if (!container) return;
 
-  // TODO: Replace with your preferred public post URLs from the company page
+  // Public post URLs from the company page (must be publicly viewable)
   const feedPosts = [
-    // Examples (must be publicly viewable):
-    // 'https://www.linkedin.com/posts/linkedinengineering_...',
-    // 'https://www.linkedin.com/posts/your-company_...'
+    'https://www.linkedin.com/posts/prytaneum-partners_activity-7378805658780930048-_bo9?utm_source=share&utm_medium=member_desktop&rcm=ACoAACSdvxYB_oO5QZzqutM6EFu_vHX-AsZmsVo',
+    'https://www.linkedin.com/posts/prytaneum-partners_activity-7376996483822182400-bU0n?utm_source=share&utm_medium=member_desktop&rcm=ACoAACSdvxYB_oO5QZzqutM6EFu_vHX-AsZmsVo',
+    'https://www.linkedin.com/posts/prytaneum-partners_activity-7375553970901090304-4Lel?utm_source=share&utm_medium=member_desktop&rcm=ACoAACSdvxYB_oO5QZzqutM6EFu_vHX-AsZmsVo'
   ];
 
   if (!Array.isArray(feedPosts) || feedPosts.length === 0) {
