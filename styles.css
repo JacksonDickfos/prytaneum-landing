@@ -709,7 +709,7 @@ body {
 }
 
 .fund-card a {
-    display: block;
+    display: inline-block;
     text-align: center;
     margin: 1rem auto 0;
 }
