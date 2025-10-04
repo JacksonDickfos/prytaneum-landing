@@ -187,7 +187,7 @@
             <div class="contact-content">
                 <div class="contact-form">
                     <div class="form-card">
-                        <form action="https://formspree.io/f/mblzgbyy" method="POST" id="contactForm">
+                        <form id="contactForm">
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" required>
@@ -201,6 +201,10 @@
                             <textarea id="message" name="message" rows="5" required placeholder="Tell us about your company and how we might work together..."></textarea>
                         </div>
                         <button type="submit" class="btn-primary">Send Message</button>
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <h3>Thanks!</h3>
+                            <p>The form was submitted successfully.</p>
+                        </div>
                     <div class="form-actions">
                             </div>
                         </form>
@@ -279,5 +283,46 @@ window.addEventListener("scroll", function() {
         observer.observe(placeholder, { childList: true, subtree: true });
     }
 })();
+</script>
+<script>
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const email = formData.get('email');
+    const name = formData.get('name');
+    const message = formData.get('message');
+    
+    // Send to Formspree
+    fetch('https://formspree.io/f/mblzgbyy', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: email,
+            name: name,
+            message: message
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            // Hide form
+            this.style.display = 'none';
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+        } else {
+            alert('There was an error submitting the form. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again.');
+    });
+});
 </script></body>
 </html> 
