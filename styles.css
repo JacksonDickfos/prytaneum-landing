@@ -797,7 +797,7 @@ body {
 }
 
 /* First card (Valkyrie Revival Fund) - show full image */
-.fund-links .fund-card img {
+.resources-content > .fund-links:first-child .fund-card img {
     object-fit: contain;
 }
 
