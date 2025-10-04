@@ -576,8 +576,8 @@ body {
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     background: transparent;
     border-radius: 50%;
     display: flex;
@@ -587,7 +587,7 @@ body {
 }
 
 .service-icon i {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--pp-hearth-gold);
 }
 
