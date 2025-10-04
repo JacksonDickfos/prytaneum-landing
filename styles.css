@@ -537,7 +537,7 @@ body {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .service-card {
@@ -761,8 +761,9 @@ body {
     line-height: 1.6;
     flex-grow: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 1rem;
 }
 
 .linkedin-placeholder p {
