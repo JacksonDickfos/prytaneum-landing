@@ -1285,7 +1285,7 @@ h1, h2, h3, h4, h5, h6,
 /* Contact form card styling inspired by provided design */
 .contact-form .form-card {
     height: 100%;
-	background: rgba(209, 173, 92, 0.05);
+	background: var(--pp-parchment);
 	border: 1px solid rgba(209, 173, 92, 0.2);
 	border-radius: 16px;
 	padding: 2rem;
@@ -1331,7 +1331,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .contact-aside-card {
-	background: rgba(209, 173, 92, 0.05);
+	background: var(--pp-parchment);
 	border: 1px solid rgba(209, 173, 92, 0.2);
 	border-radius: 16px;
 	padding: 1.5rem;
