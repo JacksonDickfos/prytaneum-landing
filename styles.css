@@ -790,10 +790,15 @@ body {
 /* Ensure all images in activity cards have consistent height */
 .resources-content img {
     height: 200px;
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     margin: 1rem 0;
     border-radius: 8px;
+}
+
+/* First card (Valkyrie Revival Fund) - show full image */
+.fund-links .fund-card img {
+    object-fit: contain;
 }
 
 /* Valkyrie Revival Fund Section */
