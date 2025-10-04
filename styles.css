@@ -616,8 +616,8 @@ body {
 
 .resources-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
 }
 
 .linkedin-embed, .fund-links {
@@ -1058,6 +1058,11 @@ body {
     .resources-content {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    
+    .resources-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .tech-grid {
