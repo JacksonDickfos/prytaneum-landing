@@ -275,6 +275,8 @@ body {
     color: var(--pp-charcoal);
     height: 48px;
     white-space: nowrap;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .btn-primary {
