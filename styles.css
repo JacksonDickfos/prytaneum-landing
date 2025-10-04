@@ -759,6 +759,20 @@ body {
     color: var(--pp-charcoal);
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin-placeholder p {
+    color: var(--pp-charcoal);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fund-card a {
@@ -778,6 +792,8 @@ body {
     height: 200px;
     object-fit: cover;
     width: 100%;
+    margin: 1rem 0;
+    border-radius: 8px;
 }
 
 /* Valkyrie Revival Fund Section */
