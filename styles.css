@@ -266,15 +266,15 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     cursor: pointer;
     font-size: 1rem;
     color: var(--pp-charcoal);
     height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    white-space: nowrap;
 }
 
 .btn-primary {
@@ -712,6 +712,12 @@ body {
     display: inline-block;
     text-align: center;
     margin: 1rem auto 0;
+    width: auto;
+}
+
+.linkedin-placeholder a {
+    display: inline-block;
+    width: auto;
 }
 
 /* Valkyrie Revival Fund Section */
