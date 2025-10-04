@@ -761,8 +761,9 @@ body {
     line-height: 1.6;
     flex-grow: 1;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     padding-top: 1rem;
 }
 
@@ -774,6 +775,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .fund-card a {
