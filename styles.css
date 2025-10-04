@@ -1369,6 +1369,11 @@ h1, h2, h3, h4, h5, h6,
     align-items: center;
     justify-content: center;
     line-height: 1.2;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .contact-aside-card {
