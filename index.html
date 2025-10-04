@@ -309,12 +309,17 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     })
     .then(response => {
         if (response.ok) {
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-            // Hide form
+            // Hide form content
             this.style.display = 'none';
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            // Show success message
+            const successMsg = document.getElementById('successMessage');
+            if (successMsg) {
+                successMsg.style.display = 'flex';
+                // Scroll to success message
+                successMsg.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.error('Success message element not found');
+            }
         } else {
             alert('There was an error submitting the form. Please try again.');
         }
