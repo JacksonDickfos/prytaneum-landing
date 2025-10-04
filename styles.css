@@ -618,10 +618,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
+    align-items: stretch;
 }
 
 .linkedin-embed, .fund-links {
     color: var(--pp-charcoal);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* LinkedIn feed */
@@ -667,6 +671,9 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .linkedin-placeholder::before {
@@ -718,6 +725,9 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .fund-card::before {
@@ -761,6 +771,13 @@ body {
 .linkedin-placeholder a {
     display: inline-block;
     width: auto;
+}
+
+/* Ensure all images in activity cards have consistent height */
+.resources-content img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
 }
 
 /* Valkyrie Revival Fund Section */
