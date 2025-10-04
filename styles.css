@@ -761,6 +761,7 @@ body {
     line-height: 1.6;
     text-align: center;
     padding-top: 1rem;
+    flex-grow: 1;
 }
 
 .linkedin-placeholder p {
@@ -769,6 +770,7 @@ body {
     line-height: 1.6;
     text-align: center;
     padding-top: 1rem;
+    flex-grow: 1;
 }
 
 .fund-card a {
@@ -776,11 +778,13 @@ body {
     text-align: center;
     margin: 1rem auto 0;
     width: auto;
+    margin-top: auto;
 }
 
 .linkedin-placeholder a {
     display: inline-block;
     width: auto;
+    margin-top: auto;
 }
 
 /* Ensure all images in activity cards have consistent height */
