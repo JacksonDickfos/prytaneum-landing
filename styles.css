@@ -683,6 +683,7 @@ body {
     position: relative;
     transition: all 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    overflow: hidden;
 }
 
 .linkedin-placeholder::before {
@@ -733,6 +734,7 @@ body {
     position: relative;
     transition: all 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    overflow: hidden;
 }
 
 .fund-card::before {
