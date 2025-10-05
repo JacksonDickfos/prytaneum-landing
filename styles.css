@@ -602,7 +602,7 @@ body {
 
 .service-icon i {
     font-size: 3rem;
-    color: #1B2951;
+    color: rgba(27, 41, 81, 0.6); /* lighter navy, matches hero circle tone */
 }
 
 .service-card h3 {
