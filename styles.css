@@ -165,7 +165,7 @@ body {
 .shape {
     position: absolute;
     border-radius: 50%;
-    background: rgba(27, 41, 81, 0.08);
+    background: linear-gradient(180deg, var(--pp-cream-1) 0%, var(--pp-cream-2) 50%, var(--pp-cream-3) 100%);
     animation: float 8s ease-in-out infinite;
     opacity: 1;
     pointer-events: none;
