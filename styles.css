@@ -1558,7 +1558,6 @@ body:not(.at-top) .navbar::after {
     margin-bottom: 2rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
-    padding: 10px 0;
     transform: translateY(-180px);
 }    
     .rotating-logo {
