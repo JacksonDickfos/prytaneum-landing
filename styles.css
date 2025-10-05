@@ -1379,6 +1379,15 @@ h1, h2, h3, h4, h5, h6,
     border: none;
     cursor: pointer;
     box-sizing: border-box;
+    background: #1B2951;
+    box-shadow: 0 4px 8px rgba(27, 41, 81, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background: #0F1A3A;
+    box-shadow: 0 6px 12px rgba(15, 26, 58, 0.4);
+    transform: translateY(-2px);
 }
 
 .success-message {
@@ -1552,6 +1561,8 @@ body:not(.at-top) .navbar::after {
     line-height: 1.1;
     transform: translateY(-180px);
     padding: 10px 0;
+    color: #1B2951;
+    text-shadow: 0 2px 4px rgba(27, 41, 81, 0.3);
 }    
 .hero-description {
     font-size: 1.1rem;
