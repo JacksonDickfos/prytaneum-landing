@@ -7,6 +7,7 @@
     --pp-charcoal: #262626;
     --pp-parchment: #FDFCF8;
     --pp-white: #FFFFFF;
+    --pp-deep-cream: #F3E5D0; /* deeper cream / beige */
 }
 
 /* Reset and Base Styles */
@@ -1182,7 +1183,7 @@ body {
 
 /* 2) About: cream */
 .about {
-    background: var(--pp-parchment);
+    background: var(--pp-deep-cream);
     color: var(--pp-charcoal);
 }
 .about .about-text p,
@@ -1205,7 +1206,7 @@ body {
 
 /* 4) Resources: cream */
 .resources {
-    background: var(--pp-parchment);
+    background: var(--pp-deep-cream);
     color: var(--pp-charcoal);
 }
 .resources .section-header p,
