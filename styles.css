@@ -8,7 +8,7 @@
     --pp-parchment: #FDFCF8;
     --pp-white: #FFFFFF;
     --pp-deep-cream: #F3E5D0; /* deeper cream / beige */
-    --pp-offwhite-deep: #F8F5EF; /* deeper off-white for section backgrounds */
+    --pp-offwhite-deep: #FFF4E8; /* 255,244,232 requested off-white */
 }
 
 /* Reset and Base Styles */
