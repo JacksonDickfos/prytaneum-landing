@@ -165,7 +165,7 @@ body {
 .shape {
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(180deg, var(--pp-cream-1) 0%, var(--pp-cream-2) 50%, var(--pp-cream-1) 100%);
+    background: linear-gradient(180deg, var(--pp-cream-1) 0%, var(--pp-cream-1) 100%);
     animation: float 8s ease-in-out infinite;
     opacity: 1;
     pointer-events: none;
@@ -1187,7 +1187,7 @@ body {
 
 /* 2) About: cream */
 .about {
-    background: linear-gradient(180deg, var(--pp-cream-1) 0%, var(--pp-cream-2) 50%, var(--pp-cream-1) 100%);
+    background: linear-gradient(180deg, var(--pp-cream-1) 0%, var(--pp-cream-1) 100%);
     color: var(--pp-charcoal);
 }
 .about .about-text p,
@@ -1210,7 +1210,7 @@ body {
 
 /* 4) Resources: cream */
 .resources {
-    background: linear-gradient(180deg, var(--pp-cream-1) 0%, var(--pp-cream-2) 50%, var(--pp-cream-1) 100%);
+    background: linear-gradient(180deg, var(--pp-cream-1) 0%, var(--pp-cream-1) 100%);
     color: var(--pp-charcoal);
 }
 .resources .section-header p,
