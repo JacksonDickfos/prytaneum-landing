@@ -1183,7 +1183,7 @@ body {
 
 /* 2) About: cream */
 .about {
-    background: var(--pp-deep-cream);
+    background: var(--pp-parchment);
     color: var(--pp-charcoal);
 }
 .about .about-text p,
@@ -1206,7 +1206,7 @@ body {
 
 /* 4) Resources: cream */
 .resources {
-    background: var(--pp-deep-cream);
+    background: var(--pp-parchment);
     color: var(--pp-charcoal);
 }
 .resources .section-header p,
