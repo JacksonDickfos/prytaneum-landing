@@ -147,27 +147,21 @@
                     <div class="fund-card">
                         <img src="back-helmet.png" alt="Valkyrie Revival Fund" onerror="console.log('Image failed to load:', this.src); this.style.display='none';">
                         <p>Valkyrie Revival Fund is Prytaneum's operational acquisition platform and dedicated capital vehicle.</p>
-                        <div style="text-align: center;">
-                            <a href="https://www.valkyrie-revival.com/" class="btn-secondary" target="_blank">Visit Site</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="linkedin-embed">
                     <div class="linkedin-placeholder">
                         <img src="article-1.png" alt="Latest Article">
                         <p>Embracing the AI Revolution: Celebrating Job Creation Over Job Destruction</p>
-                        <div style="text-align: center;">
-                            <a href="https://www.linkedin.com/pulse/embracing-ai-revolution-celebrating-job-creation-over-nepcc/" class="btn-secondary" target="_blank">Go to Post</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="fund-links">
                     <div class="fund-card">
                         <img src="article-2.png" alt="Investment Insights">
                         <p>Why the AI Gold Rush Risks Corporate Catastrophes, are we looking at an AI disaster</p>
-                        <div style="text-align: center;">
-                            <a href="https://www.linkedin.com/pulse/why-ai-gold-rush-risks-corporate-catastrophes-prytaneum-partners-dwisc/" class="btn-secondary" target="_blank">Go to Post</a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -329,5 +323,41 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         alert('There was an error submitting the form. Please try again.');
     });
 });
+</script>
+<script>
+// Make Our Activity cards clickable using previous button URLs
+(function() {
+    const mappings = [
+        {
+            selector: '.resources-content .fund-links:nth-of-type(1) .fund-card',
+            href: 'https://www.valkyrie-revival.com/'
+        },
+        {
+            selector: '.resources-content .linkedin-embed .linkedin-placeholder',
+            href: 'https://www.linkedin.com/pulse/embracing-ai-revolution-celebrating-job-creation-over-nepcc/'
+        },
+        {
+            selector: '.resources-content .fund-links:nth-of-type(2) .fund-card',
+            href: 'https://www.linkedin.com/pulse/why-ai-gold-rush-risks-corporate-catastrophes-prytaneum-partners-dwisc/'
+        }
+    ];
+
+    mappings.forEach(({ selector, href }) => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+        el.dataset.href = href;
+        el.setAttribute('role', 'link');
+        el.setAttribute('tabindex', '0');
+        el.addEventListener('click', () => {
+            window.open(href, '_blank');
+        });
+        el.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.open(href, '_blank');
+            }
+        });
+    });
+})();
 </script></body>
 </html> 

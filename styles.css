@@ -1649,3 +1649,14 @@ body:not(.at-top) .navbar::after {
 .contact .section-header h2 {
     color: #1B2951;
 }
+
+/* Clickable Our Activity cards */
+.fund-card,
+.linkedin-placeholder {
+    cursor: pointer;
+}
+.fund-card:focus,
+.linkedin-placeholder:focus {
+    outline: 2px solid rgba(27, 41, 81, 0.4);
+    outline-offset: 2px;
+}
