@@ -602,18 +602,20 @@ body {
 
 .service-icon i {
     font-size: 3rem;
-    color: var(--pp-hearth-gold);
+    color: #1B2951;
 }
 
 .service-card h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: var(--pp-charcoal);
+    text-align: center;
 }
 
 .service-card p {
     color: var(--pp-charcoal);
     line-height: 1.6;
+    text-align: center;
 }
 
 
