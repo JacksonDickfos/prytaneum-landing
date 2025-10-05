@@ -232,7 +232,8 @@ body {
     transform: translateY(-180px);
 }
 .gradient-text {
-    color: var(--pp-hearth-gold);
+    color: #1B2951;
+    text-shadow: 0 2px 4px rgba(27, 41, 81, 0.3);
 }
 
 .hero-subtitle {
@@ -276,19 +277,28 @@ body {
     height: 48px;
     white-space: nowrap;
     line-height: 1.2;
+    background: #1B2951;
+    box-shadow: 0 4px 8px rgba(27, 41, 81, 0.3);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background: #0F1A3A;
+    box-shadow: 0 6px 12px rgba(15, 26, 58, 0.4);
+    transform: translateY(-2px);
 }
 
 .btn-primary {
     color: #FFFFFF !important;
     color: var(--pp-white);
-    background: var(--pp-hearth-gold);
+    background: #1B2951;
     color: var(--pp-charcoal);
-    box-shadow: 0 4px 15px rgba(209, 173, 92, 0.4);
+    box-shadow: 0 4px 8px rgba(27, 41, 81, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(209, 173, 92, 0.6);
+    box-shadow: 0 6px 12px rgba(15, 26, 58, 0.4);
+    background: #0F1A3A;
     color: var(--pp-charcoal);
 }
 
