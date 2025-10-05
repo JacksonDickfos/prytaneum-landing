@@ -558,15 +558,13 @@ body {
 
 .service-card {
     color: var(--pp-charcoal);
-    background: rgba(209, 173, 92, 0.05);
+    background: transparent;
     border: 1px solid rgba(209, 173, 92, 0.2);
+    position: relative;
     border-radius: 16px;
     padding: 2rem;
-    text-align: center;
-    color: var(--pp-charcoal);
-    backdrop-filter: blur(20px);
-    transition: all 0.3s ease;
-    position: relative;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -678,17 +676,12 @@ body {
 }
 
 .linkedin-placeholder {
-    background: var(--pp-white);
+    background: transparent;
     border: 1px solid rgba(209, 173, 92, 0.2);
     border-radius: 16px;
     padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(20px);
-    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
 }
 
@@ -733,16 +726,12 @@ body {
 }
 
 .fund-card {
-    background: var(--pp-white);
+    background: transparent;
     border: 1px solid rgba(209, 173, 92, 0.2);
     border-radius: 16px;
     padding: 2rem;
-    backdrop-filter: blur(20px);
-    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
 }
 
@@ -1649,4 +1638,10 @@ body:not(.at-top) .navbar::after {
         font-size: 0.9rem;
         gap: 1rem;
     }
+}
+
+/* Section header colors for Services and Contact */
+.services .section-header h2,
+.contact .section-header h2 {
+    color: #1B2951;
 }
