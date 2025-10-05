@@ -160,7 +160,7 @@ body {
 .shape {
     position: absolute;
     border-radius: 50%;
-    background: rgba(209, 173, 92, 0.1);
+    background: rgba(27, 41, 81, 0.08);
     animation: float 2s ease-in-out infinite;
     opacity: 1;
     pointer-events: none;
