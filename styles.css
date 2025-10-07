@@ -178,62 +178,44 @@ body {
     z-index: 1;
 }
 
-.floating-shapes {
+/* Remove floating shapes visuals */
+.hero-background .floating-shapes { display: none; }
+.shape, .shape-1, .shape-2, .shape-3, .shape-4 { display: none; }
+
+/* ECG background */
+.ecg-background {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 240px;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0.85;
+}
+
+.ecg-svg {
+    width: 200%; /* allow scrolling effect */
     height: 100%;
 }
 
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(180deg, var(--pp-cream-2) 0%, var(--pp-cream-1) 50%, var(--pp-cream-2) 100%);
-    animation: float 8s ease-in-out infinite;
-    opacity: 1;
-    pointer-events: none;
-}
-.shape-1 {
-    width: 100px;
-    height: 100px;
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-    animation-duration: 6s;
+.ecg-track {
+    transform: translateX(0);
+    animation: ecg-scroll 6s linear infinite;
 }
 
-.shape-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
-    animation-duration: 10s;
+.ecg-line {
+    fill: none;
+    stroke: #AA3D1D;
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 6px rgba(170, 61, 29, 0.35));
 }
 
-.shape-3 {
-    width: 80px;
-    height: 80px;
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 4s;
-    animation-duration: 7s;
-}
-
-.shape-4 {
-    width: 120px;
-    height: 120px;
-    top: 30%;
-    right: 30%;
-    animation-delay: 1s;
-    animation-duration: 9s;
-}
-
-@keyframes float {
-    0% { transform: translate(0px, 0px) rotate(0deg); }
-    25% { transform: translate(30px, -25px) rotate(90deg); }
-    50% { transform: translate(-20px, -40px) rotate(180deg); }
-    75% { transform: translate(-35px, 15px) rotate(270deg); }
-    100% { transform: translate(0px, 0px) rotate(360deg); }
+@keyframes ecg-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .hero-content {
