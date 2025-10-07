@@ -254,6 +254,9 @@ body {
 .hero .hero-cta { margin-top: 1.25rem !important; padding-top: 0.5rem; }
 .hero .hero-cta .btn-primary { margin-top: 0.5rem; }
 
+/* Increase space specifically above the CTA button while keeping sentences tight */
+.hero-text .hero-cta { margin-top: 1.75rem !important; padding-top: 0; }
+
 .hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
