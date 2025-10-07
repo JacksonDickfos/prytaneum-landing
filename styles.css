@@ -406,7 +406,7 @@ body {
 /* About Section */
 .about {
     padding: 6rem 0;
-    background: var(--pp-temple-bronze);
+    background: #E4E2DA;
     position: relative;
 }
 
@@ -1190,7 +1190,7 @@ body {
 
 /* 2) About: cream */
 .about {
-    background: linear-gradient(180deg, var(--pp-cream-2) 0%, var(--pp-cream-1) 50%, var(--pp-cream-2) 100%);
+    background: #E4E2DA;
     color: var(--pp-charcoal);
 }
 .about .about-text p,
