@@ -143,7 +143,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    background: var(--pp-white);
+    background: #F9F1E6;
     overflow: hidden;
 }
 
@@ -1176,7 +1176,7 @@ body {
 
 /* 1) Hero: white */
 .hero {
-    background: var(--pp-white);
+    background: #F9F1E6;
     color: var(--pp-charcoal);
 }
 .hero .hero-text,
@@ -1328,6 +1328,7 @@ h1, h2, h3, h4, h5, h6,
     
     .hero {
         padding-top: 80px;
+        background: #F9F1E6;
     }
     
 .hero-title {
