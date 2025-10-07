@@ -100,14 +100,14 @@ body {
 
 /* Navigation links */
 .nav-menu a {
-    color: #9B8A66;
+    color: #4F555A;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #9B8A66;
+    color: #4F555A;
 }
 
 .nav-menu a::after {
