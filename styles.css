@@ -270,9 +270,9 @@ body {
 
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin: 0.5rem 0; /* reduce vertical spacing */
     color: var(--pp-charcoal);
-    line-height: 1.7;
+    line-height: 1.6; /* slightly tighter line height */
     transform: translateY(-180px);
 }
 .hero-cta {
@@ -1594,9 +1594,9 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin: 0.5rem 0; /* reduce vertical spacing */
     color: var(--pp-charcoal);
-    line-height: 1.7;
+    line-height: 1.6;
     transform: translateY(-180px);
 }    
     .rotating-logo {
@@ -1642,9 +1642,9 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin: 0.5rem 0; /* reduce vertical spacing */
     color: var(--pp-charcoal);
-    line-height: 1.7;
+    line-height: 1.6;
     transform: translateY(-180px);
 }    
     .rotating-logo {
