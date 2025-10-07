@@ -216,7 +216,7 @@ body {
     /* Draw-on animation */
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: ecg-draw 4s linear infinite;
+    animation: ecg-draw 8s linear infinite;
 }
 
 @keyframes ecg-draw {
