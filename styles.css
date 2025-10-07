@@ -423,6 +423,11 @@ body {
 .section-header p {
     font-size: 1.2rem;
     color: var(--pp-charcoal);
+    margin-bottom: 1rem;
+}
+
+.section-header p:last-child {
+    margin-bottom: 0;
 }
 
 /* About Section */
