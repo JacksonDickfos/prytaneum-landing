@@ -244,7 +244,7 @@ body {
     transform: translateY(-180px);
 }
 .gradient-text {
-    color: #3A3F42;
+    color: #4F555A;
 }
 
 .hero-subtitle {
@@ -1668,5 +1668,5 @@ body:not(.at-top) .navbar::after {
 
 /* Ensure hero tagline words color */
 .hero .hero-tagline .tagline-word {
-    color: #3A3F42 !important;
+    color: #4F555A !important;
 }
