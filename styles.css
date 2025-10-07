@@ -1153,6 +1153,10 @@ body {
     transform: translateY(-180px);
 }}
 
+/* Ensure spacing applies regardless of overrides */
+.hero .hero-cta { margin-top: 1rem; padding-top: 1rem; }
+.hero .hero-cta .btn-primary { margin-top: 0.5rem; }
+
 /* Parallax Effects */
 .parallax {
     transform: translateZ(0);
