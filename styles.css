@@ -244,7 +244,7 @@ body {
     transform: translateY(-180px);
 }
 .gradient-text {
-    color: #1B2951;
+    color: #9B8A66;
 }
 
 .hero-subtitle {
@@ -252,7 +252,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -392,7 +392,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
 }
 
 .section-header p {
@@ -441,7 +441,7 @@ body {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
     margin-bottom: 0.5rem;
 }
 
@@ -862,7 +862,7 @@ body {
 
 .valkyrie-fund .section-header p {
     font-size: 1.2rem;
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
@@ -956,7 +956,7 @@ body {
 
 .info-item h4 {
     margin-bottom: 0.5rem;
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
 }
 
 .info-item p {
@@ -996,14 +996,14 @@ body {
 }
 
 .company-name {
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
 }
 
 .company-slogan {
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
