@@ -243,9 +243,10 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    gap: 1.5rem;
+    gap: 0.5rem; /* reduced from 1.5rem to tighten spacing */
     transform: translateY(30px);
-}.hero-title {
+}
+.hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
     white-space: nowrap;
@@ -270,7 +271,7 @@ body {
 
 .hero-description {
     font-size: 1.1rem;
-    margin: 0.5rem 0; /* reduce vertical spacing */
+    margin: 0.25rem 0; /* tighter vertical spacing */
     color: var(--pp-charcoal);
     line-height: 1.6; /* slightly tighter line height */
     transform: translateY(-180px);
@@ -1594,7 +1595,7 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-description {
     font-size: 1.1rem;
-    margin: 0.5rem 0; /* reduce vertical spacing */
+    margin: 0.25rem 0; /* tighter vertical spacing */
     color: var(--pp-charcoal);
     line-height: 1.6;
     transform: translateY(-180px);
@@ -1642,7 +1643,7 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-description {
     font-size: 1.1rem;
-    margin: 0.5rem 0; /* reduce vertical spacing */
+    margin: 0.25rem 0; /* tighter vertical spacing */
     color: var(--pp-charcoal);
     line-height: 1.6;
     transform: translateY(-180px);
