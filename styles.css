@@ -395,7 +395,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #9B8A66;
+    color: #4F555A;
 }
 
 .section-header p {
@@ -1656,7 +1656,7 @@ body:not(.at-top) .navbar::after {
 /* Section header colors for Services and Contact */
 .services .section-header h2,
 .contact .section-header h2 {
-    color: #9B8A66;
+    color: #4F555A;
 }
 
 /* Clickable Our Activity cards */
