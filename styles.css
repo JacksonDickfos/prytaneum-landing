@@ -129,20 +129,20 @@ body {
 
 /* Style the last nav item (Get In Touch) as a button */
 .nav-menu li:last-child a {
-    background: #AA3D1D;
-    color: #FFFFFF;
-    padding: 8px 14px;
-    border-radius: 8px;
+    background: transparent;
+    color: #4F555A;
+    padding: 0;
+    border-radius: 0;
 }
 
 .nav-menu li:last-child a:hover {
-    background: #8F3218;
-    color: #FFFFFF;
+    background: transparent;
+    color: #4F555A;
 }
 
-/* Remove underline animation for the button */
+/* Restore underline animation for the last item */
 .nav-menu li:last-child a::after {
-    display: none;
+    display: block;
 }
 
 .hamburger {
@@ -1692,4 +1692,15 @@ body:not(.at-top) .navbar::after {
 /* Ensure hero tagline words color */
 .hero .hero-tagline .tagline-word {
     color: #4F555A !important;
+}
+
+/* Hero CTA button color override */
+.hero .btn-primary {
+    background: #AA3D1D;
+    color: #FFFFFF !important;
+}
+
+.hero .btn-primary:hover {
+    background: #8F3218;
+    color: #FFFFFF !important;
 }
