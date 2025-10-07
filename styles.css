@@ -111,6 +111,7 @@ body {
     color: #4F555A;
 }
 
+/* Underline animation */
 .nav-menu a::after {
     content: '';
     position: absolute;
@@ -124,6 +125,24 @@ body {
 
 .nav-menu a:hover::after {
     width: 100%;
+}
+
+/* Style the last nav item (Get In Touch) as a button */
+.nav-menu li:last-child a {
+    background: #AA3D1D;
+    color: #FFFFFF;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.nav-menu li:last-child a:hover {
+    background: #8F3218;
+    color: #FFFFFF;
+}
+
+/* Remove underline animation for the button */
+.nav-menu li:last-child a::after {
+    display: none;
 }
 
 .hamburger {
@@ -610,7 +629,7 @@ body {
 
 .service-icon i {
     font-size: 3rem;
-    color: rgba(27, 41, 81, 0.08); /* exact match to hero circles */
+    color: #AA3D1D;
 }
 
 .service-card h3 {
