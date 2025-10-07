@@ -280,6 +280,15 @@ window.addEventListener("scroll", function() {
 })();
 </script>
 <script>
+// Force-set hero description copy in case of CDN/HTML cache
+(function(){
+  var el = document.querySelector('.hero-description');
+  if (el) {
+    el.textContent = 'We partner with founders and investors to stabilize, systemize, and scale underperforming software assets—preserving legacy, restoring momentum, and compounding value.';
+  }
+})();
+</script>
+<script>
 // Handle form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
