@@ -555,7 +555,7 @@ body {
 /* Services Section */
 .services {
     padding: 6rem 0;
-    background: var(--pp-white);
+    background: #D6D2C4;
 }
 
 .services-grid {
@@ -635,7 +635,7 @@ body {
 /* Resources Section */
 .resources {
     padding: 6rem 0;
-    background: var(--pp-temple-bronze);
+    background: #E4E2DA;
 }
 
 .resources-content {
@@ -874,7 +874,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 6rem 0 20rem 0;
-    background: var(--pp-white);
+    background: #F9F8F3;
 }
 
 .contact-content {
@@ -972,7 +972,7 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--pp-temple-bronze);
+    background: #2F3235;
     color: var(--pp-charcoal);
     padding: 1rem 0 1rem;
     margin-top: -18rem;
@@ -1202,7 +1202,7 @@ body {
 
 /* 3) Services: white */
 .services {
-    background: var(--pp-white);
+    background: #D6D2C4;
     color: var(--pp-charcoal);
 }
 .services .section-header p,
@@ -1213,7 +1213,7 @@ body {
 
 /* 4) Resources: cream */
 .resources {
-    background: linear-gradient(180deg, var(--pp-cream-2) 0%, var(--pp-cream-1) 50%, var(--pp-cream-2) 100%);
+    background: #E4E2DA;
     color: var(--pp-charcoal);
 }
 .resources .section-header p,
@@ -1237,7 +1237,7 @@ body {
 /* 6) Contact: cream */
 /* 7) Footer: white */
 .footer {
-    background: var(--pp-white);
+    background: #2F3235;
     color: var(--pp-charcoal);
 }
 .footer .footer-nav a,
