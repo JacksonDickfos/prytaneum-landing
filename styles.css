@@ -45,7 +45,7 @@ body {
     position: static;
     
     width: 100%;
-    background: #D6D2C4;
+    background: #FFFFFF;
     backdrop-filter: none;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -54,7 +54,7 @@ body {
 }
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
     max-width: 1200px;
@@ -94,7 +94,8 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
 /* Navigation links */
@@ -1260,9 +1261,9 @@ h1, h2, h3, h4, h5, h6,
 /* Mobile hamburger menu styles */
 @media (max-width: 768px) {
     .navbar {
-    background: #D6D2C4;
+    background: #FFFFFF;
     border-bottom: none;
-        background: #D6D2C4 !important;
+        background: #FFFFFF !important;
         backdrop-filter: none !important;
         border-bottom: none !important;
         
