@@ -281,7 +281,8 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     transform: translateY(-180px);
-    margin-top: 1rem; /* add top buffer */
+    margin-top: 1rem; /* keep small outer gap */
+    padding-top: 1rem; /* add visible buffer above button */
 }
 .btn-primary, .btn-secondary {
     color: #FFFFFF !important;
