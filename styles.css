@@ -1041,7 +1041,7 @@ body {
 }
 
 .footer-nav a {
-    color: var(--pp-charcoal);
+    color: #9B8A66;
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
@@ -1087,7 +1087,7 @@ body {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(209, 173, 92, 0.2);
-    color: var(--pp-charcoal);
+    color: #F9F8F3;
 }
 
 .footer-logo-img {
@@ -1259,9 +1259,11 @@ body {
     background: #2F3235;
     color: var(--pp-charcoal);
 }
-.footer .footer-nav a,
+.footer .footer-nav a {
+    color: #9B8A66;
+}
 .footer .footer-bottom p {
-    color: var(--pp-charcoal);
+    color: #F9F8F3;
 }
 
 /* Typography: use logo font for all headings and nav brand text */
