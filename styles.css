@@ -45,7 +45,7 @@ body {
     position: static;
     
     width: 100%;
-    background: #FFFFFF;
+    background: #F9F8F3;
     backdrop-filter: none;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -1262,9 +1262,9 @@ h1, h2, h3, h4, h5, h6,
 /* Mobile hamburger menu styles */
 @media (max-width: 768px) {
     .navbar {
-    background: #FFFFFF;
+    background: #F9F8F3;
     border-bottom: none;
-        background: #FFFFFF !important;
+        background: #F9F8F3 !important;
         backdrop-filter: none !important;
         border-bottom: none !important;
         
