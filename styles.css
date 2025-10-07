@@ -59,6 +59,7 @@ body {
     padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background: transparent;
 }
 
 .nav-logo {
@@ -143,7 +144,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    background: #D1D3CE;
+    background: #D6D2C4;
     overflow: hidden;
 }
 
@@ -1176,7 +1177,7 @@ body {
 
 /* 1) Hero: white */
 .hero {
-    background: #D1D3CE;
+    background: #D6D2C4;
     color: var(--pp-charcoal);
 }
 .hero .hero-text,
@@ -1328,7 +1329,7 @@ h1, h2, h3, h4, h5, h6,
     
     .hero {
         padding-top: 80px;
-        background: #D1D3CE;
+        background: #D6D2C4;
     }
     
 .hero-title {
