@@ -1706,3 +1706,20 @@ body:not(.at-top) .navbar::after {
     background: #8F3218;
     color: #FFFFFF !important;
 }
+
+/* Footer gold sheen text (match logo) */
+.footer .company-name,
+.footer .company-slogan,
+.footer .footer-nav a {
+    background: linear-gradient(90deg, var(--pp-hearth-gold) 0%, var(--pp-hearth-gold-deep) 50%, var(--pp-hearth-gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.footer .footer-nav a:hover {
+    background: linear-gradient(90deg, var(--pp-hearth-gold-deep) 0%, var(--pp-hearth-gold) 50%, var(--pp-hearth-gold-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
