@@ -1396,8 +1396,8 @@ h1, h2, h3, h4, h5, h6,
 
 .contact-form .form-card:hover {
 	transform: translateY(-27.5px);
-	border-color: var(--pp-hearth-gold);
-	box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
+	border-color: #AA3D1D;
+	box-shadow: 0 10px 30px rgba(170, 61, 29, 0.2);
 }
 
 .contact-form .form-actions {
