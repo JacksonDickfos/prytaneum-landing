@@ -1665,3 +1665,8 @@ body:not(.at-top) .navbar::after {
     outline: 2px solid rgba(27, 41, 81, 0.4);
     outline-offset: 2px;
 }
+
+/* Ensure hero tagline words color */
+.hero .hero-tagline .tagline-word {
+    color: #3A3F42 !important;
+}
