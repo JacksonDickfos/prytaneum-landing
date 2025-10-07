@@ -1418,14 +1418,14 @@ h1, h2, h3, h4, h5, h6,
     border: none;
     cursor: pointer;
     box-sizing: border-box;
-    background: #1B2951;
-    box-shadow: 0 4px 8px rgba(27, 41, 81, 0.3);
+    background: #AA3D1D;
+    box-shadow: 0 4px 8px rgba(170, 61, 29, 0.3);
     transition: all 0.3s ease;
 }
 
 .contact-form .btn-primary:hover {
-    background: #0F1A3A;
-    box-shadow: 0 6px 12px rgba(15, 26, 58, 0.4);
+    background: #8F3218;
+    box-shadow: 0 6px 12px rgba(143, 50, 24, 0.4);
     transform: translateY(-2px);
 }
 
