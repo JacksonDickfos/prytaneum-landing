@@ -243,12 +243,12 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    gap: 1rem; /* increased gap for clearer spacing */
+    gap: 0.5rem; /* reverted to tighter spacing between sentences */
     transform: translateY(30px);
 }
 
 /* Ensure the last paragraph gives breathing room above the CTA */
-.hero-text .hero-description:last-of-type { margin-bottom: 1rem; }
+.hero-text .hero-description:last-of-type { margin-bottom: 0.5rem; }
 
 /* Force top spacing on CTA regardless of other overrides */
 .hero .hero-cta { margin-top: 1.25rem !important; padding-top: 0.5rem; }
