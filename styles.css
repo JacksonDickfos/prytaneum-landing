@@ -574,7 +574,7 @@ body {
 /* Services Section */
 .services {
     padding: 6rem 0;
-    background: #D6D2C4;
+    background: #FFFFFF;
 }
 
 .services-grid {
@@ -893,7 +893,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 6rem 0 20rem 0;
-    background: #F9F8F3;
+    background: #D6D2C4;
 }
 
 .contact-content {
@@ -1221,7 +1221,7 @@ body {
 
 /* 3) Services: white */
 .services {
-    background: #D6D2C4;
+    background: #FFFFFF;
     color: var(--pp-charcoal);
 }
 .services .section-header p,
