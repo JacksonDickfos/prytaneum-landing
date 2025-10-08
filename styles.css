@@ -189,7 +189,7 @@ body {
     left: 0;
     width: 100%;
     height: 200px;
-    transform: translateY(calc(-50% - 335px));
+    transform: translateY(calc(-50% - 330px));
     z-index: 1;
     overflow: hidden;
     opacity: 0.85;
