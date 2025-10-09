@@ -189,7 +189,7 @@ body {
     left: 0;
     width: 100%;
     height: 200px;
-    transform: translateY(calc(-50% - 350px)); /* Move up 20px */
+    transform: translateY(calc(-50% - 355px)); /* Move up 25px total */
     z-index: 1;
     overflow: hidden;
     opacity: 0.85;
