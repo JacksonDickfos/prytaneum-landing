@@ -285,9 +285,10 @@ window.addEventListener("scroll", function() {
 <script>
 // Force-set hero description copy in case of CDN/HTML cache
 (function(){
-  var el = document.querySelector('.hero-description');
-  if (el) {
-    el.textContent = 'We partner with founders and investors to stabilize, systemize, and scale underperforming software assets—preserving legacy, restoring momentum, and compounding value.';
+  var els = document.querySelectorAll('.hero-description');
+  if (els.length >= 2) {
+    els[0].textContent = 'Prytaneum Partners takes over struggling software companies and rebuilds them into profitable, high-performing businesses.';
+    els[1].textContent = 'We are actively seeking to buy distressed software companies - get in touch if you need to sell.';
   }
 })();
 </script>
