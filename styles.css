@@ -245,6 +245,7 @@ body {
     width: 100%;
     gap: 1rem;
     margin-top: 2rem; /* Fixed margin instead of transform */
+    transform: translateY(10px); /* Move down 10px */
 }
 
 /* Ensure proper spacing for description text */
@@ -360,7 +361,7 @@ body {
     align-items: center;
     width: 100%;
     margin-bottom: 1rem;
-    transform: translateY(-110px);
+    transform: translateY(-100px); /* Move down 10px from -110px to -100px */
 }
 
 .grid-item {
