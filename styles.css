@@ -1547,6 +1547,20 @@ body:not(.at-top) .navbar::after {
     --navbar-shadow: none;
 }
 
+/* Mobile-specific fixes: hide header and allow title to wrap */
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+
+    .hero-title {
+        white-space: normal !important; /* allow wrapping */
+        overflow-wrap: anywhere;        /* prevent overflow */
+        word-break: normal;
+        transform: none;               /* avoid clipping off-screen */
+    }
+}
+
 
 /* Mobile menu styles */
 .mobile-menu {
