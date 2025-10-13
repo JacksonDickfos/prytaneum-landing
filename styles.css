@@ -1547,6 +1547,9 @@ body:not(.at-top) .navbar::after {
     --navbar-shadow: none;
 }
 
+/* Ensure no shadow on hero title across breakpoints */
+.hero-title { text-shadow: none; }
+
 /* Mobile-specific fixes: hide header and allow title to wrap */
 @media (max-width: 768px) {
     .navbar {
@@ -1559,6 +1562,10 @@ body:not(.at-top) .navbar::after {
         word-break: normal;
         transform: none;               /* avoid clipping off-screen */
     }
+
+    /* Move tagline below logo and tighten gap to title */
+    .hero-visual { margin-bottom: 0.25rem; }
+    .hero-tagline { bottom: -10px; }
 }
 
 
