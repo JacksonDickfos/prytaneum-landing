@@ -1561,7 +1561,7 @@ body:not(.at-top) .navbar::after {
         overflow-wrap: anywhere;        /* prevent overflow */
         word-break: normal;
         transform: none;               /* avoid clipping off-screen */
-        margin-top: 0.75rem;           /* create space from tagline */
+        margin-top: 1.5rem;            /* increased space from tagline */
         text-shadow: none !important;  /* ensure no shadow on mobile */
     }
 
