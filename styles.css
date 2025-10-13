@@ -1562,6 +1562,7 @@ body:not(.at-top) .navbar::after {
         word-break: normal;
         transform: none;               /* avoid clipping off-screen */
         margin-top: calc(1.5rem + 8px); /* increased space from tagline (+8px) */
+        font-size: 3rem !important;    /* mobile title size */
         text-shadow: none !important;  /* ensure no shadow on mobile */
     }
 
