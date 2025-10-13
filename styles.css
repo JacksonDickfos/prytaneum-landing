@@ -1561,12 +1561,17 @@ body:not(.at-top) .navbar::after {
         overflow-wrap: anywhere;        /* prevent overflow */
         word-break: normal;
         transform: none;               /* avoid clipping off-screen */
+        margin-top: 0.75rem;           /* create space from tagline */
+        text-shadow: none !important;  /* ensure no shadow on mobile */
     }
 
     /* Move tagline below logo and tighten gap to title */
     .hero-visual { margin-bottom: 0.25rem; }
     .hero-tagline { bottom: -10px; }
 }
+
+/* Final overrides (placed late to win cascade) */
+.hero .hero-title { text-shadow: none !important; }
 
 
 /* Mobile menu styles */
