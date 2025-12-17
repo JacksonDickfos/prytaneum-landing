@@ -1935,11 +1935,12 @@ body:not(.at-top) .navbar::after {
     transform: scale(1.6);
 }
 
-/* Zoom out Chris Morino's image slightly */
+/* Zoom out Chris Morino's image slightly - use contain to show full image without cropping */
 .team-photo img.chris-morino-photo {
     object-position: center center !important;
-    object-fit: cover;
-    transform: scale(0.9);
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
 }
 
 /* Team badge logo - positioned outside the photo circle, relative to team-card */
