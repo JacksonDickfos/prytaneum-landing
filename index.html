@@ -199,7 +199,7 @@
                         </div>
                         <div class="form-group">
                             <label for="arr">Current Annual Recurring Revenue</label>
-                            <input type="number" id="arr" name="arr" step="0.01" min="0">
+                            <input type="text" id="arr" inputmode="numeric" pattern="[0-9,]*">
                         </div>
                         <div class="form-group">
                             <label for="location">Location</label>
@@ -325,7 +325,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const name = formData.get('name');
     const phone = formData.get('phone');
     const companyName = formData.get('companyName');
-    const arr = formData.get('arr');
+    // Parse ARR value (remove commas from formatted display)
+    const arrInput = document.getElementById('arr');
+    const arr = arrInput ? arrInput.value.replace(/,/g, '') : '';
     const location = formData.get('location');
     const urgency = formData.get('urgency');
     const message = formData.get('message');
@@ -369,6 +371,70 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         alert('There was an error submitting the form. Please try again.');
     });
 });
+</script>
+<script>
+// Handle ARR field formatting and arrow key increments
+(function() {
+    const arrInput = document.getElementById('arr');
+    if (!arrInput) return;
+
+    // Function to format number with commas
+    function formatNumber(num) {
+        if (!num && num !== 0) return '';
+        // Remove any existing commas and non-numeric characters
+        const cleaned = num.toString().replace(/[^0-9]/g, '');
+        if (!cleaned) return '';
+        // Add commas every 3 digits from the right
+        return cleaned.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    // Function to parse formatted number (remove commas)
+    function parseNumber(formatted) {
+        if (!formatted) return '';
+        return formatted.toString().replace(/,/g, '');
+    }
+
+    // Handle input - format as user types
+    arrInput.addEventListener('input', function(e) {
+        const cursorPosition = this.selectionStart;
+        const value = this.value;
+        const cleaned = parseNumber(value);
+        
+        if (cleaned === '') {
+            this.value = '';
+            return;
+        }
+
+        const formatted = formatNumber(cleaned);
+        this.value = formatted;
+        
+        // Restore cursor position (adjust for added/removed commas)
+        const diff = formatted.length - value.length;
+        const newPosition = Math.max(0, Math.min(formatted.length, cursorPosition + diff));
+        this.setSelectionRange(newPosition, newPosition);
+    });
+
+    // Handle arrow key up/down for increment/decrement
+    arrInput.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            
+            const currentValue = parseNumber(this.value) || '0';
+            const numValue = parseInt(currentValue, 10) || 0;
+            const increment = 100000;
+            
+            let newValue;
+            if (e.key === 'ArrowUp') {
+                newValue = numValue + increment;
+            } else {
+                newValue = Math.max(0, numValue - increment);
+            }
+            
+            this.value = formatNumber(newValue);
+        }
+    });
+
+})();
 </script>
 <script>
 // Make Our Activity cards clickable using previous button URLs
