@@ -1930,9 +1930,9 @@ body:not(.at-top) .navbar::after {
 
 /* Fix Ian Miller's image positioning */
 .team-photo img.ian-miller-photo {
-    object-position: center 25% !important;
+    object-position: center 20% !important;
     object-fit: cover;
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 
 /* Team badge logo */
