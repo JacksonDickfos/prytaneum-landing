@@ -1014,8 +1014,10 @@ body {
 .footer {
     background: #2F3235;
     color: var(--pp-charcoal);
-    padding: 1rem 0 1rem;
-    margin-top: -18rem;
+    padding: 3rem 0 1rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
@@ -1791,7 +1793,7 @@ body:not(.at-top) .navbar::after {
 
 /* Team Section */
 .team {
-    padding: 6rem 0;
+    padding: 6rem 0 8rem 0;
     background: var(--pp-white);
     min-height: 80vh;
 }
@@ -1801,6 +1803,7 @@ body:not(.at-top) .navbar::after {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
     margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 .team-card {

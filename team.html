@@ -38,7 +38,7 @@
             <div class="team-grid">
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/chris-morino.jpg" alt="Chris Morino" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/chris-morino.jpg" alt="Chris Morino" data-linkedin-profile="chris-morino" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Chris Morino</h3>
@@ -49,7 +49,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/jeff-moyer.jpg" alt="Jeff Moyer" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/jeff-moyer.jpg" alt="Jeff Moyer" data-linkedin-profile="jeff-moyer" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Jeff Moyer</h3>
@@ -60,7 +60,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/brad-ramsay.jpg" alt="Brad Ramsay" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/brad-ramsay.jpg" alt="Brad Ramsay" data-linkedin-profile="brad-ramsay" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Brad Ramsay</h3>
@@ -71,7 +71,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/jackson-dickfos.jpg" alt="Jackson Dickfos" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/jackson-dickfos.jpg" alt="Jackson Dickfos" data-linkedin-profile="jackson-dickfos" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Jackson Dickfos</h3>
@@ -145,6 +145,47 @@ window.addEventListener("scroll", function() {
         root.style.setProperty("--navbar-shadow", "none");
     }
 });
+</script>
+<script>
+// LinkedIn profile image URLs - Update these with actual LinkedIn profile image URLs
+// To get a LinkedIn profile image URL:
+// 1. Go to the person's LinkedIn profile
+// 2. Right-click on their profile picture
+// 3. Select "Open image in new tab" or "Copy image address"
+// 4. Copy the URL and paste it below
+const linkedInImages = {
+    'chris-morino': '', // Add LinkedIn profile image URL here
+    'jeff-moyer': '',   // Add LinkedIn profile image URL here
+    'brad-ramsay': '',  // Add LinkedIn profile image URL here
+    'jackson-dickfos': '' // Add LinkedIn profile image URL here
+};
+
+// Function to load LinkedIn profile images
+function loadLinkedInImages() {
+    const images = document.querySelectorAll('img[data-linkedin-profile]');
+    images.forEach(img => {
+        const profileKey = img.getAttribute('data-linkedin-profile');
+        const linkedInUrl = linkedInImages[profileKey];
+        if (linkedInUrl) {
+            // Try LinkedIn image first, fallback to local image
+            const tempImg = new Image();
+            tempImg.onload = function() {
+                img.src = linkedInUrl;
+            };
+            tempImg.onerror = function() {
+                // Keep original src if LinkedIn image fails
+            };
+            tempImg.src = linkedInUrl;
+        }
+    });
+}
+
+// Load images when page is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadLinkedInImages);
+} else {
+    loadLinkedInImages();
+}
 </script>
 <script src="linkedin-feed.js"></script>
 <script src="activity-feed.js"></script>
