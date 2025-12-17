@@ -1794,9 +1794,21 @@ body:not(.at-top) .navbar::after {
 /* Team Section */
 .team {
     padding: 6rem 0 8rem 0;
-    background: var(--pp-white);
+    background: var(--pp-white) !important;
     min-height: 80vh;
     border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.team * {
+    box-shadow: none !important;
+}
+
+.team *::before,
+.team *::after {
+    display: none !important;
+    content: none !important;
     box-shadow: none !important;
 }
 
