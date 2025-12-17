@@ -194,6 +194,14 @@ function loadLinkedInImages() {
         const profileKey = img.getAttribute('data-linkedin-profile');
         const linkedInUrl = linkedInImages[profileKey];
         if (linkedInUrl) {
+            // Skip if it's already a local file (like Chris's image)
+            if (linkedInUrl.startsWith('images/') || linkedInUrl.startsWith('team/')) {
+                // Just ensure opacity and filter are set correctly
+                img.style.opacity = '1';
+                img.style.filter = 'none';
+                return;
+            }
+            
             // Remove any opacity or fade effects
             img.style.opacity = '1';
             img.style.filter = 'none';
