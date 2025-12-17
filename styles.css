@@ -1930,31 +1930,31 @@ body:not(.at-top) .navbar::after {
 
 /* Fix Ian Miller's image positioning */
 .team-photo img.ian-miller-photo {
-    object-position: center 20% !important;
+    object-position: center 15% !important;
     object-fit: cover;
-    transform: scale(1.4);
+    transform: scale(1.6);
 }
 
-/* Team badge logo */
+/* Team badge logo - positioned outside the photo circle */
 .team-badge {
     position: absolute;
-    bottom: 8px;
-    right: 8px;
-    width: 40px;
-    height: 40px;
+    bottom: -8px;
+    right: -8px;
+    width: 50px;
+    height: 50px;
     background: var(--pp-white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--pp-hearth-gold);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: 10;
+    border: 3px solid var(--pp-hearth-gold);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    z-index: 20;
 }
 
 .team-badge .badge-logo {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
     opacity: 1 !important;
     filter: none !important;
