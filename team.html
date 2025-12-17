@@ -38,7 +38,7 @@
             <div class="team-grid">
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/chris-morino.jpg" alt="Chris Morino" data-linkedin-profile="chris-morino" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/chris-morino.jpg" alt="Chris Morino" data-linkedin-profile="chris-morino" style="opacity: 1; filter: none;" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Chris Morino</h3>
@@ -49,7 +49,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/jeff-moyer.jpg" alt="Jeff Moyer" data-linkedin-profile="jeff-moyer" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/jeff-moyer.jpg" alt="Jeff Moyer" data-linkedin-profile="jeff-moyer" style="opacity: 1; filter: none;" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Jeff Moyer</h3>
@@ -60,7 +60,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/brad-ramsay.jpg" alt="Brad Ramsay" data-linkedin-profile="brad-ramsay" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/brad-ramsay.jpg" alt="Brad Ramsay" data-linkedin-profile="brad-ramsay" style="opacity: 1; filter: none;" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Brad Ramsay</h3>
@@ -71,7 +71,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="team/jackson-dickfos.jpg" alt="Jackson Dickfos" data-linkedin-profile="jackson-dickfos" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="team/jackson-dickfos.jpg" alt="Jackson Dickfos" data-linkedin-profile="jackson-dickfos" style="opacity: 1; filter: none;" onerror="this.src='logo.png'; this.style.opacity='0.3';">
                     </div>
                     <div class="team-info">
                         <h3>Jackson Dickfos</h3>
@@ -162,10 +162,18 @@ function loadLinkedInImages() {
         const profileKey = img.getAttribute('data-linkedin-profile');
         const linkedInUrl = linkedInImages[profileKey];
         if (linkedInUrl) {
+            // Remove any opacity or fade effects
+            img.style.opacity = '1';
+            img.style.filter = 'none';
+            
             // Try LinkedIn image first, fallback to local image
             const tempImg = new Image();
             tempImg.onload = function() {
                 img.src = linkedInUrl;
+                img.style.opacity = '1';
+                img.style.filter = 'none';
+                // Ensure high quality rendering
+                img.style.imageRendering = 'high-quality';
             };
             tempImg.onerror = function() {
                 // Keep original src if LinkedIn image fails
