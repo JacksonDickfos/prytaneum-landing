@@ -1822,6 +1822,14 @@ body:not(.at-top) .navbar::after {
     border-top: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 0 !important;
+}
+
+.team .section-header h2::after,
+.team .section-header p::after {
+    display: none !important;
+    content: none !important;
 }
 
 .team .section-header::before,
@@ -1834,10 +1842,11 @@ body:not(.at-top) .navbar::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    margin-top: 3rem;
+    margin-top: 0 !important;
     margin-bottom: 2rem;
     border: none !important;
     box-shadow: none !important;
+    padding-top: 0 !important;
 }
 
 .team-grid::before,
@@ -1853,7 +1862,7 @@ body:not(.at-top) .navbar::after {
     text-align: center;
     transition: all 0.3s ease;
     border: 1px solid rgba(209, 173, 92, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    box-shadow: none !important;
     position: relative;
     z-index: 1;
 }
@@ -1862,11 +1871,12 @@ body:not(.at-top) .navbar::after {
 .team-card::after {
     display: none !important;
     content: none !important;
+    box-shadow: none !important;
 }
 
 .team-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: none !important;
     border-color: rgba(209, 173, 92, 0.4);
     z-index: 2;
 }
