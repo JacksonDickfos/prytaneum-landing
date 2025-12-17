@@ -1913,6 +1913,7 @@ body:not(.at-top) .navbar::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .team-photo img {
@@ -1925,6 +1926,38 @@ body:not(.at-top) .navbar::after {
     image-rendering: crisp-edges;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+/* Fix Ian Miller's image positioning */
+.team-photo img.ian-miller-photo {
+    object-position: center 25% !important;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+/* Team badge logo */
+.team-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background: var(--pp-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--pp-hearth-gold);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.team-badge .badge-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    opacity: 1 !important;
+    filter: none !important;
 }
 
 .team-info h3 {
