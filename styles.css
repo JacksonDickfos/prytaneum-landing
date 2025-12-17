@@ -1936,13 +1936,9 @@ body:not(.at-top) .navbar::after {
 }
 
 /* Team badge logo - positioned outside the photo circle, relative to team-card */
-.team-card {
-    position: relative;
-}
-
 .team-badge {
     position: absolute;
-    bottom: calc(180px + 1.5rem - 10px);
+    top: calc(180px + 1.5rem - 50px - 10px);
     right: calc(50% - 90px - 10px);
     width: 50px;
     height: 50px;
