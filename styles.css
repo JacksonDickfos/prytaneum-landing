@@ -1935,6 +1935,13 @@ body:not(.at-top) .navbar::after {
     transform: scale(1.6);
 }
 
+/* Zoom out Chris Morino's image slightly */
+.team-photo img.chris-morino-photo {
+    object-position: center center !important;
+    object-fit: cover;
+    transform: scale(0.9);
+}
+
 /* Team badge logo - positioned outside the photo circle, relative to team-card */
 .team-badge {
     position: absolute;
