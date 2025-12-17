@@ -1935,12 +1935,28 @@ body:not(.at-top) .navbar::after {
     transform: scale(1.6);
 }
 
-/* Zoom out Chris Morino's image slightly - use contain to show full image without cropping */
+/* Zoom out Chris Morino's image slightly - wrap in container to allow scale without clipping */
+.team-photo.chris-photo-container {
+    overflow: visible;
+}
+
+.team-photo.chris-photo-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid var(--pp-hearth-gold);
+    pointer-events: none;
+    z-index: 2;
+}
+
 .team-photo img.chris-morino-photo {
     object-position: center center !important;
-    object-fit: contain;
-    width: 90%;
-    height: 90%;
+    object-fit: cover;
+    transform: scale(0.85);
+    position: relative;
+    z-index: 1;
 }
 
 /* Team badge logo - positioned outside the photo circle, relative to team-card */
