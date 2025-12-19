@@ -646,6 +646,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(1352%) hue-rotate(340deg) brightness(96%) contrast(89%);
 }
 
 .service-card h3 {
