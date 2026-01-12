@@ -107,7 +107,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFhkKJOraXNpg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1674842799985?e=1767830400&v=beta&t=PIS5bvhEvj6STEc8ssYQueodN6uzZ5KdF6YlsLOntXM" alt="Ian Miller, MBE, CA" data-linkedin-profile="ian-miller" class="ian-miller-photo" style="opacity: 1; filter: none; object-position: 40% 15%; transform: scale(1.6);" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="" alt="Ian Miller, MBE, CA" data-linkedin-profile="ian-miller" class="ian-miller-photo" style="opacity: 1; filter: none; object-position: 40% 15%; transform: scale(1.6);">
                     </div>
                     <div class="team-badge">
                         <img src="logo.png" alt="Prytaneum Partners" class="badge-logo">
@@ -122,7 +122,7 @@
 
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="https://media.licdn.com/dms/image/v2/C4E03AQGQpr6pl8X_Ow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1524250870633?e=1767830400&v=beta&t=ZH9Ly6_VtpQhkY8bor3wPvscVXN94ULT9tct718F7Vw" alt="Jeff Moyer" data-linkedin-profile="jeff-moyer" style="opacity: 1; filter: none;" onerror="this.src='logo.png'; this.style.opacity='0.3';">
+                        <img src="" alt="Jeff Moyer" data-linkedin-profile="jeff-moyer" style="opacity: 1; filter: none;">
                     </div>
                     <div class="team-badge">
                         <img src="logo.png" alt="Prytaneum Partners" class="badge-logo">
@@ -199,7 +199,7 @@ function loadLinkedInImages() {
         if (linkedInUrl) {
             // Skip if it's already a local file (like Chris's image)
             if (linkedInUrl.startsWith('images/') || linkedInUrl.startsWith('team/')) {
-                // Just ensure opacity and filter are set correctly
+                img.src = linkedInUrl;
                 img.style.opacity = '1';
                 img.style.filter = 'none';
                 return;
@@ -211,6 +211,7 @@ function loadLinkedInImages() {
             
             // Try LinkedIn image first, fallback to local image
             const tempImg = new Image();
+            tempImg.crossOrigin = 'anonymous';
             tempImg.onload = function() {
                 img.src = linkedInUrl;
                 img.style.opacity = '1';
@@ -226,7 +227,13 @@ function loadLinkedInImages() {
                 }
             };
             tempImg.onerror = function() {
-                // Keep original src if LinkedIn image fails
+                // Try to load without CORS restrictions
+                console.log('LinkedIn image failed, trying direct load for:', profileKey);
+                img.src = linkedInUrl;
+                img.onerror = function() {
+                    console.log('Image load failed for:', profileKey);
+                    // Don't set to logo.png - just leave it blank or show a placeholder
+                };
             };
             tempImg.src = linkedInUrl;
         }
