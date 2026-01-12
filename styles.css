@@ -1868,6 +1868,13 @@ body:not(.at-top) .navbar::after {
     content: none !important;
 }
 
+.team .section-header h2 {
+    background: linear-gradient(90deg, var(--pp-hearth-gold) 0%, var(--pp-hearth-gold-deep) 50%, var(--pp-hearth-gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
