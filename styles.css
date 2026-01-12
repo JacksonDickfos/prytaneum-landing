@@ -1941,7 +1941,7 @@ body:not(.at-top) .navbar::after {
 .team-photo img.ian-miller-photo {
     object-position: 30% 15% !important;
     object-fit: cover;
-    transform: scale(1.6) translateX(-10px);
+    transform: scale(1.6) translateX(-7px);
 }
 
 
@@ -2000,6 +2000,12 @@ body:not(.at-top) .navbar::after {
     color: var(--pp-charcoal);
     line-height: 1.6;
     text-align: left;
+}
+
+@media (min-width: 1024px) {
+    .team-role {
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 768px) {
