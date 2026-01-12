@@ -1869,7 +1869,7 @@ body:not(.at-top) .navbar::after {
 }
 
 .team .section-header h2 {
-    background: linear-gradient(90deg, var(--pp-hearth-gold) 0%, #E8C97A 50%, var(--pp-hearth-gold) 100%);
+    background: linear-gradient(90deg, var(--pp-hearth-gold) 0%, var(--pp-hearth-gold) 50%, var(--pp-hearth-gold) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
