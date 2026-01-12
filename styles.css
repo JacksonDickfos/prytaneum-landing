@@ -2002,6 +2002,23 @@ body:not(.at-top) .navbar::after {
     text-align: left;
 }
 
+.team-description-container {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.team-card[data-member] {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card[data-member]:hover {
+    transform: translateY(-8px);
+}
+
 @media (min-width: 1024px) {
     .team-role {
         white-space: nowrap;
