@@ -2025,6 +2025,138 @@ body:not(.at-top) .navbar::after {
     }
 }
 
+/* Team Modal Styles */
+.team-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-modal.active {
+    display: flex;
+}
+
+.team-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.team-modal-content {
+    position: relative;
+    background: var(--pp-white);
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 10001;
+    margin: 20px;
+}
+
+.team-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--pp-charcoal);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 10002;
+}
+
+.team-modal-close:hover {
+    background: var(--pp-deep-cream);
+    color: var(--pp-hearth-gold-deep);
+}
+
+.team-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem 2.5rem 2rem;
+    border-bottom: 1px solid var(--pp-deep-cream);
+}
+
+.team-modal-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--pp-hearth-gold);
+    flex-shrink: 0;
+}
+
+.team-modal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-modal-info {
+    flex: 1;
+}
+
+.team-modal-info h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.75rem;
+    color: var(--pp-charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.team-modal-title {
+    font-size: 1rem;
+    color: var(--pp-hearth-gold-deep);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.team-modal-role {
+    font-size: 0.95rem;
+    color: var(--pp-charcoal);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.team-modal-body {
+    padding: 2rem 2.5rem 2.5rem;
+}
+
+.team-modal-description {
+    font-size: 1rem;
+    color: var(--pp-charcoal);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.team-modal-description .team-description {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.team-modal-description .team-description:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
     .team-grid {
         grid-template-columns: 1fr;
@@ -2038,5 +2170,25 @@ body:not(.at-top) .navbar::after {
     
     .team-card {
         padding: 1.5rem;
+    }
+    
+    .team-modal-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .team-modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .team-modal-body {
+        padding: 1.5rem;
+    }
+    
+    .team-modal-info h2 {
+        font-size: 1.5rem;
     }
 }
