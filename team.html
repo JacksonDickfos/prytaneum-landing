@@ -189,11 +189,30 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Prytaneum Partners. All rights reserved.</p>
+                <p>&copy; <span id="footer-year"></span> Prytaneum Partners. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+<script>
+// Set current year in footer
+(function() {
+    function updateYear() {
+        var yearElement = document.getElementById('footer-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateYear);
+    } else {
+        updateYear();
+    }
+    // Also try immediately and after a short delay as fallback
+    setTimeout(updateYear, 0);
+    setTimeout(updateYear, 100);
+})();
+</script>
 <script>
 // Simple scroll handler using CSS variables
 window.addEventListener("scroll", function() {
