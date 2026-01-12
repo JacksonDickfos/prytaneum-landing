@@ -1979,6 +1979,8 @@ body:not(.at-top) .navbar::after {
     image-rendering: crisp-edges;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    position: relative;
+    z-index: 0;
 }
 
 /* Fix Ian Miller's image positioning */
