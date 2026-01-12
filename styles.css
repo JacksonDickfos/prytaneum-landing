@@ -1923,15 +1923,14 @@ body:not(.at-top) .navbar::after {
     height: 180px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
-    overflow: hidden;
-    border: none;
+    overflow: visible;
+    border: 4px solid transparent;
     background: var(--pp-deep-cream);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 4px;
-    box-sizing: border-box;
+    background-clip: padding-box;
 }
 
 /* Animated gold sheen border */
@@ -1946,29 +1945,24 @@ body:not(.at-top) .navbar::after {
     background: conic-gradient(
         from 0deg,
         var(--pp-hearth-gold) 0deg,
-        var(--pp-hearth-gold-deep) 60deg,
-        #F5D896 120deg,
-        var(--pp-hearth-gold-deep) 180deg,
-        var(--pp-hearth-gold) 240deg,
-        var(--pp-hearth-gold-deep) 300deg,
+        #F5D896 45deg,
+        var(--pp-hearth-gold-deep) 90deg,
+        #F5D896 135deg,
+        var(--pp-hearth-gold) 180deg,
+        #F5D896 225deg,
+        var(--pp-hearth-gold-deep) 270deg,
+        #F5D896 315deg,
         var(--pp-hearth-gold) 360deg
     );
     animation: rotateSheen 3s linear infinite;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
-}
-
-.team-photo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: var(--pp-deep-cream);
-    z-index: 1;
-    pointer-events: none;
+    padding: 4px;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 }
 
 @keyframes rotateSheen {
