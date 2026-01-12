@@ -1924,56 +1924,48 @@ body:not(.at-top) .navbar::after {
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: none;
+    border: 4px solid var(--pp-hearth-gold);
     background: var(--pp-deep-cream);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 4px;
 }
 
 /* Animated gold sheen border - visible rotating shimmer */
 .team-photo::before {
     content: '';
     position: absolute;
-    top: -4px;
-    left: -4px;
-    width: calc(100% + 8px);
-    height: calc(100% + 8px);
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
     border-radius: 50%;
     background: conic-gradient(
         from 0deg,
-        var(--pp-hearth-gold) 0deg,
-        #E8C97A 45deg,
-        var(--pp-hearth-gold) 90deg,
-        #E8C97A 135deg,
-        var(--pp-hearth-gold) 180deg,
-        #E8C97A 225deg,
-        var(--pp-hearth-gold) 270deg,
-        #E8C97A 315deg,
-        var(--pp-hearth-gold) 360deg
+        transparent 0deg,
+        transparent 40deg,
+        var(--pp-hearth-gold) 50deg,
+        #E8C97A 60deg,
+        var(--pp-hearth-gold) 70deg,
+        transparent 80deg,
+        transparent 360deg
     );
-    animation: rotateSheen 3s linear infinite;
-    z-index: 0;
+    animation: rotateSheen 2.5s linear infinite;
+    z-index: 2;
     pointer-events: none;
-    padding: 4px;
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+    opacity: 1;
 }
 
 .team-photo::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
     border-radius: 50%;
-    background: var(--pp-deep-cream);
+    border: 4px solid var(--pp-hearth-gold);
     z-index: 1;
     pointer-events: none;
 }
