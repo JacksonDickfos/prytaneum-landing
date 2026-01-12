@@ -1939,9 +1939,9 @@ body:not(.at-top) .navbar::after {
 
 /* Fix Ian Miller's image positioning */
 .team-photo img.ian-miller-photo {
-    object-position: 33% 15% !important;
+    object-position: 30% 15% !important;
     object-fit: cover;
-    transform: scale(1.6);
+    transform: scale(1.6) translateX(-10px);
 }
 
 
