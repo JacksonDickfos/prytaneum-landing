@@ -493,13 +493,6 @@ body {
     line-height: 1.0;
 }
 
-/* Adjust $500M+ spacing so its description sits level with the others */
-.about-stats .stat:nth-child(2) .stat-number {
-    margin-top: 6px; /* lower the $500M+ metric slightly */
-    margin-bottom: 0.35rem; /* match base metric spacing */
-    line-height: 1.05;
-}
-
 .about-visual {
     display: flex;
     justify-content: center;
