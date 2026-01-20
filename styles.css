@@ -492,15 +492,15 @@ body {
     line-height: 1.0;
 }
 
-/* Nudge $500M+ description up to align vertically with others */
+/* Adjust $500M+ spacing so its description sits level with the others */
 .about-stats .stat:nth-child(2) .stat-number {
-    margin-bottom: 0.15rem;
-    line-height: 0.95;
+    margin-bottom: 0.6rem; /* push description down slightly */
+    line-height: 1.05;
 }
 
 .about-stats .stat:nth-child(2) .stat-label {
     display: inline-block;
-    margin-top: 0.1rem;
+    margin-top: 0.3rem; /* extra space above description to match neighbors */
 }
 
 .about-visual {
