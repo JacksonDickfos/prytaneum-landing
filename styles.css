@@ -474,20 +474,22 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     color: #AA3D1D;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.05;
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--pp-charcoal);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 /* Slightly reduce size of non-monetary metric headings */
 .about-stats .stat:first-child .stat-number,
 .about-stats .stat:last-child .stat-number {
     font-size: 1.8rem;
+    line-height: 1.0;
 }
 
 .about-visual {
