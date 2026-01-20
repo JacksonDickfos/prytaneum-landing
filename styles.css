@@ -486,6 +486,11 @@ body {
     line-height: 1.6; /* ensure consistent vertical gap between stacked description lines */
 }
 
+/* Nudge the middle metric block down so its description aligns with the others */
+.about-stats .stat:nth-child(2) {
+    margin-top: 4px;
+}
+
 /* Slightly reduce size of non-monetary metric headings */
 .about-stats .stat:first-child .stat-number,
 .about-stats .stat:last-child .stat-number {
