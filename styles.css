@@ -492,6 +492,12 @@ body {
     line-height: 1.0;
 }
 
+/* Nudge $500M+ description up to align vertically with others */
+.about-stats .stat:nth-child(2) .stat-number {
+    margin-bottom: 0.15rem;
+    line-height: 0.95;
+}
+
 .about-visual {
     display: flex;
     justify-content: center;
