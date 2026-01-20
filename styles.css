@@ -500,7 +500,7 @@ body {
 
 .about-stats .stat:nth-child(2) .stat-label {
     display: inline-block;
-    margin-top: 0.6rem; /* move description further down to match neighbors */
+    margin-top: 1.1rem; /* move description further down to match neighbors */
 }
 
 .about-visual {
