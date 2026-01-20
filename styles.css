@@ -457,8 +457,8 @@ body {
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     margin-top: 3rem;
     justify-items: center;
 }
@@ -478,10 +478,16 @@ body {
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--pp-charcoal);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Slightly reduce size of non-monetary metric headings */
+.about-stats .stat:nth-child(1) .stat-number,
+.about-stats .stat:nth-child(3) .stat-number {
+    font-size: 1.6rem;
 }
 
 .about-visual {
