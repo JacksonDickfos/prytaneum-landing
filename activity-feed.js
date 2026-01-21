@@ -28,16 +28,23 @@
         img.src = data.image; img.alt = data.title || 'Media item';
         card.appendChild(img);
       }
-      const p = document.createElement('p');
-      if (data.url){
-        const a = document.createElement('a');
-        a.href = data.url; a.textContent = data.title || 'View post';
-        a.className = 'card-link';
-        p.appendChild(a);
-      } else {
-        p.textContent = data.title || '';
+      if (data.title){
+        const titleP = document.createElement('p');
+        if (data.url){
+          const a = document.createElement('a');
+          a.href = data.url; a.textContent = data.title;
+          a.className = 'card-link';
+          titleP.appendChild(a);
+        } else {
+          titleP.textContent = data.title;
+        }
+        card.appendChild(titleP);
       }
-      card.appendChild(p);
+      if (data.description){
+        const descP = document.createElement('p');
+        descP.textContent = data.description;
+        card.appendChild(descP);
+      }
     }
   }
 
