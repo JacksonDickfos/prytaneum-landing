@@ -1887,8 +1887,9 @@ body:not(.at-top) .navbar::after {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2.5rem;
     margin-top: 0 !important;
     margin-bottom: 2rem;
@@ -1913,6 +1914,8 @@ body:not(.at-top) .navbar::after {
     box-shadow: none !important;
     position: relative;
     z-index: 1;
+    flex: 0 1 320px;
+    max-width: 360px;
 }
 
 .team-card::before,
