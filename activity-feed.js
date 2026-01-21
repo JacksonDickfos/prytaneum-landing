@@ -23,6 +23,15 @@
       const card = slot.querySelector('.fund-card');
       if (!card) continue;
       card.innerHTML = '';
+      
+      // Make entire card clickable if URL exists
+      if (data.url){
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function() {
+          window.open(data.url, '_blank', 'noopener,noreferrer');
+        });
+      }
+      
       if (data.image){
         const img = document.createElement('img');
         img.src = data.image; img.alt = data.title || 'Media item';
@@ -30,13 +39,9 @@
       }
       if (data.title){
         const titleP = document.createElement('p');
+        titleP.textContent = data.title;
         if (data.url){
-          const a = document.createElement('a');
-          a.href = data.url; a.textContent = data.title;
-          a.className = 'card-link';
-          titleP.appendChild(a);
-        } else {
-          titleP.textContent = data.title;
+          titleP.style.cursor = 'pointer';
         }
         card.appendChild(titleP);
       }
