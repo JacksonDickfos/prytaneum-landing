@@ -483,12 +483,7 @@ body {
     color: var(--pp-charcoal);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    line-height: 1.6; /* ensure consistent vertical gap between stacked description lines */
-}
-
-/* Nudge the middle metric block down so its description aligns with the others */
-.about-stats .stat:nth-child(2) {
-    margin-top: 15px;
+    line-height: 1.6; /* consistent vertical gap between stacked description lines */
 }
 
 /* Slightly reduce size of non-monetary metric headings */
