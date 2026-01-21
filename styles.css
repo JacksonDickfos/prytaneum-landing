@@ -688,18 +688,18 @@ body {
 .investor-icon-badge {
     width: 80px;
     height: 80px;
-    background: var(--pp-navy-blue);
+    background: #AA3D1D; /* Prytaneum red background */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    border: 2px solid var(--pp-navy-blue);
+    border: 2px solid #AA3D1D;
 }
 
 .investor-icon-badge i {
     font-size: 2rem;
-    color: #AA3D1D; /* Prytaneum red for icons */
+    color: var(--pp-white); /* white icon on red background */
 }
 
 .investor-card h3 {
@@ -795,18 +795,18 @@ body {
 .modal-icon-badge {
     width: 80px;
     height: 80px;
-    background: var(--pp-navy-blue);
+    background: #AA3D1D; /* Prytaneum red background */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    border: 2px solid var(--pp-navy-blue);
+    border: 2px solid #AA3D1D;
 }
 
 .modal-icon-badge i {
     font-size: 2rem;
-    color: #AA3D1D; /* Prytaneum red in modals as well */
+    color: var(--pp-white); /* white icon in modals */
 }
 
 .investor-modal .modal-content h3 {
