@@ -2209,6 +2209,7 @@ body:not(.at-top) .navbar::after {
 .team-modal-description .team-description {
     margin-bottom: 1.25rem;
     font-size: 1rem;
+    text-align: left; /* ensure modal paragraphs are left-aligned even though card snippets are centered */
 }
 
 .team-modal-description .team-description:last-child {
