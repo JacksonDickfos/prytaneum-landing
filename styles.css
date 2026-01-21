@@ -1887,9 +1887,9 @@ body:not(.at-top) .navbar::after {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 340px));
-    justify-content: center; /* center the full grid so last row is centered */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center each row; last row with 2 cards centers automatically */
     gap: 2.5rem;
     margin-top: 0 !important;
     margin-bottom: 2rem;
@@ -1914,6 +1914,8 @@ body:not(.at-top) .navbar::after {
     box-shadow: none !important;
     position: relative;
     z-index: 1;
+    width: 340px;       /* fixed, identical width for every card */
+    flex: 0 0 340px;    /* prevent flex from stretching or shrinking cards */
 }
 
 .team-card::before,
@@ -2214,7 +2216,9 @@ body:not(.at-top) .navbar::after {
 
 @media (max-width: 768px) {
     .team-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 2rem;
     }
     
@@ -2225,6 +2229,9 @@ body:not(.at-top) .navbar::after {
     
     .team-card {
         padding: 1.5rem;
+        width: 100%;
+        max-width: 360px;
+        flex: 0 0 auto;
     }
     
     .team-modal-header {
