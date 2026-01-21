@@ -489,7 +489,7 @@ body {
 /* Slightly reduce visual size of the outer metric headings without moving their descriptions */
 .about-stats .stat:first-child .stat-number,
 .about-stats .stat:last-child .stat-number {
-    font-size: 2.1rem;   /* smaller than $500M+ */
+    font-size: 2.0rem;   /* smaller than $500M+ */
     padding-top: 0.4rem; /* keep total block height (and description baseline) consistent */
 }
 
