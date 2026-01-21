@@ -486,6 +486,13 @@ body {
     line-height: 1.6; /* consistent vertical gap between stacked description lines */
 }
 
+/* Slightly reduce visual size of the outer metric headings without moving their descriptions */
+.about-stats .stat:first-child .stat-number,
+.about-stats .stat:last-child .stat-number {
+    font-size: 2.1rem;   /* smaller than $500M+ */
+    padding-top: 0.4rem; /* keep total block height (and description baseline) consistent */
+}
+
 .about-visual {
     display: flex;
     justify-content: center;
