@@ -486,13 +486,6 @@ body {
     line-height: 1.6; /* consistent vertical gap between stacked description lines */
 }
 
-/* Slightly reduce size of non-monetary metric headings */
-.about-stats .stat:first-child .stat-number,
-.about-stats .stat:last-child .stat-number {
-    font-size: 1.8rem;
-    line-height: 1.0;
-}
-
 .about-visual {
     display: flex;
     justify-content: center;
