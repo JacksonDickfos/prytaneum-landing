@@ -703,7 +703,7 @@ body {
 }
 
 .investor-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: 1rem;
     color: var(--pp-navy-blue);
     font-weight: 600;
@@ -725,6 +725,11 @@ body {
 @media (min-width: 969px) {
     .investors-grid .investor-card {
         width: 100%;
+    }
+    
+    /* Keep customer card titles on one line on desktop */
+    .investor-card h3 {
+        white-space: nowrap;
     }
 }
 
