@@ -1853,6 +1853,7 @@ body:not(.at-top) .navbar::after {
 .team .container {
     border: none !important;
     box-shadow: none !important;
+    max-width: 1320px; /* allow 3 wider cards in first row */
 }
 
 .team .container::before,
