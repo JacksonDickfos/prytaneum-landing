@@ -1914,8 +1914,8 @@ body:not(.at-top) .navbar::after {
     box-shadow: none !important;
     position: relative;
     z-index: 1;
-    width: 340px;       /* fixed, identical width for every card */
-    flex: 0 0 340px;    /* prevent flex from stretching or shrinking cards */
+    width: 380px;       /* slightly wider cards to avoid awkward wrapping */
+    flex: 0 0 380px;    /* fixed width per card so all are identical */
 }
 
 .team-card::before,
@@ -2056,7 +2056,7 @@ body:not(.at-top) .navbar::after {
     font-size: 0.95rem;
     color: var(--pp-charcoal);
     line-height: 1.6;
-    text-align: left;
+    text-align: center; /* center the 3-line preview text on each card */
 }
 
 .team-description-container {
