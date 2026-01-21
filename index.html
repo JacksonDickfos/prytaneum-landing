@@ -592,39 +592,5 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 })();
 </script>
 <script>
-// Make Our Activity cards clickable using previous button URLs
-(function() {
-    const mappings = [
-        {
-            selector: '.resources-content .fund-links:nth-of-type(1) .fund-card',
-            href: 'https://www.valkyrie-revival.com/'
-        },
-        {
-            selector: '.resources-content .linkedin-embed .linkedin-placeholder',
-            href: 'https://www.linkedin.com/pulse/embracing-ai-revolution-celebrating-job-creation-over-nepcc/'
-        },
-        {
-            selector: '.resources-content .fund-links:last-child .fund-card',
-            href: 'https://www.linkedin.com/pulse/why-ai-gold-rush-risks-corporate-catastrophes-prytaneum-partners-dwisc/'
-        }
-    ];
-
-    mappings.forEach(({ selector, href }) => {
-        const el = document.querySelector(selector);
-        if (!el) return;
-        el.dataset.href = href;
-        el.setAttribute('role', 'link');
-        el.setAttribute('tabindex', '0');
-        el.addEventListener('click', () => {
-            window.open(href, '_blank');
-        });
-        el.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                window.open(href, '_blank');
-            }
-        });
-    });
-})();
 </script></body>
 </html> 
