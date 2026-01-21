@@ -26,9 +26,10 @@
       
       // Make entire card clickable if URL exists
       if (data.url){
+        const url = data.url; // Capture URL in closure
         card.style.cursor = 'pointer';
         card.addEventListener('click', function() {
-          window.open(data.url, '_blank', 'noopener,noreferrer');
+          window.open(url, '_blank', 'noopener,noreferrer');
         });
       }
       
@@ -37,17 +38,14 @@
         img.src = data.image; img.alt = data.title || 'Media item';
         card.appendChild(img);
       }
-      if (data.title){
-        const titleP = document.createElement('p');
-        titleP.textContent = data.title;
-        if (data.url){
-          titleP.style.cursor = 'pointer';
-        }
-        card.appendChild(titleP);
-      }
       if (data.description){
         const descP = document.createElement('p');
         descP.textContent = data.description;
+        descP.style.display = '-webkit-box';
+        descP.style.webkitLineClamp = '4';
+        descP.style.webkitBoxOrient = 'vertical';
+        descP.style.overflow = 'hidden';
+        descP.style.textOverflow = 'ellipsis';
         card.appendChild(descP);
       }
     }
