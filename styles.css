@@ -12,6 +12,7 @@
     --pp-cream-1: #FFFBF7; /* light off-white */
     --pp-cream-2: #F9F1E6; /* mid cream */
     --pp-cream-3: #F3E6D6; /* deeper cream */
+    --pp-navy-blue: #1B2951; /* deep navy for investor section */
 }
 
 /* Reset and Base Styles */
@@ -627,6 +628,223 @@ body {
 
 .service-card:hover::before {
     left: 100%;
+}
+
+/* Investors Section */
+.investors {
+    padding: 3rem 0 6rem 0;
+    background: #FFFFFF;
+}
+
+.investors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.investor-card {
+    background: var(--pp-white);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.investor-card .card-preview {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.6;
+    max-height: calc(1.6em * 3);
+}
+
+.investor-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, transparent 50%, rgba(192, 192, 192, 0.1) 50%);
+    border-radius: 0 0 0 16px;
+}
+
+.investor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.investor-icon-badge {
+    width: 80px;
+    height: 80px;
+    background: var(--pp-navy-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 2px solid var(--pp-navy-blue);
+}
+
+.investor-icon-badge i {
+    font-size: 2rem;
+    color: var(--pp-white);
+}
+
+.investor-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--pp-navy-blue);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.investor-card p {
+    color: var(--pp-charcoal);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 969px) {
+    .investors-grid .investor-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 968px) {
+    .investors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .investors-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Investor Card Modal Styles */
+.investor-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    animation: fadeInInvestors 0.3s ease;
+}
+
+.investor-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.investor-modal .modal-content {
+    background-color: var(--pp-white);
+    margin: auto;
+    padding: 3rem;
+    border-radius: 16px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUpInvestors 0.3s ease;
+    text-align: center;
+}
+
+.investor-modal .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--pp-charcoal);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.investor-modal .modal-close:hover {
+    color: var(--pp-navy-blue);
+}
+
+.modal-icon-badge {
+    width: 80px;
+    height: 80px;
+    background: var(--pp-navy-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 2px solid var(--pp-navy-blue);
+}
+
+.modal-icon-badge i {
+    font-size: 2rem;
+    color: var(--pp-white);
+}
+
+.investor-modal .modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--pp-navy-blue);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.investor-modal .modal-content p {
+    color: var(--pp-charcoal);
+    line-height: 1.7;
+    font-size: 1rem;
+    text-align: left;
+}
+
+@keyframes fadeInInvestors {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpInvestors {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .investor-modal .modal-content {
+        padding: 2rem 1.5rem;
+        width: 95%;
+    }
+    
+    .investor-modal .modal-close {
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 1.5rem;
+    }
 }
 
 .service-card:hover {
