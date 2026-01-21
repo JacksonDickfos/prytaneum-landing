@@ -661,12 +661,12 @@ body {
 
 .investor-card .card-preview {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.6;
-    max-height: calc(1.6em * 3);
+    max-height: calc(1.6em * 2);
 }
 
 .investor-card::after {
@@ -699,7 +699,7 @@ body {
 
 .investor-icon-badge i {
     font-size: 2rem;
-    color: var(--pp-white);
+    color: #AA3D1D; /* Prytaneum red for icons */
 }
 
 .investor-card h3 {
@@ -714,6 +714,12 @@ body {
     color: var(--pp-charcoal);
     line-height: 1.6;
     font-size: 0.95rem;
+}
+
+.investor-subtitle {
+    margin-top: 0.35rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
 }
 
 @media (min-width: 969px) {
@@ -800,7 +806,7 @@ body {
 
 .modal-icon-badge i {
     font-size: 2rem;
-    color: var(--pp-white);
+    color: #AA3D1D; /* Prytaneum red in modals as well */
 }
 
 .investor-modal .modal-content h3 {
