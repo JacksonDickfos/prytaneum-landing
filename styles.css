@@ -488,7 +488,7 @@ body {
     color: var(--pp-charcoal);
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.2; /* consistent vertical gap between stacked description lines */
+    line-height: 1.3; /* small but clear gap between stacked description lines */
     margin-top: 1rem;
 }
 
