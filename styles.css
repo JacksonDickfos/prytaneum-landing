@@ -484,7 +484,7 @@ body {
     color: var(--pp-charcoal);
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.6; /* consistent vertical gap between stacked description lines */
+    line-height: 1.45; /* consistent vertical gap between stacked description lines */
 }
 
 /* Slightly reduce visual size of the outer metric headings without moving their descriptions */
