@@ -467,7 +467,11 @@ body {
 .stat {
     color: var(--pp-charcoal);
     text-align: center;
-    color: var(--pp-charcoal);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 120px;
 }
 
 .stat-number {
@@ -475,8 +479,8 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     color: #AA3D1D;
-    margin-bottom: 1.0rem;
-    line-height: 1.05;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
 .stat-label {
@@ -484,14 +488,15 @@ body {
     color: var(--pp-charcoal);
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.0; /* consistent vertical gap between stacked description lines */
+    line-height: 1.2; /* consistent vertical gap between stacked description lines */
+    margin-top: 1rem;
 }
 
 /* Slightly reduce visual size of the outer metric headings without moving their descriptions */
 .about-stats .stat:first-child .stat-number,
 .about-stats .stat:last-child .stat-number {
     font-size: 2.0rem;   /* smaller than $500M+ */
-    padding-top: 0.4rem; /* keep total block height (and description baseline) consistent */
+    padding-top: 0;      /* no extra vertical offset; rely on flex alignment */
 }
 
 .about-visual {
