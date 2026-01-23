@@ -483,7 +483,7 @@ body {
     font-size: 0.9rem;
     color: var(--pp-charcoal);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     line-height: 1.6; /* consistent vertical gap between stacked description lines */
 }
 
