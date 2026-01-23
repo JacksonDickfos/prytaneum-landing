@@ -433,6 +433,11 @@ body {
     margin-bottom: 0;
 }
 
+/* Align spacing under "Who We Are" title with other section headers */
+.about .section-header {
+    margin-bottom: 1rem;
+}
+
 /* About Section */
 .about {
     padding: 6rem 0;
