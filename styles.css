@@ -2357,11 +2357,6 @@ body:not(.at-top) .navbar::after {
     text-overflow: ellipsis;
 }
 
-/* Hide bio preview on grid cards; content remains for profile modal */
-.team-card .team-description-container {
-    display: none;
-}
-
 .team-card[data-member] {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
