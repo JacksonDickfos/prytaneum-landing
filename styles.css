@@ -2275,14 +2275,6 @@ body:not(.at-top) .navbar::after {
     border-radius: 50%;
 }
 
-/* Fix Ian Miller's image positioning */
-.team-photo img.ian-miller-photo {
-    object-position: 30% 15% !important;
-    object-fit: cover;
-    transform: scale(1.6) translateX(-7px);
-}
-
-
 /* Team badge logo - positioned outside the photo circle, relative to team-card */
 .team-badge {
     position: absolute;
