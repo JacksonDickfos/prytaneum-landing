@@ -1625,6 +1625,11 @@ body {
 .contact .section-header p {
     color: #ccccc9;
 }
+
+.contact .section-header .connect-intro {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
 .contact .section-header a {
     color: var(--pp-hearth-gold);
 }
