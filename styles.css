@@ -1748,7 +1748,7 @@ h1, h2, h3, h4, h5, h6,
 /* Contact form card styling inspired by provided design */
 .contact-form .form-card {
     height: 100%;
-	background: var(--pp-white);
+	background: #484b4d;
 	border: 1px solid rgba(209, 173, 92, 0.2);
 	border-radius: 16px;
 	padding: 2rem;
@@ -1777,6 +1777,22 @@ h1, h2, h3, h4, h5, h6,
 	transform: translateY(-27.5px);
 	border-color: var(--pp-hearth-gold);
 	box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
+}
+
+.contact-form .form-card label {
+    color: #ccccc9;
+}
+
+.contact-form .form-card input,
+.contact-form .form-card textarea {
+    background: rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    border-color: rgba(209, 173, 92, 0.35);
+}
+
+.contact-form .form-card input::placeholder,
+.contact-form .form-card textarea::placeholder {
+    color: rgba(204, 204, 201, 0.65);
 }
 
 .contact-form .form-actions {
