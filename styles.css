@@ -166,7 +166,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    background: #D6D2C4;
+    background: #2e3235;
     overflow: hidden;
 }
 
@@ -209,11 +209,11 @@ body {
 
 .ecg-line {
     fill: none;
-    stroke: #AA3D1D;
+    stroke: url(#ecgGoldGradient);
     stroke-width: 2.5;
     stroke-linejoin: round;
     stroke-linecap: round;
-    filter: drop-shadow(0 0 6px rgba(170, 61, 29, 0.35));
+    filter: drop-shadow(0 0 6px rgba(209, 173, 92, 0.4));
     /* Draw-on animation */
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
@@ -1304,7 +1304,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #2F3235;
+    background: #2e3235;
     color: var(--pp-charcoal);
     padding: 3rem 0 1rem;
     margin-top: 0;
@@ -1515,9 +1515,9 @@ body {
     background: var(--pp-white);
 }
 
-/* 1) Hero: white */
+/* 1) Hero: charcoal (matches footer) */
 .hero {
-    background: #D6D2C4;
+    background: #2e3235;
     color: var(--pp-charcoal);
 }
 .hero .hero-text,
@@ -1575,7 +1575,7 @@ body {
 /* 6) Contact: cream */
 /* 7) Footer: white */
 .footer {
-    background: #2F3235;
+    background: #2e3235;
     color: var(--pp-charcoal);
 }
 .footer .footer-nav a {
@@ -1671,7 +1671,7 @@ h1, h2, h3, h4, h5, h6,
     
     .hero {
         padding-top: 80px;
-        background: #D6D2C4;
+        background: #2e3235;
     }
     
 .hero-title {
