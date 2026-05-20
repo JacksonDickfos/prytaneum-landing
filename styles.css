@@ -301,7 +301,18 @@ body {
 }
 
 .hero-operating-line + .hero-description {
-    margin-top: 1.75rem;
+    margin-top: 0;
+}
+
+.hero-divider {
+    width: 0.5cm;
+    height: 1px;
+    border: none;
+    margin: 0.65rem auto;
+    padding: 0;
+    background: #ccccc9;
+    opacity: 0.85;
+    flex-shrink: 0;
 }
 
 .hero-subtitle {
@@ -325,6 +336,7 @@ body {
 
 .hero-fund-amount {
     color: var(--pp-hearth-gold);
+    font-weight: 700;
 }
 .hero-cta {
     display: flex;
@@ -2179,6 +2191,7 @@ body:not(.at-top) .navbar::after {
 
 .hero .hero-fund-amount {
     color: var(--pp-hearth-gold) !important;
+    font-weight: 700 !important;
 }
 
 /* Hero headline: exactly two lines from tablet up */
