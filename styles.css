@@ -283,7 +283,7 @@ body {
     font-size: clamp(0.95rem, 2.2vw, 1.3rem);
     line-height: 1.35;
     margin: 0;
-    color: #4F555A;
+    color: #FFFFFF;
     max-width: 32em;
     transform: translateY(-180px);
 }
@@ -305,7 +305,7 @@ body {
 .hero-description {
     font-size: 1.1rem;
     margin: 0.25rem 0; /* tighter vertical spacing */
-    color: var(--pp-charcoal);
+    color: #FFFFFF;
     line-height: 1.6; /* slightly tighter line height */
     transform: translateY(-180px);
 }
@@ -1518,12 +1518,17 @@ body {
 /* 1) Hero: charcoal (matches footer) */
 .hero {
     background: #2e3235;
-    color: var(--pp-charcoal);
+    color: #FFFFFF;
 }
 .hero .hero-text,
 .hero .hero-description,
 .hero .section-header p {
-    color: var(--pp-charcoal);
+    color: #FFFFFF;
+}
+.hero .hero-title,
+.hero .hero-title .gradient-text,
+.hero .hero-operating-line {
+    color: #FFFFFF;
 }
 
 /* 2) About: cream */
@@ -1966,13 +1971,13 @@ body:not(.at-top) .navbar::after {
     line-height: 1.1;
     transform: translateY(-180px);
     padding: 10px 0;
-    color: #1B2951;
-    text-shadow: 0 2px 4px rgba(27, 41, 81, 0.3);
+    color: #FFFFFF;
+    text-shadow: none;
 }    
 .hero-description {
     font-size: 1.1rem;
     margin: 0.25rem 0; /* tighter vertical spacing */
-    color: var(--pp-charcoal);
+    color: #FFFFFF;
     line-height: 1.6;
     transform: translateY(-180px);
 }    
@@ -2020,7 +2025,7 @@ body:not(.at-top) .navbar::after {
 .hero-description {
     font-size: 1.1rem;
     margin: 0.25rem 0; /* tighter vertical spacing */
-    color: var(--pp-charcoal);
+    color: #FFFFFF;
     line-height: 1.6;
     transform: translateY(-180px);
 }    
@@ -2072,7 +2077,7 @@ body:not(.at-top) .navbar::after {
 
 /* Ensure hero tagline words color */
 .hero .hero-tagline .tagline-word {
-    color: #4F555A !important;
+    color: #FFFFFF !important;
 }
 
 /* Hero CTA button color override */
