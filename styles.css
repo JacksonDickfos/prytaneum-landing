@@ -43,14 +43,12 @@ body {
 
 /* Navigation */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: static;
     width: 100%;
     background: transparent;
     backdrop-filter: none;
     z-index: 1000;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     border-bottom: none;
     box-shadow: none !important;
 }
@@ -2208,7 +2206,7 @@ body:not(.at-top) .navbar::after {
 
 /* Team Section */
 .team {
-    padding: 8rem 0 8rem 0;
+    padding: 6rem 0 8rem 0;
     background: #212325 !important;
     min-height: 80vh;
     border: none !important;
