@@ -762,7 +762,7 @@ body {
 
 .investor-icon-badge i {
     font-size: 2rem;
-    color: #212325;
+    color: #FFFFFF;
 }
 
 .investor-card h3 {
@@ -874,7 +874,7 @@ body {
 
 .modal-icon-badge i {
     font-size: 2rem;
-    color: #212325;
+    color: #FFFFFF;
 }
 
 .investor-modal .modal-content h3 {
@@ -1213,7 +1213,8 @@ body {
 /* Contact Section */
 .contact {
     padding: 6rem 0 4rem 0;
-    background: #D6D2C4;
+    background: #212325;
+    color: #ccccc9;
 }
 
 .contact-content {
@@ -1600,7 +1601,23 @@ body {
     color: var(--pp-charcoal);
 }
 
-/* 6) Contact: cream */
+/* 6) Contact: charcoal (matches hero) */
+.contact {
+    background: #212325;
+    color: #ccccc9;
+}
+.contact .section-header h2 {
+    color: #FFFFFF;
+}
+.contact .section-header p {
+    color: #ccccc9;
+}
+.contact .section-header a {
+    color: var(--pp-hearth-gold);
+}
+.contact .section-header a:hover {
+    color: #FFFFFF;
+}
 /* 7) Footer: white */
 .footer {
     background: #2e3235;
@@ -2105,9 +2122,8 @@ body:not(.at-top) .navbar::after {
     }
 }
 
-/* Section header colors for Services and Contact */
-.services .section-header h2,
-.contact .section-header h2 {
+/* Section header colors for Services */
+.services .section-header h2 {
     color: #4F555A;
 }
 
