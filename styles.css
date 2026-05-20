@@ -1366,8 +1366,8 @@ body {
 
 .company-name {
     color: #9B8A66;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
     font-size: 1.5rem;
 }
 
@@ -2261,6 +2261,11 @@ body:not(.at-top) .navbar::after {
 }
 
 /* Footer gold sheen text (match logo) */
+.footer .company-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
 .footer .company-name,
 .footer .company-slogan,
 .footer .footer-nav a {
