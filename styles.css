@@ -414,7 +414,7 @@ body {
 .grid-item:hover {
     transform: translateY(-27.5px);
     background: rgba(209, 173, 92, 0.1);
-    border-color: #AA3D1D;
+    border-color: var(--pp-hearth-gold);
 }
 
 .grid-item i {
@@ -516,7 +516,7 @@ body {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #AA3D1D;
+    color: var(--pp-hearth-gold);
     margin-bottom: 0;
     line-height: 1;
 }
@@ -665,7 +665,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(170, 61, 29, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(209, 173, 92, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
@@ -710,7 +710,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(170, 61, 29, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(209, 173, 92, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
@@ -747,18 +747,18 @@ body {
 .investor-icon-badge {
     width: 80px;
     height: 80px;
-    background: #AA3D1D; /* Prytaneum red background */
+    background: var(--pp-hearth-gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    border: 2px solid #AA3D1D;
+    border: 2px solid var(--pp-hearth-gold);
 }
 
 .investor-icon-badge i {
     font-size: 2rem;
-    color: var(--pp-white); /* white icon on red background */
+    color: #212325;
 }
 
 .investor-card h3 {
@@ -859,18 +859,18 @@ body {
 .modal-icon-badge {
     width: 80px;
     height: 80px;
-    background: #AA3D1D; /* Prytaneum red background */
+    background: var(--pp-hearth-gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    border: 2px solid #AA3D1D;
+    border: 2px solid var(--pp-hearth-gold);
 }
 
 .modal-icon-badge i {
     font-size: 2rem;
-    color: var(--pp-white); /* white icon in modals */
+    color: #212325;
 }
 
 .investor-modal .modal-content h3 {
@@ -919,8 +919,8 @@ body {
 
 .service-card:hover {
     transform: translateY(-27.5px);
-    border-color: #AA3D1D;
-    box-shadow: 0 10px 30px rgba(170, 61, 29, 0.2);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
 .service-icon {
@@ -936,7 +936,7 @@ body {
 
 .service-icon i {
     font-size: 3rem;
-    color: #AA3D1D;
+    color: var(--pp-hearth-gold);
 }
 
 .service-icon img {
@@ -945,7 +945,7 @@ body {
     max-width: 4.5rem;
     max-height: 4.5rem;
     object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(18%) sepia(95%) saturate(2000%) hue-rotate(345deg) brightness(0.85) contrast(1.05);
+    filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(746%) hue-rotate(358deg) brightness(91%) contrast(88%);
 }
 
 .service-card h3 {
@@ -1038,7 +1038,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(170, 61, 29, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(209, 173, 92, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
@@ -1048,8 +1048,8 @@ body {
 
 .linkedin-placeholder:hover {
     transform: translateY(-27.5px);
-    border-color: #AA3D1D;
-    box-shadow: 0 10px 30px rgba(170, 61, 29, 0.2);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
 .linkedin-placeholder i {
@@ -1089,7 +1089,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(170, 61, 29, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(209, 173, 92, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
@@ -1099,8 +1099,8 @@ body {
 
 .fund-card:hover {
     transform: translateY(-27.5px);
-    border-color: #AA3D1D;
-    box-shadow: 0 10px 30px rgba(170, 61, 29, 0.2);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
 .fund-card h3 {
@@ -1262,7 +1262,7 @@ body {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #AA3D1D;
+    border-color: var(--pp-hearth-gold);
     box-shadow: 0 0 0 3px rgba(209, 173, 92, 0.1);
 }
 
@@ -1736,8 +1736,8 @@ h1, h2, h3, h4, h5, h6,
 
 .contact-form .form-card:hover {
 	transform: translateY(-27.5px);
-	border-color: #AA3D1D;
-	box-shadow: 0 10px 30px rgba(170, 61, 29, 0.2);
+	border-color: var(--pp-hearth-gold);
+	box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
 .contact-form .form-actions {
@@ -1745,8 +1745,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .contact-form .btn-primary {
-    color: #FFFFFF !important;
-    color: var(--pp-white);
+    color: #212325 !important;
 	width: 100%;
     height: 48px;
     display: flex;
@@ -1758,14 +1757,15 @@ h1, h2, h3, h4, h5, h6,
     border: none;
     cursor: pointer;
     box-sizing: border-box;
-    background: #AA3D1D;
-    box-shadow: 0 4px 8px rgba(170, 61, 29, 0.3);
+    background: var(--pp-hearth-gold);
+    box-shadow: 0 4px 14px rgba(209, 173, 92, 0.35);
     transition: all 0.3s ease;
 }
 
 .contact-form .btn-primary:hover {
-    background: #8F3218;
-    box-shadow: 0 6px 12px rgba(143, 50, 24, 0.4);
+    background: var(--pp-hearth-gold-deep);
+    color: #FFFFFF !important;
+    box-shadow: 0 6px 18px rgba(209, 173, 92, 0.45);
     transform: translateY(-2px);
 }
 
@@ -2115,14 +2115,14 @@ body:not(.at-top) .navbar::after {
 
 /* Card link styling */
 .card-link {
-    color: #AA3D1D;
+    color: var(--pp-hearth-gold);
     text-decoration: underline;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .card-link:hover {
-    color: #8F3218;
+    color: var(--pp-hearth-gold-deep);
     text-decoration: underline;
 }
 .fund-card:focus,
