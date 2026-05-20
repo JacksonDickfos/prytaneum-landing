@@ -1568,12 +1568,12 @@ body {
         height: 100px;
     }
 
-    .about-team-name {
-        font-size: 0.85rem;
+    .about .about-team .about-team-name {
+        font-size: 1rem;
     }
 
     .about .about-team .about-team-title {
-        font-size: 0.75rem;
+        font-size: 1rem;
         max-width: 168px;
         color: #ccccc9;
     }
@@ -1665,7 +1665,7 @@ body {
 /* Who We Are team previews — must beat .about-text paragraph styles */
 .about .about-team .about-team-name {
     font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--pp-charcoal);
     margin: 0 0 0.35rem;
@@ -1675,7 +1675,7 @@ body {
 
 .about .about-team .about-team-title {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: #ccccc9;
     margin: 0;
