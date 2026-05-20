@@ -547,7 +547,7 @@ body {
 
 .about-team-name {
     font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--pp-charcoal);
     margin: 0 0 0.35rem;
