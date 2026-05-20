@@ -190,7 +190,7 @@ body {
     left: 0;
     width: 100%;
     height: 200px;
-    transform: translateY(calc(-50% - 495px));
+    transform: translateY(calc(-50% - 355px));
     z-index: 1;
     overflow: hidden;
     opacity: 0.85;
@@ -238,7 +238,6 @@ body {
     padding: 2rem;
     position: relative;
     z-index: 20;
-    transform: translateY(-140px);
 }.hero-text {
     display: flex;
     flex-direction: column;
@@ -247,7 +246,7 @@ body {
     width: 100%;
     gap: 1rem;
     margin-top: 1rem;
-    transform: none;
+    transform: translateY(-140px);
 }
 
 /* Ensure proper spacing for description text */
@@ -392,7 +391,7 @@ body {
     align-items: center;
     width: 100%;
     margin-bottom: 0.5rem;
-    transform: none;
+    transform: translateY(24px);
 }
 
 .grid-item {
@@ -1920,12 +1919,12 @@ body:not(.at-top) .navbar::after {
     .hero-visual { margin-bottom: 0.25rem; }
     .hero-tagline { bottom: -10px; }
 
-    .hero-content {
+    .hero-text {
         transform: translateY(-50px);
     }
 
-    .ecg-background {
-        transform: translateY(calc(-50% - 405px));
+    .hero-visual {
+        transform: translateY(30px);
     }
 }
 
@@ -1946,9 +1945,16 @@ body:not(.at-top) .navbar::after {
 
 .hero .hero-operating-line,
 .hero .hero-description,
-.hero .hero-cta,
-.hero .hero-text {
+.hero .hero-cta {
     transform: none !important;
+}
+
+.hero .hero-text {
+    transform: translateY(-140px) !important;
+}
+
+.hero .hero-visual {
+    transform: translateY(24px) !important;
 }
 
 
