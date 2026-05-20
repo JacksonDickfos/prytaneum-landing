@@ -1579,7 +1579,7 @@ body {
 
     .about .about-team .about-team-title {
         font-size: 0.875rem;
-        max-width: 140px;
+        max-width: 154px;
         color: var(--pp-hearth-gold-deep) !important;
     }
     
@@ -1685,7 +1685,7 @@ body {
     color: var(--pp-hearth-gold-deep) !important;
     margin: 0;
     line-height: 1.35;
-    max-width: 148px;
+    max-width: 174px;
 }
 
 /* 3) Services: white */
