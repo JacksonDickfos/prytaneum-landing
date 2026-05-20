@@ -517,10 +517,8 @@ body {
     align-items: flex-start;
     gap: 1.375rem 1.5rem;
     margin-top: 3rem;
-    width: max-content;
+    width: 100%;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .about-team-member {
@@ -1560,12 +1558,22 @@ body {
     }
 
     .about-team {
-        gap: 1.375rem 1.175rem;
+        width: 100%;
+        max-width: 100%;
+        gap: 1.25rem 0.75rem;
+        box-sizing: border-box;
     }
 
     .about-team-member {
         width: 154px;
-        max-width: 154px;
+        max-width: calc(50% - 0.75rem);
+        flex: 0 1 154px;
+        min-width: 0;
+    }
+
+    .about-team-name,
+    .about .about-team .about-team-name {
+        white-space: normal;
     }
 
     .about-team-photo {
@@ -2883,4 +2891,13 @@ body.team-page .footer {
 /* Who We Are team role titles — enforce deep gold (beats inherited .about color) */
 .about .about-text .about-team p.about-team-title {
     color: var(--pp-hearth-gold-deep) !important;
+}
+
+/* Desktop only: cluster team row without forcing mobile overflow */
+@media (min-width: 769px) {
+    .about-team {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
