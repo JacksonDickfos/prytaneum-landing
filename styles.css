@@ -2179,13 +2179,16 @@ body:not(.at-top) .navbar::after {
 
 /* Hero CTA button color override */
 .hero .btn-primary {
-    background: #AA3D1D;
-    color: #FFFFFF !important;
+    background: var(--pp-hearth-gold);
+    color: #2e3235 !important;
+    box-shadow: 0 4px 14px rgba(209, 173, 92, 0.35);
+    border: none;
 }
 
 .hero .btn-primary:hover {
-    background: #8F3218;
+    background: var(--pp-hearth-gold-deep);
     color: #FFFFFF !important;
+    box-shadow: 0 6px 18px rgba(209, 173, 92, 0.45);
 }
 
 /* Footer gold sheen text (match logo) */
@@ -2208,7 +2211,7 @@ body:not(.at-top) .navbar::after {
 /* Team Section */
 .team {
     padding: 6rem 0 8rem 0;
-    background: var(--pp-white) !important;
+    background: #2e3235 !important;
     min-height: 80vh;
     border: none !important;
     box-shadow: none !important;
@@ -2266,7 +2269,15 @@ body:not(.at-top) .navbar::after {
 }
 
 .team .section-header h2 {
-    color: #4F555A;
+    color: #FFFFFF;
+}
+
+.team .section-header p {
+    color: #ccccc9;
+}
+
+body.team-page {
+    background: #2e3235;
 }
 
 .team-grid {
