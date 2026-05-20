@@ -280,7 +280,7 @@ body {
 
 .hero-operating-line {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: clamp(0.95rem, 2.2vw, 1.3rem);
     line-height: 1.35;
     margin: 0;
@@ -1532,6 +1532,10 @@ body {
     color: #FFFFFF;
 }
 
+.hero .hero-operating-line {
+    font-weight: 400;
+}
+
 /* 2) About: cream */
 .about {
     background: #E4E2DA;
@@ -1886,6 +1890,10 @@ body:not(.at-top) .navbar::after {
         text-shadow: none !important;  /* ensure no shadow on mobile */
     }
 
+    .hero-headline-line {
+        white-space: normal;
+    }
+
     .hero-operating-line {
         transform: none;
         font-size: clamp(0.9rem, 3.5vw, 1.15rem);
@@ -1906,7 +1914,7 @@ body:not(.at-top) .navbar::after {
 .hero .hero-title {
     text-shadow: none !important;
     white-space: normal !important;
-    max-width: 14em;
+    max-width: 100%;
 }
 
 
@@ -2083,18 +2091,33 @@ body:not(.at-top) .navbar::after {
 /* Ensure hero tagline words color */
 .hero .hero-tagline .tagline-word {
     font-family: 'Cinzel', serif;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 1.75rem;
     text-transform: none;
     letter-spacing: 0.04em;
     color: #FFFFFF !important;
 }
 
-/* Hero headline: two lines on laptop */
+.hero-headline-line {
+    display: block;
+}
+
+/* Hero headline: exactly two lines from tablet up */
+@media (min-width: 769px) {
+    .hero .hero-title,
+    .hero .hero-title .gradient-text {
+        max-width: 100%;
+    }
+
+    .hero-headline-line {
+        white-space: nowrap;
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1440px) {
     .hero .hero-title,
     .hero .hero-title .gradient-text {
-        font-size: clamp(2.5rem, 4.2vw, 3.5rem);
-        max-width: 14em;
+        font-size: clamp(2.35rem, 3.4vw, 3.15rem);
         line-height: 1.08;
     }
 }
