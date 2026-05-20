@@ -1375,9 +1375,12 @@ body {
     color: #9B8A66;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 0.85rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    max-width: 22em;
+    text-align: center;
 }
 
 .footer-nav {
