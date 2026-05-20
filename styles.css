@@ -296,6 +296,10 @@ body {
     transform: none;
 }
 
+.hero-operating-line-part {
+    display: block;
+}
+
 .hero-operating-line + .hero-description {
     margin-top: 1.75rem;
 }
@@ -312,7 +316,7 @@ body {
 
 .hero-description {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin: 0.25rem 0; /* tighter vertical spacing */
     color: #FFFFFF;
     line-height: 1.6; /* slightly tighter line height */
@@ -2031,7 +2035,7 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-description {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin: 0.25rem 0; /* tighter vertical spacing */
     color: #FFFFFF;
     line-height: 1.6;
@@ -2079,7 +2083,7 @@ body:not(.at-top) .navbar::after {
     transform: none;
 }    
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin: 0.25rem 0; /* tighter vertical spacing */
     color: #FFFFFF;
     line-height: 1.6;
@@ -2168,10 +2172,17 @@ body:not(.at-top) .navbar::after {
     }
 
     .hero .hero-operating-line {
-        white-space: nowrap;
         max-width: none;
         font-size: clamp(1.05rem, 1.75vw, 1.45rem);
     }
+
+    .hero-operating-line-part {
+        white-space: nowrap;
+    }
+}
+
+.hero .hero-description {
+    font-size: 1.25rem !important;
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
