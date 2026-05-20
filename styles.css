@@ -2323,6 +2323,7 @@ body:not(.at-top) .navbar::after {
     border-top: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
+    margin-top: -50px;
     margin-bottom: 2rem !important;
     padding-bottom: 0 !important;
 }
@@ -2351,6 +2352,19 @@ body:not(.at-top) .navbar::after {
 
 body.team-page {
     background: #2e3235;
+}
+
+body.team-page .team {
+    min-height: auto;
+    padding-bottom: 3rem;
+}
+
+body.team-page .team-grid {
+    margin-bottom: 0.5rem;
+}
+
+body.team-page .footer {
+    padding-top: 2rem;
 }
 
 .team-grid {
