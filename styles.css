@@ -391,7 +391,7 @@ body {
     align-items: center;
     width: 100%;
     margin-bottom: 0.5rem;
-    transform: translateY(-50px);
+    transform: translateY(-100px);
 }
 
 .grid-item {
@@ -1924,7 +1924,7 @@ body:not(.at-top) .navbar::after {
     }
 
     .hero-visual {
-        transform: translateY(-50px);
+        transform: translateY(-100px);
     }
 }
 
@@ -1954,7 +1954,7 @@ body:not(.at-top) .navbar::after {
 }
 
 .hero .hero-visual {
-    transform: translateY(-50px) !important;
+    transform: translateY(-100px) !important;
 }
 
 
