@@ -2209,6 +2209,12 @@ body:not(.at-top) .navbar::after {
     color: #FFFFFF !important;
 }
 
+@media (max-width: 768px) {
+    .hero .hero-tagline .tagline-word {
+        font-size: 1.25rem !important;
+    }
+}
+
 .hero-headline-line {
     display: block;
     text-align: center;
