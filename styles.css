@@ -45,7 +45,7 @@ body {
 .navbar {
     position: static;
     width: 100%;
-    background: #212325;
+    background: #2e3235;
     backdrop-filter: none;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -165,7 +165,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    background: #212325;
+    background: #2e3235;
     overflow: hidden;
 }
 
@@ -1225,7 +1225,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 6rem 0 4rem 0;
-    background: #212325;
+    background: #2e3235;
     color: #ccccc9;
 }
 
@@ -1548,7 +1548,7 @@ body {
 
 /* 1) Hero: charcoal */
 .hero {
-    background: #212325;
+    background: #2e3235;
     color: #FFFFFF;
 }
 .hero .hero-text,
@@ -1615,7 +1615,7 @@ body {
 
 /* 6) Contact: charcoal (matches hero) */
 .contact {
-    background: #212325;
+    background: #2e3235;
     color: #ccccc9;
 }
 .contact .section-header h2 {
@@ -1659,7 +1659,7 @@ h1, h2, h3, h4, h5, h6,
 /* Mobile hamburger menu styles */
 @media (max-width: 768px) {
     .navbar {
-        background: #212325 !important;
+        background: #2e3235 !important;
         backdrop-filter: none !important;
         border-bottom: none !important;
     }
@@ -1725,7 +1725,7 @@ h1, h2, h3, h4, h5, h6,
     
     .hero {
         padding-top: 80px;
-        background: #212325;
+        background: #2e3235;
     }
     
 .hero-title {
@@ -2255,7 +2255,7 @@ body:not(.at-top) .navbar::after {
 /* Team Section */
 .team {
     padding: 6rem 0 8rem 0;
-    background: #212325 !important;
+    background: #2e3235 !important;
     min-height: 80vh;
     border: none !important;
     box-shadow: none !important;
@@ -2321,7 +2321,7 @@ body:not(.at-top) .navbar::after {
 }
 
 body.team-page {
-    background: #212325;
+    background: #2e3235;
 }
 
 .team-grid {
