@@ -955,13 +955,14 @@ body {
     color: var(--pp-hearth-gold);
 }
 
-.service-icon img {
+/* Custom icon: mask PNG so fill matches --pp-hearth-gold exactly (FA icons use same token) */
+.service-icon-value {
+    display: block;
     width: 4.5rem;
     height: 4.5rem;
-    max-width: 4.5rem;
-    max-height: 4.5rem;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(746%) hue-rotate(358deg) brightness(91%) contrast(88%);
+    background-color: var(--pp-hearth-gold);
+    -webkit-mask: url('images/value.png') center / contain no-repeat;
+    mask: url('images/value.png') center / contain no-repeat;
 }
 
 .service-card h3 {
