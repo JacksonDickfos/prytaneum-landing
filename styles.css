@@ -1906,7 +1906,7 @@ body:not(.at-top) .navbar::after {
 .hero .hero-title {
     text-shadow: none !important;
     white-space: normal !important;
-    max-width: 18em;
+    max-width: 14em;
 }
 
 
@@ -2082,7 +2082,21 @@ body:not(.at-top) .navbar::after {
 
 /* Ensure hero tagline words color */
 .hero .hero-tagline .tagline-word {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.04em;
     color: #FFFFFF !important;
+}
+
+/* Hero headline: two lines on laptop */
+@media (min-width: 769px) and (max-width: 1440px) {
+    .hero .hero-title,
+    .hero .hero-title .gradient-text {
+        font-size: clamp(2.5rem, 4.2vw, 3.5rem);
+        max-width: 14em;
+        line-height: 1.08;
+    }
 }
 
 /* Hero CTA button color override */
