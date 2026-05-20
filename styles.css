@@ -1966,7 +1966,7 @@ body:not(.at-top) .navbar::after {
         word-break: normal;
         transform: none;               /* avoid clipping off-screen */
         margin-top: calc(1.5rem + 18px); /* +10px more spacing on mobile */
-        font-size: 3rem !important;    /* mobile title size */
+        font-size: 2rem !important;    /* mobile headline — two steps below desktop */
         text-shadow: none !important;  /* ensure no shadow on mobile */
     }
 
@@ -2140,7 +2140,7 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-title {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 3.5rem;
+    font-size: 2rem !important;
     white-space: nowrap;
     font-weight: 700;
     margin-bottom: 1rem;
