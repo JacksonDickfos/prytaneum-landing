@@ -35,13 +35,6 @@
         <div class="hero-background">
             <div class="ecg-background">
                 <svg class="ecg-svg" viewBox="0 0 1200 200" preserveAspectRatio="none">
-                    <defs>
-                        <linearGradient id="ecgGoldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#D1AD5C" />
-                            <stop offset="50%" stop-color="#8C733D" />
-                            <stop offset="100%" stop-color="#D1AD5C" />
-                        </linearGradient>
-                    </defs>
                     <g class="ecg-track">
                         <path class="ecg-line" pathLength="1000" d="M0 120 
                             L60 120 L80 120 
@@ -65,19 +58,16 @@
                 <div class="rotating-logo">
                     <img src="logo.png" alt="Prytaneum Partners Logo" class="logo-core-img">
                     <div class="hero-tagline">
-                        <span class="tagline-word word-1">REVIVE.</span>
-                        <span class="tagline-word word-2">SCALE.</span>
-                        <span class="tagline-word word-3">THRIVE.</span>
+                        <span class="tagline-word word-1">Prytaneum Partners</span>
                     </div>
                 </div>
             </div>
             <div class="hero-text">
                 <h1 class="hero-title">
-                    <span class="gradient-text">Prytaneum Partners</span>
+                    <span class="gradient-text">Acquiring the Surviving Software Market</span>
                 </h1>
                 <p class="hero-operating-line">The Operating Arm of the Valkyrie Revival Fund</p>
                 <p class="hero-description">Prytaneum Partners revives struggling software companies and rebuilds them into profitable, high-performing businesses.</p>
-                <p class="hero-description">We are actively seeking to buy distressed software companies. Get in touch if you need to sell.</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn-primary">Get in Touch</a>
                 </div>
@@ -471,9 +461,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Force-set hero description copy in case of CDN/HTML cache
 (function(){
   var els = document.querySelectorAll('.hero-description');
-  if (els.length >= 2) {
+  if (els.length >= 1) {
     els[0].textContent = 'Prytaneum Partners revives struggling software companies and rebuilds them into profitable, high-performing businesses.';
-    els[1].textContent = 'We are actively seeking to buy distressed software companies. Get in touch if you need to sell.';
   }
 })();
 </script>
