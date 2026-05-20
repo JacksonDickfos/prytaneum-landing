@@ -1947,7 +1947,7 @@ body:not(.at-top) .navbar::after {
     }
 
     .hero-operating-line + .hero-description {
-        margin-top: 1.5rem;
+        margin-top: 0;
     }
 
     /* Move tagline below logo and tighten gap to title */
