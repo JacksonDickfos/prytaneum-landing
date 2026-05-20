@@ -2253,6 +2253,11 @@ body:not(.at-top) .navbar::after {
     color: transparent;
 }
 
+/* Hidden sections (kept in DOM for easy restore) */
+.section-hidden {
+    display: none !important;
+}
+
 /* Team Section */
 .team {
     padding: 6rem 0 8rem 0;

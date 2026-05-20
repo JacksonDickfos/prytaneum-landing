@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prytaneum Partners - Private Equity Innovation</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css?v=20260520-21">
+    <link rel="stylesheet" href="styles.css?v=20260520-22">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,7 +17,6 @@
             <ul class="nav-menu">
                 <li><a href="#about">Who We Are</a></li>
                 <li><a href="#services">What We Do</a></li>
-                <li><a href="#customers">What Customers Can Expect</a></li>
                 <li><a href="#resources">Our Activity</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="#contact">Connect</a></li>
@@ -149,8 +148,8 @@
         </div>
     </section>
 
-    <!-- Customers Section -->
-    <section id="customers" class="investors">
+    <!-- Customers Section (hidden) -->
+    <section id="customers" class="investors section-hidden">
         <div class="container">
             <div class="section-header">
                 <h2>What Our Customers Can Expect</h2>
@@ -220,8 +219,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Connect</h2>
-                <p><strong>We buy distressed software companies.</strong></p>
-                <p>If you’re facing the edge—decline, dilution, over-leveraged, illiquid, or bankruptcy—we can offer a path out.<br>Fill out the form below or contact us at <a href="mailto:info@prytaneumpartners.com">info@prytaneumpartners.com</a></p>
+                <p>We are engaging a select group of exceptional LP's who share our vision.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-form">
@@ -232,20 +230,8 @@
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
                             <label for="companyName">Company Name</label>
                             <input type="text" id="companyName" name="companyName">
-                        </div>
-                        <div class="form-group">
-                            <label for="arr">Current Annual Recurring Revenue</label>
-                            <input type="text" id="arr" inputmode="numeric" pattern="[0-9,]*">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Location</label>
-                            <input type="text" id="location" name="location">
                         </div>
                         <div class="form-group">
                             <label for="urgency">Urgency to Exit</label>
@@ -290,7 +276,6 @@
             <div class="footer-nav">
                 <a href="#about">Who We Are</a>
                 <a href="#services">What We Do</a>
-                <a href="#customers">What Customers Can Expect</a>
                 <a href="#resources">Our Activity</a>
                 <a href="team.html">Our Team</a>
                 <a href="#contact">Connect</a>
@@ -481,12 +466,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const formData = new FormData(this);
     const email = formData.get('email');
     const name = formData.get('name');
-    const phone = formData.get('phone');
     const companyName = formData.get('companyName');
-    // Parse ARR value (remove commas from formatted display)
-    const arrInput = document.getElementById('arr');
-    const arr = arrInput ? arrInput.value.replace(/,/g, '') : '';
-    const location = formData.get('location');
     const urgency = formData.get('urgency');
     const message = formData.get('message');
     
@@ -499,10 +479,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         body: JSON.stringify({
             email: email,
             name: name,
-            phone: phone,
             companyName: companyName,
-            arr: arr,
-            location: location,
             urgency: urgency,
             message: message
         })
@@ -530,70 +507,5 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     });
 });
 </script>
-<script>
-// Handle ARR field formatting and arrow key increments
-(function() {
-    const arrInput = document.getElementById('arr');
-    if (!arrInput) return;
-
-    // Function to format number with commas
-    function formatNumber(num) {
-        if (!num && num !== 0) return '';
-        // Remove any existing commas and non-numeric characters
-        const cleaned = num.toString().replace(/[^0-9]/g, '');
-        if (!cleaned) return '';
-        // Add commas every 3 digits from the right
-        return cleaned.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    }
-
-    // Function to parse formatted number (remove commas)
-    function parseNumber(formatted) {
-        if (!formatted) return '';
-        return formatted.toString().replace(/,/g, '');
-    }
-
-    // Handle input - format as user types
-    arrInput.addEventListener('input', function(e) {
-        const cursorPosition = this.selectionStart;
-        const value = this.value;
-        const cleaned = parseNumber(value);
-        
-        if (cleaned === '') {
-            this.value = '';
-            return;
-        }
-
-        const formatted = formatNumber(cleaned);
-        this.value = formatted;
-        
-        // Restore cursor position (adjust for added/removed commas)
-        const diff = formatted.length - value.length;
-        const newPosition = Math.max(0, Math.min(formatted.length, cursorPosition + diff));
-        this.setSelectionRange(newPosition, newPosition);
-    });
-
-    // Handle arrow key up/down for increment/decrement
-    arrInput.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
-            e.preventDefault();
-            
-            const currentValue = parseNumber(this.value) || '0';
-            const numValue = parseInt(currentValue, 10) || 0;
-            const increment = 100000;
-            
-            let newValue;
-            if (e.key === 'ArrowUp') {
-                newValue = numValue + increment;
-            } else {
-                newValue = Math.max(0, numValue - increment);
-            }
-            
-            this.value = formatNumber(newValue);
-        }
-    });
-
-})();
-</script>
-<script>
-</script></body>
+</body>
 </html> 
