@@ -43,13 +43,14 @@ body {
 
 /* Navigation */
 .navbar {
-    position: static;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #F9F8F3;
+    background: transparent;
     backdrop-filter: none;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
     border-bottom: none;
     box-shadow: none !important;
 }
@@ -101,7 +102,7 @@ body {
 
 /* Navigation links */
 .nav-menu a {
-    color: #4F555A;
+    color: #ccccc9;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -109,7 +110,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #4F555A;
+    color: #FFFFFF;
 }
 
 /* Underline animation */
@@ -131,14 +132,14 @@ body {
 /* Style the last nav item (Get In Touch) as a button */
 .nav-menu li:last-child a {
     background: transparent;
-    color: #4F555A;
+    color: #ccccc9;
     padding: 0;
     border-radius: 0;
 }
 
 .nav-menu li:last-child a:hover {
     background: transparent;
-    color: #4F555A;
+    color: #FFFFFF;
 }
 
 /* Restore underline animation for the last item */
@@ -1623,12 +1624,9 @@ h1, h2, h3, h4, h5, h6,
 /* Mobile hamburger menu styles */
 @media (max-width: 768px) {
     .navbar {
-    background: #F9F8F3;
-    border-bottom: none;
-        background: #F9F8F3 !important;
+        background: transparent !important;
         backdrop-filter: none !important;
         border-bottom: none !important;
-        
     }
     
     .hamburger {
@@ -2210,7 +2208,7 @@ body:not(.at-top) .navbar::after {
 
 /* Team Section */
 .team {
-    padding: 6rem 0 8rem 0;
+    padding: 8rem 0 8rem 0;
     background: #212325 !important;
     min-height: 80vh;
     border: none !important;
