@@ -2549,9 +2549,22 @@ body.team-page .footer {
     z-index: 1;
     width: 380px;       /* slightly wider cards to avoid awkward wrapping */
     flex: 0 0 380px;    /* fixed width per card so all are identical */
+    overflow: hidden;
 }
 
-.team-card::before,
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(209, 173, 92, 0.1), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .team-card::after {
     display: none !important;
     content: none !important;
@@ -2559,10 +2572,14 @@ body.team-page .footer {
 }
 
 .team-card:hover {
-    transform: translateY(-8px);
-    box-shadow: none !important;
-    border-color: rgba(209, 173, 92, 0.4);
+    transform: translateY(-27.5px);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2) !important;
     z-index: 2;
+}
+
+.team-card:hover::before {
+    left: 100%;
 }
 
 .team-card .team-info h3 {
@@ -2646,7 +2663,7 @@ body.team-page .footer {
     right: calc(50% - 90px - 10px);
     width: 50px;
     height: 50px;
-    background: var(--pp-white);
+    background: #484b4d;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2715,11 +2732,6 @@ body.team-page .footer {
 
 .team-card[data-member] {
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-card[data-member]:hover {
-    transform: translateY(-8px);
 }
 
 @media (min-width: 1024px) {
