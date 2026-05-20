@@ -127,7 +127,7 @@ body {
     width: 100%;
 }
 
-/* Style the last nav item (Get In Touch) as a button */
+/* Style the last nav item (Connect Now) as a button */
 .nav-menu li:last-child a {
     background: transparent;
     color: #ccccc9;
@@ -286,7 +286,7 @@ body {
 .hero-operating-line {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 400;
-    font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+    font-size: clamp(1.2rem, 2.6vw, 1.65rem);
     line-height: 1.35;
     margin: 0;
     color: #ccccc9;
@@ -317,6 +317,10 @@ body {
     color: #FFFFFF;
     line-height: 1.6; /* slightly tighter line height */
     transform: none;
+}
+
+.hero-fund-amount {
+    color: var(--pp-hearth-gold);
 }
 .hero-cta {
     display: flex;
@@ -1903,7 +1907,7 @@ body:not(.at-top) .navbar::after {
 
     .hero-operating-line {
         transform: none;
-        font-size: clamp(0.9rem, 3.5vw, 1.15rem);
+        font-size: clamp(1.15rem, 3.5vw, 1.4rem);
         max-width: 22em;
         margin-top: 0.25rem;
         white-space: normal;
@@ -2153,6 +2157,10 @@ body:not(.at-top) .navbar::after {
     color: #ccccc9 !important;
 }
 
+.hero .hero-fund-amount {
+    color: var(--pp-hearth-gold) !important;
+}
+
 /* Hero headline: exactly two lines from tablet up */
 @media (min-width: 769px) {
     .hero-headline-line {
@@ -2162,7 +2170,7 @@ body:not(.at-top) .navbar::after {
     .hero .hero-operating-line {
         white-space: nowrap;
         max-width: none;
-        font-size: clamp(0.8rem, 1.35vw, 1.15rem);
+        font-size: clamp(1.05rem, 1.75vw, 1.45rem);
     }
 }
 
