@@ -127,7 +127,7 @@ body {
     width: 100%;
 }
 
-/* Style the last nav item (Connect Now) as a button */
+/* Style the last nav item (Connect) as a button */
 .nav-menu li:last-child a {
     background: transparent;
     color: #ccccc9;
@@ -256,7 +256,7 @@ body {
 
 /* CTA button spacing */
 .hero-text .hero-cta { 
-    margin-top: 2.65rem; 
+    margin-top: 1.15rem; 
 }
 
 .hero-title {
@@ -332,8 +332,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     transform: none;
-    margin-top: 1rem; /* keep small outer gap */
-    padding-top: 1rem; /* add visible buffer above button */
+    margin-top: 0.5rem;
+    padding-top: 0.25rem;
 }
 .btn-primary, .btn-secondary {
     color: #FFFFFF !important;
@@ -1495,8 +1495,8 @@ body {
 }}
 
 /* Ensure spacing applies regardless of overrides */
-.hero .hero-cta { margin-top: 2.65rem; padding-top: 1rem; }
-.hero .hero-cta .btn-primary { margin-top: 0.5rem; }
+.hero .hero-cta { margin-top: 1.15rem; padding-top: 0.25rem; }
+.hero .hero-cta .btn-primary { margin-top: 0; }
 
 /* Parallax Effects */
 .parallax {
