@@ -2370,7 +2370,7 @@ body.team-page {
 }
 
 .team-card {
-    background: var(--pp-parchment);
+    background: #484b4d;
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
@@ -2395,6 +2395,18 @@ body.team-page {
     box-shadow: none !important;
     border-color: rgba(209, 173, 92, 0.4);
     z-index: 2;
+}
+
+.team-card .team-info h3 {
+    color: #FFFFFF;
+}
+
+.team-card .team-title {
+    color: var(--pp-hearth-gold);
+}
+
+.team-card .team-description {
+    color: #ccccc9;
 }
 
 .team-photo {
