@@ -514,9 +514,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem 2.5rem;
+    align-items: flex-start;
+    gap: 0.75rem 0.5rem;
     margin-top: 3rem;
-    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-team-member {
@@ -524,8 +528,9 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 200px;
-    max-width: 200px;
+    width: 148px;
+    max-width: 148px;
+    flex: 0 0 148px;
 }
 
 .about-team-photo {
@@ -559,10 +564,10 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--pp-hearth-gold) !important;
+    color: var(--pp-hearth-gold-deep) !important;
     margin: 0;
     line-height: 1.35;
-    max-width: 200px;
+    max-width: 148px;
 }
 
 .about-stats {
@@ -1555,12 +1560,12 @@ body {
     }
 
     .about-team {
-        gap: 1.75rem 1.5rem;
+        gap: 1rem 0.85rem;
     }
 
     .about-team-member {
-        width: 168px;
-        max-width: 168px;
+        width: 140px;
+        max-width: 140px;
     }
 
     .about-team-photo {
@@ -1574,8 +1579,8 @@ body {
 
     .about .about-team .about-team-title {
         font-size: 0.875rem;
-        max-width: 168px;
-        color: var(--pp-hearth-gold) !important;
+        max-width: 140px;
+        color: var(--pp-hearth-gold-deep) !important;
     }
     
     .footer-content {
@@ -1677,10 +1682,10 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--pp-hearth-gold) !important;
+    color: var(--pp-hearth-gold-deep) !important;
     margin: 0;
     line-height: 1.35;
-    max-width: 200px;
+    max-width: 148px;
 }
 
 /* 3) Services: white */
@@ -2877,5 +2882,5 @@ body.team-page .footer {
 
 /* Who We Are team role titles — enforce deep gold (beats inherited .about color) */
 .about .about-text .about-team p.about-team-title {
-    color: var(--pp-hearth-gold) !important;
+    color: var(--pp-hearth-gold-deep) !important;
 }
