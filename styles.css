@@ -2341,10 +2341,12 @@ body:not(.at-top) .navbar::after {
 
 .team .section-header h2 {
     color: #FFFFFF;
+    margin-bottom: 0.35rem;
 }
 
 .team .section-header p {
     color: #ccccc9;
+    margin-top: 0;
 }
 
 body.team-page {
