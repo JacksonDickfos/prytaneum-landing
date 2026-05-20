@@ -268,7 +268,9 @@ body {
     margin-bottom: 1rem;
     line-height: 1.15;
     transform: translateY(-180px);
-    max-width: 18em;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
 }
 .gradient-text {
     color: #4F555A;
@@ -1899,6 +1901,7 @@ body:not(.at-top) .navbar::after {
         font-size: clamp(0.9rem, 3.5vw, 1.15rem);
         max-width: 22em;
         margin-top: 0.25rem;
+        white-space: normal;
     }
 
     .hero-operating-line + .hero-description {
@@ -1914,7 +1917,9 @@ body:not(.at-top) .navbar::after {
 .hero .hero-title {
     text-shadow: none !important;
     white-space: normal !important;
+    width: 100%;
     max-width: 100%;
+    text-align: center;
 }
 
 
@@ -2091,19 +2096,33 @@ body:not(.at-top) .navbar::after {
 /* Ensure hero tagline words color */
 .hero .hero-tagline .tagline-word {
     font-family: 'Cinzel', serif;
-    font-weight: 400;
+    font-weight: 400 !important;
     font-size: 1.75rem;
-    text-transform: none;
+    text-transform: none !important;
     letter-spacing: 0.04em;
     color: #FFFFFF !important;
 }
 
 .hero-headline-line {
     display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.hero .hero-title .gradient-text {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 /* Hero headline: exactly two lines from tablet up */
 @media (min-width: 769px) {
+    .hero .hero-title {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
     .hero .hero-title,
     .hero .hero-title .gradient-text {
         max-width: 100%;
@@ -2111,6 +2130,12 @@ body:not(.at-top) .navbar::after {
 
     .hero-headline-line {
         white-space: nowrap;
+    }
+
+    .hero .hero-operating-line {
+        white-space: nowrap;
+        max-width: none;
+        font-size: clamp(0.8rem, 1.35vw, 1.15rem);
     }
 }
 
