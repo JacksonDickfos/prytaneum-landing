@@ -1160,8 +1160,10 @@ body {
 
 .fund-bubble {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.35rem;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -1169,13 +1171,17 @@ body {
     background: #484b4d;
     color: #FFFFFF;
     font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
     text-decoration: none;
     text-align: center;
     line-height: 1.2;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fund-bubble-label {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #FFFFFF;
 }
 
 .fund-bubble:hover {
@@ -1190,9 +1196,10 @@ body {
 }
 
 .fund-bubble-amount {
-    font-size: 1.65rem;
+    font-size: 1rem;
     color: var(--pp-hearth-gold);
     font-weight: 700;
+    line-height: 1;
 }
 
 .fund-page-back {
