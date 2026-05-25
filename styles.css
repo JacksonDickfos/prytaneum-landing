@@ -3214,12 +3214,16 @@ body.team-page .footer {
 
 .investor-home-section .investor-home-card h3 {
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.35;
     white-space: normal;
     position: relative;
     z-index: 1;
     margin: 0;
+    min-height: calc(0.9rem * 1.35 * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .investor-home-section .investor-home-card .investor-icon-badge {
@@ -3255,10 +3259,6 @@ a.investor-home-card {
     font-size: 2.625rem;
 }
 
-.investor-home-section .investor-home-grid .investor-home-card h3 {
-    font-size: 0.9rem;
-}
-
 .data-room-section {
     text-align: center;
     max-width: 900px;
@@ -3282,7 +3282,7 @@ a.investor-home-card {
     margin: 0 auto 2rem;
 }
 
-button.data-room-card {
+.investor-home-section button.data-room-card {
     cursor: pointer;
     pointer-events: auto;
     appearance: none;
@@ -3291,68 +3291,18 @@ button.data-room-card {
     color: inherit;
     width: 100%;
     text-align: center;
-    padding: 1.35rem 1.5rem 1.15rem;
+    padding: 1rem 1rem 0.85rem;
+    box-sizing: border-box;
 }
 
-button.data-room-card .investor-icon-badge {
-    width: 120px;
-    height: 120px;
+.investor-home-section button.data-room-card .investor-icon-badge {
+    width: 105px;
+    height: 105px;
     margin: 0 auto 0.85rem;
 }
 
-button.data-room-card .investor-icon-badge i {
-    font-size: 3rem;
-}
-
-button.data-room-card h3 {
-    font-size: 1.05rem;
-}
-
-@media (min-width: 769px) {
-    .data-room-cards {
-        max-width: 340px;
-    }
-
-    button.data-room-card {
-        padding: 1.65rem 2rem 1.35rem;
-    }
-
-    button.data-room-card .investor-icon-badge {
-        width: 144px;
-        height: 144px;
-        margin-bottom: 1rem;
-    }
-
-    button.data-room-card .investor-icon-badge i {
-        font-size: 3.525rem;
-    }
-
-    button.data-room-card h3 {
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width: 1100px) {
-    .data-room-cards {
-        max-width: 400px;
-    }
-
-    button.data-room-card {
-        padding: 1.75rem 2.25rem 1.45rem;
-    }
-
-    button.data-room-card .investor-icon-badge {
-        width: 156px;
-        height: 156px;
-    }
-
-    button.data-room-card .investor-icon-badge i {
-        font-size: 3.75rem;
-    }
-
-    button.data-room-card h3 {
-        font-size: 1.25rem;
-    }
+.investor-home-section button.data-room-card .investor-icon-badge i {
+    font-size: 2.625rem;
 }
 
 button.data-room-card:focus-visible {
