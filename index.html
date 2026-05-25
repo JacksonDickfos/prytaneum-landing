@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prytaneum Partners - Private Equity Innovation</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css?v=20260521-45">
+    <link rel="stylesheet" href="styles.css?v=20260521-46">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
             <ul class="nav-menu">
                 <li><a href="#about">Our Leadership</a></li>
                 <li><a href="#services">What We Do</a></li>
-                <li><a href="#resources">Our Activity</a></li>
+                <li><a href="#fund">Our Fund</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="#contact">Connect</a></li>
             </ul>
@@ -206,8 +206,25 @@
         </div>
     </section>
 
-    <!-- Resources Section -->
-    <section id="resources" class="resources">
+    <!-- Our Fund Section -->
+    <section id="fund" class="our-fund">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Fund</h2>
+            </div>
+            <div class="our-fund-content">
+                <a href="valkyrie-revival-fund/" class="our-fund-subtitle-link">
+                    <img src="no-back-helmet.png" alt="" class="our-fund-logo" width="72" height="72">
+                    <span class="our-fund-subtitle">The Valkyrie Revival Fund 1</span>
+                </a>
+                <p class="our-fund-lead">Valkyrie Revival Fund I is the investment vehicle behind Prytaneum Partners—a <strong class="our-fund-amount">$120M</strong> fund acquiring and reviving distressed B2B software businesses through disciplined operations and full ownership.</p>
+                <a href="valkyrie-revival-fund/" class="btn-primary our-fund-cta">Explore the fund</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Activity (hidden) -->
+    <section id="resources" class="resources section-hidden" aria-hidden="true">
         <div class="container">
             <div class="section-header">
                 <h2>Our Activity</h2>
@@ -216,9 +233,8 @@
             <div class="resources-content">
                 <div class="fund-links">
                     <div class="fund-card">
-                        <img src="back-helmet.png" alt="Valkyrie Revival Fund" onerror="console.log('Image failed to load:', this.src); this.style.display='none';">
+                        <img src="no-back-helmet.png" alt="Valkyrie Revival Fund">
                         <p><a href="https://www.valkyrie-revival.com/" class="card-link">Valkyrie Revival Fund</a> is the investment fund behind Prytaneum's work—acquiring the companies that we operate, rebuild, and grow with precision.</p>
-                        
                     </div>
                 </div>
                 <div class="fund-links">
@@ -231,7 +247,6 @@
                     <div class="fund-card">
                         <img src="article-2.png" alt="Investment Insights">
                         <p>Why the AI Gold Rush Risks Corporate Catastrophes, are we looking at an AI disaster</p>
-                        
                     </div>
                 </div>
             </div>
@@ -288,7 +303,7 @@
             <div class="footer-nav">
                 <a href="#about">Our Leadership</a>
                 <a href="#services">What We Do</a>
-                <a href="#resources">Our Activity</a>
+                <a href="#fund">Our Fund</a>
                 <a href="team.html">Our Team</a>
                 <a href="#contact">Connect</a>
             </div>
@@ -375,9 +390,6 @@ window.addEventListener("scroll", function() {
     }
 });
 </script>
-<script src="linkedin-feed.js"></script>
-<script src="activity-feed.js"></script>
-
 <script>
 // Investor Card Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {

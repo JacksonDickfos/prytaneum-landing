@@ -1056,6 +1056,160 @@ body {
 
 
 
+/* Our Fund Section (homepage) */
+.our-fund {
+    padding: 6rem 0;
+    background: #E4E2DA;
+}
+
+.our-fund .section-header {
+    margin-bottom: 2rem;
+}
+
+.our-fund-content {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.our-fund-subtitle-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    text-decoration: none;
+    margin-bottom: 1.75rem;
+    transition: opacity 0.2s ease;
+}
+
+.our-fund-subtitle-link:hover {
+    opacity: 0.85;
+}
+
+.our-fund-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.our-fund-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    font-weight: 600;
+    color: var(--pp-charcoal);
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.our-fund-lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--pp-charcoal);
+    margin-bottom: 2rem;
+}
+
+.our-fund-amount {
+    color: var(--pp-hearth-gold-deep);
+    font-weight: 700;
+}
+
+.our-fund-cta {
+    display: inline-block;
+}
+
+/* Valkyrie Revival Fund landing page */
+.fund-page {
+    padding: 7rem 0 6rem;
+    background: #E4E2DA;
+    min-height: 60vh;
+}
+
+.fund-page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.fund-page-header .our-fund-subtitle-link {
+    margin-bottom: 0;
+}
+
+.fund-page-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.fund-page-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--pp-charcoal);
+    margin-bottom: 1.25rem;
+}
+
+.fund-page-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.fund-bubble-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0 1rem;
+}
+
+.fund-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--pp-hearth-gold);
+    background: #484b4d;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fund-bubble:hover {
+    transform: translateY(-8px);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.25);
+}
+
+.fund-bubble:focus-visible {
+    outline: 2px solid var(--pp-hearth-gold);
+    outline-offset: 4px;
+}
+
+.fund-page-back {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--pp-hearth-gold-deep);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fund-page-back:hover {
+    color: var(--pp-charcoal);
+}
+
+.fund-i-placeholder {
+    text-align: center;
+    max-width: 560px;
+    margin: 2rem auto 0;
+    color: var(--pp-charcoal);
+    line-height: 1.7;
+}
+
 /* Resources Section */
 .resources {
     padding: 6rem 0;
@@ -1721,9 +1875,15 @@ body {
     color: var(--pp-charcoal);
 }
 
-/* 4) Resources: cream */
+/* 4) Our Fund / Resources: cream */
+.our-fund,
 .resources {
     background: #E4E2DA;
+    color: var(--pp-charcoal);
+}
+
+.our-fund .section-header h2,
+.our-fund-lead {
     color: var(--pp-charcoal);
 }
 .resources .section-header p,
