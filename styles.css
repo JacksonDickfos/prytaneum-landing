@@ -1760,6 +1760,12 @@ body {
     margin-bottom: 0;
     line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+    .contact .section-header .connect-intro br {
+        display: none;
+    }
+}
 .contact .section-header a {
     color: var(--pp-hearth-gold);
 }
