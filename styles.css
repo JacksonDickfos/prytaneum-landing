@@ -249,7 +249,8 @@ body {
 }
 
 /* Ensure proper spacing for description text */
-.hero-text .hero-description { 
+.hero-text .hero-description,
+.hero-text .hero-fund-link { 
     margin-bottom: 0.5rem; 
     max-width: 600px;
 }
@@ -300,7 +301,8 @@ body {
     display: block;
 }
 
-.hero-operating-line + .hero-description {
+.hero-operating-line + .hero-description,
+.hero-operating-line + .hero-fund-link {
     margin-top: 0;
 }
 
@@ -338,6 +340,28 @@ body {
     color: var(--pp-hearth-gold);
     font-weight: 700;
 }
+
+a.hero-fund-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+a.hero-fund-link:hover {
+    opacity: 0.88;
+}
+
+a.hero-fund-link:focus-visible {
+    outline: 2px solid var(--pp-hearth-gold);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.our-fund-bubble-wrap {
+    margin: 0.5rem auto 1.75rem;
+}
+
 .hero-cta {
     display: flex;
     gap: 1rem;
@@ -2288,7 +2312,8 @@ body:not(.at-top) .navbar::after {
         white-space: normal;
     }
 
-    .hero-operating-line + .hero-description {
+    .hero-operating-line + .hero-description,
+.hero-operating-line + .hero-fund-link {
         margin-top: 0;
     }
 
@@ -2529,6 +2554,7 @@ body:not(.at-top) .navbar::after {
 .hero .hero-title,
 .hero .hero-headline-line,
 .hero .hero-description,
+.hero .hero-fund-link,
 .hero .hero-operating-line {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
@@ -2558,7 +2584,8 @@ body:not(.at-top) .navbar::after {
     }
 }
 
-.hero .hero-description {
+.hero .hero-description,
+.hero .hero-fund-link {
     font-size: 1.25rem !important;
 }
 

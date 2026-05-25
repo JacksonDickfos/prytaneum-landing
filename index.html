@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prytaneum Partners - Private Equity Innovation</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css?v=20260521-46">
+    <link rel="stylesheet" href="styles.css?v=20260521-48">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -72,7 +72,7 @@
                     <span class="hero-operating-line-part">Operational competence is.</span>
                 </p>
                 <hr class="hero-divider" aria-hidden="true">
-                <p class="hero-description">Valkyrie Revival Fund I <span class="hero-fund-amount">$120M</span></p>
+                <a href="#fund" class="hero-description hero-fund-link">Valkyrie Revival Fund I <span class="hero-fund-amount">$120M</span></a>
                 <div class="hero-cta">
                     <a href="#contact" class="btn-primary">Connect</a>
                 </div>
@@ -217,6 +217,12 @@
                     <img src="no-back-helmet.png" alt="" class="our-fund-logo" width="72" height="72">
                     <span class="our-fund-subtitle">The Valkyrie Revival Fund 1</span>
                 </a>
+                <div class="fund-bubble-wrap our-fund-bubble-wrap">
+                    <a href="valkyrie-revival-fund-I/" class="fund-bubble" aria-label="Fund 1, $120 million">
+                        <span class="fund-bubble-label">Fund 1</span>
+                        <span class="fund-bubble-amount">$120M</span>
+                    </a>
+                </div>
                 <p class="our-fund-lead">Valkyrie Revival Fund I is the investment vehicle behind Prytaneum Partners—a <strong class="our-fund-amount">$120M</strong> fund acquiring and reviving distressed B2B software businesses through disciplined operations and full ownership.</p>
                 <a href="valkyrie-revival-fund/" class="btn-primary our-fund-cta">Explore the fund</a>
             </div>
@@ -475,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 // Force-set hero description copy in case of CDN/HTML cache
 (function(){
-  var els = document.querySelectorAll('.hero-description');
+  var els = document.querySelectorAll('.hero-fund-link');
   if (els.length >= 1) {
     els[0].innerHTML = 'Valkyrie Revival Fund I <span class="hero-fund-amount">$120M</span>';
   }
