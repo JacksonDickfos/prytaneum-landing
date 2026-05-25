@@ -3189,12 +3189,8 @@ a.investor-home-card .investor-icon-badge {
 .data-room-intro {
     font-size: 1.1rem;
     color: var(--pp-charcoal);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     line-height: 1.6;
-}
-
-.data-room-access-btn {
-    margin-bottom: 2.5rem;
 }
 
 .data-room-cards {
@@ -3205,19 +3201,31 @@ a.investor-home-card .investor-icon-badge {
     margin: 0 auto 2rem;
 }
 
-.data-room-card {
-    cursor: default;
-    pointer-events: none;
-    opacity: 0.92;
+button.data-room-card {
+    cursor: pointer;
+    pointer-events: auto;
+    opacity: 1;
+    appearance: none;
+    -webkit-appearance: none;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    text-align: center;
 }
 
-.data-room-card:hover {
-    transform: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+button.data-room-card:hover {
+    transform: translateY(-27.5px);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
+}
+
+button.data-room-card:focus-visible {
+    outline: 2px solid var(--pp-hearth-gold);
+    outline-offset: 4px;
 }
 
 .investor-home-disclaimer {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.55;
     color: #666;
     margin: 2rem auto 1.5rem;

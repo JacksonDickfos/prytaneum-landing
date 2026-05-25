@@ -70,20 +70,19 @@
             <!-- Data Room Section -->
             <div class="data-room-section">
                 <p class="data-room-intro">For investors seeking full diligence materials and current pipeline:</p>
-                <button type="button" class="btn-primary data-room-access-btn" id="requestDataRoomBtn">Request Access to Data Room</button>
                 <div class="data-room-cards">
-                    <div class="investor-card investor-home-card data-room-card">
+                    <button type="button" class="investor-card investor-home-card data-room-card" aria-label="Request access to Data Room Phase 1">
                         <div class="investor-icon-badge">
                             <i class="fas fa-folder-open"></i>
                         </div>
                         <h3>Data Room - Phase 1</h3>
-                    </div>
-                    <div class="investor-card investor-home-card data-room-card">
+                    </button>
+                    <button type="button" class="investor-card investor-home-card data-room-card" aria-label="Request access to Data Room Phase 2">
                         <div class="investor-icon-badge">
                             <i class="fas fa-folder-open"></i>
                         </div>
                         <h3>Data Room - Phase 2</h3>
-                    </div>
+                    </button>
                 </div>
                 <p class="investor-home-disclaimer">Disclaimer: All materials and information presented herein are subject to change without notice. While reasonable care has been taken in the preparation of this content, no representation or warranty, express or implied, is made as to its accuracy, completeness, or reliability. Users should not rely solely on this information for decision-making purposes.</p>
             </div>
@@ -160,15 +159,18 @@
     // Data Room Modal
     document.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById('dataRoomModal');
-        const openBtn = document.getElementById('requestDataRoomBtn');
+        const openTriggers = document.querySelectorAll('.data-room-card');
         const closeBtn = document.getElementById('dataRoomModalClose');
 
-        if (openBtn && modal) {
-            openBtn.addEventListener('click', function() {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
+        function openDataRoomModal() {
+            if (!modal) return;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
+
+        openTriggers.forEach(function(trigger) {
+            trigger.addEventListener('click', openDataRoomModal);
+        });
         if (closeBtn && modal) {
             closeBtn.addEventListener('click', function() {
                 modal.classList.remove('active');
