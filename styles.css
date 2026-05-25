@@ -3550,70 +3550,29 @@ body.nda-terms-layout {
     margin: 0 auto;
     padding: 0 1.5rem;
     color: var(--pp-charcoal);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .nda-terms-content h1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
     font-weight: 700;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
     color: #4F555A;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
     line-height: 1.3;
 }
 
-.nda-intro {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 2.25rem;
-}
-
-.nda-terms-content section {
-    margin-bottom: 1.75rem;
-}
-
-.nda-terms-content h2 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--pp-charcoal);
-    margin: 0 0 0.65rem;
-    line-height: 1.4;
-}
-
 .nda-terms-content p {
-    font-size: 0.95rem;
-    line-height: 1.75;
-    margin: 0 0 0.85rem;
-}
-
-.nda-sublist {
-    margin: 0.35rem 0 0.85rem;
-    padding-left: 1.35rem;
-}
-
-.nda-sublist li {
-    font-size: 0.95rem;
-    line-height: 1.75;
-    margin-bottom: 0.65rem;
-}
-
-.nda-sublist li:last-child {
-    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--pp-charcoal);
 }
 
 .nda-terms-closing {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(79, 85, 90, 0.15);
-    font-size: 0.85rem;
+    margin-top: 0;
     font-weight: 600;
-    letter-spacing: 0.03em;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
