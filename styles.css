@@ -3168,12 +3168,12 @@ body.team-page .footer {
     margin-bottom: 3rem;
 }
 
-/* Fund I cards — match team page card styling */
+/* Fund I cards — match Fund page $120M bubble */
 .investor-home-section .investor-home-card {
     background: #484b4d;
     border-radius: 12px;
-    border: 1px solid rgba(209, 173, 92, 0.2);
-    box-shadow: none !important;
+    border: 3px solid var(--pp-hearth-gold);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -3181,16 +3181,8 @@ body.team-page .footer {
 }
 
 .investor-home-section .investor-home-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(209, 173, 92, 0.1), transparent);
-    transition: left 0.5s ease;
-    pointer-events: none;
-    z-index: 0;
+    display: none;
+    content: none;
 }
 
 .investor-home-section .investor-home-card::after {
@@ -3201,14 +3193,10 @@ body.team-page .footer {
 
 .investor-home-section a.investor-home-card:hover,
 .investor-home-section button.investor-home-card:hover {
-    transform: translateY(-27.5px);
+    transform: translateY(-8px);
     border-color: var(--pp-hearth-gold);
-    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.25) !important;
     z-index: 2;
-}
-
-.investor-home-section .investor-home-card:hover::before {
-    left: 100%;
 }
 
 .investor-home-section .investor-home-card h3 {
@@ -3224,6 +3212,12 @@ body.team-page .footer {
     position: relative;
     z-index: 1;
     pointer-events: none;
+    background: transparent;
+    border: none;
+}
+
+.investor-home-section .investor-home-card .investor-icon-badge i {
+    color: var(--pp-hearth-gold);
 }
 
 a.investor-home-card {
