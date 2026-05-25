@@ -1217,7 +1217,8 @@ a.hero-fund-link:focus-visible {
 }
 
 button.fund-bubble {
-    font: inherit;
+    font-family: 'Cinzel', serif;
+    color: #FFFFFF;
 }
 
 .fund-bubble-label {
