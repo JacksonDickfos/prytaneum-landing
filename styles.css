@@ -2841,7 +2841,7 @@ body.team-page .footer {
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid var(--pp-hearth-gold);
+    border: none;
     background: var(--pp-deep-cream);
     display: flex;
     align-items: center;
@@ -2849,28 +2849,9 @@ body.team-page .footer {
     position: relative;
 }
 
-/* Animated gold sheen border - visible rotating shimmer */
 .team-photo::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    width: 8px;
-    height: 20px;
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        #F5D896,
-        var(--pp-hearth-gold),
-        #F5D896,
-        transparent
-    );
-    border-radius: 4px;
-    transform-origin: center 94px;
-    animation: rotateSheen 3s linear infinite;
-    z-index: 10;
-    pointer-events: none;
-    box-shadow: 0 0 10px rgba(245, 216, 150, 0.8);
+    display: none;
+    content: none;
 }
 
 @keyframes rotateSheen {
