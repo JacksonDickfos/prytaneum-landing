@@ -3245,13 +3245,13 @@ a.investor-home-card {
 }
 
 .investor-home-section .investor-home-grid .investor-icon-badge {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1rem;
+    width: 105px;
+    height: 105px;
+    margin-bottom: 1.5rem;
 }
 
 .investor-home-section .investor-home-grid .investor-icon-badge i {
-    font-size: 1.75rem;
+    font-size: 2.625rem;
 }
 
 .investor-home-section .investor-home-grid .investor-home-card h3 {
@@ -3294,8 +3294,12 @@ button.data-room-card {
 }
 
 button.data-room-card .investor-icon-badge {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+}
+
+button.data-room-card .investor-icon-badge i {
+    font-size: 3rem;
 }
 
 button.data-room-card h3 {
@@ -3312,13 +3316,13 @@ button.data-room-card h3 {
     }
 
     button.data-room-card .investor-icon-badge {
-        width: 96px;
-        height: 96px;
-        margin-bottom: 1.35rem;
+        width: 144px;
+        height: 144px;
+        margin-bottom: 2rem;
     }
 
     button.data-room-card .investor-icon-badge i {
-        font-size: 2.35rem;
+        font-size: 3.525rem;
     }
 
     button.data-room-card h3 {
@@ -3336,12 +3340,12 @@ button.data-room-card h3 {
     }
 
     button.data-room-card .investor-icon-badge {
-        width: 104px;
-        height: 104px;
+        width: 156px;
+        height: 156px;
     }
 
     button.data-room-card .investor-icon-badge i {
-        font-size: 2.5rem;
+        font-size: 3.75rem;
     }
 
     button.data-room-card h3 {
