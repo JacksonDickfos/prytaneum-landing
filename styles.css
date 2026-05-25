@@ -574,7 +574,7 @@ a.hero-fund-link:focus-visible {
     height: 120px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--pp-hearth-gold);
+    border: none;
     background: var(--pp-deep-cream);
     margin-bottom: 0.85rem;
 }
