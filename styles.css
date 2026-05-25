@@ -3133,3 +3133,205 @@ body.team-page .footer {
         margin-right: auto;
     }
 }
+
+/* Investor Home (Fund I) */
+.investor-home-section {
+    padding: 7rem 0 4rem;
+    background: #E4E2DA;
+}
+
+.investor-home-section .section-header h2 {
+    color: var(--pp-charcoal);
+}
+
+.investor-home-section .section-header p {
+    color: var(--pp-charcoal);
+}
+
+.investor-home-grid {
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 3rem;
+}
+
+a.investor-home-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+a.investor-home-card:hover {
+    transform: translateY(-27.5px);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
+}
+
+a.investor-home-card .investor-icon-badge {
+    pointer-events: none;
+}
+
+.investor-home-card h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+    white-space: normal;
+}
+
+.data-room-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.data-room-intro {
+    font-size: 1.1rem;
+    color: var(--pp-charcoal);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.data-room-access-btn {
+    margin-bottom: 2.5rem;
+}
+
+.data-room-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+}
+
+.data-room-card {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.92;
+}
+
+.data-room-card:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.investor-home-disclaimer {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: #666;
+    margin: 2rem auto 1.5rem;
+    max-width: 800px;
+}
+
+.investor-home-back {
+    display: block;
+    text-align: center;
+}
+
+/* Data Room modal */
+.data-room-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    animation: fadeInInvestors 0.3s ease;
+}
+
+.data-room-modal.active {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.data-room-modal-content {
+    background: #2e3235;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 560px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.data-room-modal-content .section-header h2 {
+    color: #FFFFFF;
+    font-size: 1.75rem;
+}
+
+.data-room-modal-content .section-header p {
+    color: #ccccc9;
+}
+
+.data-room-modal .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ccccc9;
+    cursor: pointer;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.data-room-modal .modal-close:hover {
+    color: #FFFFFF;
+}
+
+.data-room-modal .contact-form .form-card {
+    margin-top: 1rem;
+}
+
+/* Investor document viewer pages */
+.investor-doc-page .investor-doc-viewer {
+    padding: 6rem 0 2rem;
+    background: #E4E2DA;
+    min-height: 80vh;
+}
+
+.investor-doc-viewer .fund-page-back {
+    margin-bottom: 1rem;
+}
+
+.investor-doc-viewer iframe {
+    width: 100%;
+    height: calc(100vh - 180px);
+    min-height: 480px;
+    border: 1px solid rgba(209, 173, 92, 0.25);
+    border-radius: 8px;
+    background: #fff;
+}
+
+@media (max-width: 1100px) {
+    .investor-home-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .investor-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .data-room-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .data-room-modal-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .investor-home-grid {
+        grid-template-columns: 1fr;
+    }
+}

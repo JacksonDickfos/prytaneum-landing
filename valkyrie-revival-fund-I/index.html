@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valkyrie Revival Fund I | Prytaneum Partners</title>
+    <title>Investor Home — Valkyrie Revival Fund I | Prytaneum Partners</title>
     <link rel="icon" type="image/png" href="../logo.png">
-    <link rel="stylesheet" href="../styles.css?v=20260521-46">
+    <link rel="stylesheet" href="../styles.css?v=20260521-50">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -15,7 +15,7 @@
             <ul class="nav-menu">
                 <li><a href="../index.html#about">Our Leadership</a></li>
                 <li><a href="../index.html#doctrine">Our Doctrine</a></li>
-                <li><a href="../../valkyrie-revival-fund/">Our Fund</a></li>
+                <li><a href="../valkyrie-revival-fund/">Our Fund</a></li>
                 <li><a href="../team.html">Our Team</a></li>
                 <li><a href="../index.html#contact">Connect</a></li>
             </ul>
@@ -27,18 +27,118 @@
         </div>
     </nav>
 
-    <section class="fund-page">
+    <!-- Investor Home - 7 bubbles -->
+    <section id="investor-home" class="investors investor-home-section visible">
         <div class="container">
-            <div class="fund-page-header">
-                <a href="../valkyrie-revival-fund/" class="our-fund-subtitle-link">
-                    <img src="../no-back-helmet.png" alt="" class="our-fund-logo" width="88" height="88">
-                    <span class="our-fund-subtitle">Valkyrie Revival Fund I</span>
+            <div class="section-header">
+                <h2>Investor Home</h2>
+                <p>We are selectively onboarding investors for the current raise.</p>
+            </div>
+            <div class="investors-grid investor-home-grid">
+                <a href="1-pager.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>1-pager</h3>
+                </a>
+                <a href="presentation-deck.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <h3>Investor Presentation Deck</h3>
+                </a>
+                <a href="appendix.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Case Studies &amp; Track Record</h3>
+                </a>
+                <a href="spv-deck.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Special Purpose Vehicle Option</h3>
+                </a>
+                <a href="faqs.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Investor FAQs</h3>
                 </a>
             </div>
-            <p class="fund-i-placeholder">Detailed Fund I materials will be published here shortly.</p>
-            <a href="../valkyrie-revival-fund/" class="fund-page-back">&larr; Back to Valkyrie Revival Fund</a>
+
+            <!-- Data Room Section -->
+            <div class="data-room-section">
+                <p class="data-room-intro">For investors seeking full diligence materials and current pipeline:</p>
+                <button type="button" class="btn-primary data-room-access-btn" id="requestDataRoomBtn">Request Access to Investor Data Room</button>
+                <div class="data-room-cards">
+                    <div class="investor-card investor-home-card data-room-card">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Data Room - Phase 1</h3>
+                    </div>
+                    <div class="investor-card investor-home-card data-room-card">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Data Room - Phase 2</h3>
+                    </div>
+                </div>
+                <p class="investor-home-disclaimer">Disclaimer: All materials and information presented herein are subject to change without notice. While reasonable care has been taken in the preparation of this content, no representation or warranty, express or implied, is made as to its accuracy, completeness, or reliability.<br>Users should not rely solely on this information for decision-making purposes.</p>
+            </div>
+            <a href="../valkyrie-revival-fund/" class="fund-page-back investor-home-back">&larr; Back to Valkyrie Revival Fund</a>
         </div>
     </section>
+
+    <!-- Data Room Request Modal -->
+    <div id="dataRoomModal" class="data-room-modal">
+        <div class="data-room-modal-content">
+            <button type="button" class="modal-close" id="dataRoomModalClose" aria-label="Close">&times;</button>
+            <div class="section-header">
+                <h2>Request Access to Investor Data Room</h2>
+                <p>Fill out the form below to request access to our data room materials.</p>
+            </div>
+            <div class="contact-form">
+                <div class="form-card">
+                    <form id="dataRoomContactForm">
+                        <div class="form-group">
+                            <label for="dataRoomEmail">Email Address *</label>
+                            <input type="email" id="dataRoomEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomPhone">Phone Number</label>
+                            <input type="tel" id="dataRoomPhone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomAvailableCapital">Available Capital</label>
+                            <input type="text" id="dataRoomAvailableCapital" name="availableCapital" inputmode="numeric" pattern="[0-9,]*" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomInvestorType">Type of Investor</label>
+                            <select id="dataRoomInvestorType" name="investorType">
+                                <option value="">Select an option</option>
+                                <option value="Angel Investor">Angel Investor</option>
+                                <option value="High net-worth individual">High net-worth individual</option>
+                                <option value="Family Office">Family Office</option>
+                                <option value="Venture Capital">Venture Capital</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomMessage">Message *</label>
+                            <textarea id="dataRoomMessage" name="message" rows="5" required placeholder="Request access to the data room"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Request Data Room Access</button>
+                    </form>
+                    <div id="dataRoomSuccessMessage" class="success-message" style="display: none;">
+                        <h3>Thank you</h3>
+                        <p>Your request was submitted successfully. The Valkyrie revival team will be in touch with you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -54,7 +154,7 @@
             <div class="footer-nav">
                 <a href="../index.html#about">Our Leadership</a>
                 <a href="../index.html#doctrine">Our Doctrine</a>
-                <a href="../../valkyrie-revival-fund/">Our Fund</a>
+                <a href="../valkyrie-revival-fund/">Our Fund</a>
                 <a href="../team.html">Our Team</a>
                 <a href="../index.html#contact">Connect</a>
             </div>
@@ -73,6 +173,106 @@
             </div>
         </div>
     </footer>
+
     <script src="../script.js"></script>
+    <script>
+    // Data Room Modal
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('dataRoomModal');
+        const openBtn = document.getElementById('requestDataRoomBtn');
+        const closeBtn = document.getElementById('dataRoomModalClose');
+
+        if (openBtn && modal) {
+            openBtn.addEventListener('click', function() {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        if (closeBtn && modal) {
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Available Capital formatting for Data Room form
+    function formatNumberWithCommas(value) {
+        const numericValue = String(value).replace(/\D/g, '');
+        return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+    function parseFormattedNumber(value) {
+        return parseInt(String(value).replace(/,/g, ''), 10) || 0;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const input = document.getElementById('dataRoomAvailableCapital');
+        if (input) {
+            input.addEventListener('input', function() {
+                const cursorPosition = this.selectionStart;
+                const oldValue = this.value;
+                const newValue = formatNumberWithCommas(oldValue);
+                this.value = newValue;
+                const addedCommas = (newValue.match(/,/g) || []).length - (oldValue.match(/,/g) || []).length;
+                this.setSelectionRange(cursorPosition + addedCommas, cursorPosition + addedCommas);
+            });
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const currentValue = parseFormattedNumber(this.value);
+                    const increment = 500000;
+                    const newValue = e.key === 'ArrowUp' ? currentValue + increment : Math.max(0, currentValue - increment);
+                    this.value = formatNumberWithCommas(newValue.toString());
+                }
+            });
+        }
+    });
+
+    // Data Room form submission
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('dataRoomContactForm');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const availableCapitalInput = document.getElementById('dataRoomAvailableCapital');
+            const availableCapital = availableCapitalInput ? parseFormattedNumber(availableCapitalInput.value).toString() : '';
+            const investorType = formData.get('investorType');
+            const message = formData.get('message');
+            fetch('https://formspree.io/f/mblzgbyy', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, name: '', phone, availableCapital, investorType, message })
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    const successMsg = document.getElementById('dataRoomSuccessMessage');
+                    if (successMsg) successMsg.style.display = 'flex';
+                } else {
+                    alert('There was an error submitting the form. Please try again.');
+                }
+            })
+            .catch(function() {
+                alert('There was an error submitting the form. Please try again.');
+            });
+        });
+    });
+    </script>
 </body>
 </html>
