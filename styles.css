@@ -1236,6 +1236,21 @@ a.hero-fund-link:focus-visible {
     line-height: 1;
 }
 
+.fund-page-video {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+}
+
+.fund-page-sizzle {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    background: #212325;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 .fund-page-back {
     display: block;
     text-align: center;
