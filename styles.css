@@ -3364,6 +3364,13 @@ body.investor-fund-layout .footer {
     margin: 0;
 }
 
+.investor-doc-frame {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(209, 173, 92, 0.2);
+    background: #fff;
+}
+
 .investor-doc-viewer iframe {
     display: block;
     width: 100%;
@@ -3371,7 +3378,7 @@ body.investor-fund-layout .footer {
     min-height: 560px;
     border: none;
     border-radius: 0;
-    background: transparent;
+    background: #fff;
     box-shadow: none;
 }
 
