@@ -362,10 +362,6 @@ a.hero-fund-link:focus-visible {
     margin: 0.25rem auto 1.75rem;
 }
 
-.our-fund-lead {
-    margin-bottom: 1.5rem;
-}
-
 .hero-cta {
     display: flex;
     gap: 1rem;
@@ -1135,7 +1131,7 @@ a.hero-fund-link:focus-visible {
     font-size: 1.1rem;
     line-height: 1.7;
     color: var(--pp-charcoal);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .our-fund-amount {
