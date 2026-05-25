@@ -3219,6 +3219,7 @@ body.team-page .footer {
     white-space: normal;
     position: relative;
     z-index: 1;
+    margin: 0;
 }
 
 .investor-home-section .investor-home-card .investor-icon-badge {
@@ -3241,13 +3242,13 @@ a.investor-home-card {
 
 /* Slightly compact document bubbles */
 .investor-home-section .investor-home-grid .investor-home-card {
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem 0.85rem;
 }
 
 .investor-home-section .investor-home-grid .investor-icon-badge {
     width: 105px;
     height: 105px;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 0.85rem;
 }
 
 .investor-home-section .investor-home-grid .investor-icon-badge i {
@@ -3290,12 +3291,13 @@ button.data-room-card {
     color: inherit;
     width: 100%;
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 1.35rem 1.5rem 1.15rem;
 }
 
 button.data-room-card .investor-icon-badge {
     width: 120px;
     height: 120px;
+    margin: 0 auto 0.85rem;
 }
 
 button.data-room-card .investor-icon-badge i {
@@ -3312,13 +3314,13 @@ button.data-room-card h3 {
     }
 
     button.data-room-card {
-        padding: 2.35rem 2rem;
+        padding: 1.65rem 2rem 1.35rem;
     }
 
     button.data-room-card .investor-icon-badge {
         width: 144px;
         height: 144px;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     button.data-room-card .investor-icon-badge i {
@@ -3336,7 +3338,7 @@ button.data-room-card h3 {
     }
 
     button.data-room-card {
-        padding: 2.5rem 2.25rem;
+        padding: 1.75rem 2.25rem 1.45rem;
     }
 
     button.data-room-card .investor-icon-badge {
