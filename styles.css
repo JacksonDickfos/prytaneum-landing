@@ -3305,6 +3305,10 @@ a.investor-home-card {
     font-size: 2.625rem;
 }
 
+.investor-home-section button.data-room-card h3 {
+    font-size: 1.15rem;
+}
+
 button.data-room-card:focus-visible {
     outline: 2px solid var(--pp-hearth-gold);
     outline-offset: 4px;
