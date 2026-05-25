@@ -3303,15 +3303,29 @@ a.investor-home-card .investor-icon-badge {
 }
 
 .investor-doc-page .investor-doc-container {
-    max-width: min(98vw, 1680px);
-    width: 100%;
+    max-width: min(85vw, 1500px);
+    width: 85vw;
     margin: 0 auto;
     padding: 0 0.5rem;
 }
 
-.investor-doc-viewer .fund-page-back {
-    margin-bottom: 0.75rem;
+.investor-doc-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.investor-doc-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--pp-charcoal);
+    margin: 0 0 0.75rem;
+    line-height: 1.25;
+}
+
+.investor-doc-viewer .investor-doc-back {
     display: inline-block;
+    margin: 0;
 }
 
 .investor-doc-viewer iframe {
