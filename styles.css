@@ -752,6 +752,11 @@ a.hero-fund-link:focus-visible {
     background: #FFFFFF;
 }
 
+.services .section-header p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
