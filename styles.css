@@ -3154,7 +3154,27 @@ body.team-page .footer {
 
 .investor-home-grid {
     grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
     margin-bottom: 3rem;
+}
+
+/* Slightly compact document bubbles */
+.investor-home-section .investor-home-grid .investor-home-card {
+    padding: 1.5rem 1rem;
+}
+
+.investor-home-section .investor-home-grid .investor-icon-badge {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+.investor-home-section .investor-home-grid .investor-icon-badge i {
+    font-size: 1.75rem;
+}
+
+.investor-home-section .investor-home-grid .investor-home-card h3 {
+    font-size: 0.9rem;
 }
 
 a.investor-home-card {
@@ -3197,7 +3217,8 @@ a.investor-home-card .investor-icon-badge {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 280px;
+    width: 100%;
+    max-width: min(100%, 360px);
     margin: 0 auto 2rem;
 }
 
@@ -3211,6 +3232,63 @@ button.data-room-card {
     color: inherit;
     width: 100%;
     text-align: center;
+    padding: 2rem 1.5rem;
+}
+
+button.data-room-card .investor-icon-badge {
+    width: 80px;
+    height: 80px;
+}
+
+button.data-room-card h3 {
+    font-size: 1.05rem;
+}
+
+@media (min-width: 769px) {
+    .data-room-cards {
+        max-width: 340px;
+    }
+
+    button.data-room-card {
+        padding: 2.35rem 2rem;
+    }
+
+    button.data-room-card .investor-icon-badge {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 1.35rem;
+    }
+
+    button.data-room-card .investor-icon-badge i {
+        font-size: 2.35rem;
+    }
+
+    button.data-room-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .data-room-cards {
+        max-width: 400px;
+    }
+
+    button.data-room-card {
+        padding: 2.5rem 2.25rem;
+    }
+
+    button.data-room-card .investor-icon-badge {
+        width: 104px;
+        height: 104px;
+    }
+
+    button.data-room-card .investor-icon-badge i {
+        font-size: 2.5rem;
+    }
+
+    button.data-room-card h3 {
+        font-size: 1.25rem;
+    }
 }
 
 button.data-room-card:hover {
@@ -3401,6 +3479,10 @@ body.investor-fund-layout .footer {
         gap: 1.25rem;
     }
 
+    .data-room-cards {
+        max-width: calc((100% - 1.25rem) / 2);
+        width: calc((100% - 1.25rem) / 2);
+    }
 
     .data-room-modal-content {
         padding: 1.5rem;
@@ -3410,5 +3492,10 @@ body.investor-fund-layout .footer {
 @media (max-width: 480px) {
     .investor-home-grid {
         grid-template-columns: 1fr;
+    }
+
+    .data-room-cards {
+        max-width: 100%;
+        width: 100%;
     }
 }
