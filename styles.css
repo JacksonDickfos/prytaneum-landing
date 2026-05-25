@@ -1210,6 +1210,14 @@ a.hero-fund-link:focus-visible {
     line-height: 1.2;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    padding: 0;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+button.fund-bubble {
+    font: inherit;
 }
 
 .fund-bubble-label {
@@ -3417,6 +3425,37 @@ button.data-room-card:focus-visible {
 
 .data-room-modal .contact-form .form-card {
     margin-top: 1rem;
+}
+
+.form-checkbox-group {
+    margin-top: 0.25rem;
+}
+
+.form-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #ccccc9;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    accent-color: var(--pp-hearth-gold);
+}
+
+.form-checkbox-label a {
+    color: var(--pp-hearth-gold);
+    text-decoration: underline;
+}
+
+.form-checkbox-label a:hover {
+    color: #FFFFFF;
 }
 
 /* Investor / fund document pages — seamless cream background, no card fold shadows */

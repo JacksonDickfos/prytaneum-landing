@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valkyrie Revival Fund | Prytaneum Partners</title>
     <link rel="icon" type="image/png" href="../logo.png">
-    <link rel="stylesheet" href="../styles.css?v=20260521-76">
+    <link rel="stylesheet" href="../styles.css?v=20260521-80">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -38,10 +38,10 @@
                 <p><strong>Valkyrie Revival Fund</strong> is the investment vehicle behind Prytaneum Partners—continuous funds purpose-built to acquire, operate, and revive distressed B2B software businesses in the $10–20 million revenue range. This is how qualified investors participate in the opportunity.</p>
             </div>
             <div class="fund-bubble-wrap">
-                <a href="../valkyrie-revival-fund-I/" class="fund-bubble" aria-label="Fund 1, $120 million">
+                <button type="button" class="fund-bubble" id="fundOneAccessTrigger" aria-label="Fund 1, $120 million">
                     <span class="fund-bubble-label">Fund 1</span>
                     <span class="fund-bubble-amount">$120M</span>
-                </a>
+                </button>
             </div>
             <div class="fund-page-video">
                 <video class="fund-page-sizzle" controls playsinline preload="metadata">
@@ -84,6 +84,43 @@
             </div>
         </div>
     </footer>
+    <!-- Fund I access modal -->
+    <div id="fundOneAccessModal" class="data-room-modal">
+        <div class="data-room-modal-content">
+            <button type="button" class="modal-close" id="fundOneAccessModalClose" aria-label="Close">&times;</button>
+            <div class="section-header">
+                <h2>Fund I Investor Material</h2>
+                <p>This page is exclusive to prospective investors. Please provide your details to access the material.</p>
+            </div>
+            <div class="contact-form">
+                <div class="form-card">
+                    <form id="fundOneAccessForm">
+                        <div class="form-group">
+                            <label for="fundOneName">Name *</label>
+                            <input type="text" id="fundOneName" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="fundOneEmail">Email Address *</label>
+                            <input type="email" id="fundOneEmail" name="email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="fundOneCompany">Company</label>
+                            <input type="text" id="fundOneCompany" name="company" autocomplete="organization">
+                        </div>
+                        <div class="form-group form-checkbox-group">
+                            <label class="form-checkbox-label" for="fundOneNdaAccept">
+                                <input type="checkbox" id="fundOneNdaAccept" name="nda_accepted" required>
+                                <span>By checking this box, I agree to be bound by the <a href="https://www.prytaneumpartners.com/NDA-terms-and-conditions" target="_blank" rel="noopener noreferrer">terms of the Non-Disclosure Agreement (NDA)</a> and acknowledge that all materials accessed are confidential and may be used solely for evaluating a potential investment in the Valkyrie Revival Fund.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary">View &lsquo;Fund I&rsquo; Material</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../script.js"></script>
+    <script src="../fund-i-access.js"></script>
 </body>
 </html>
