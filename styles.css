@@ -3137,7 +3137,11 @@ body.team-page .footer {
 /* Investor Home (Fund I) */
 .investor-home-section {
     padding: 7rem 0 4rem;
-    background: #E4E2DA;
+    background: #E4E2DA !important;
+}
+
+.investors.investor-home-section {
+    background: #E4E2DA !important;
 }
 
 .investor-home-section .section-header h2 {
@@ -3289,17 +3293,40 @@ a.investor-home-card .investor-icon-badge {
     margin-top: 1rem;
 }
 
+/* Investor / fund document pages — seamless cream background, no card fold shadows */
+body.investor-fund-layout {
+    background: #E4E2DA;
+}
+
+body.investor-fund-layout .navbar::after {
+    display: none !important;
+    content: none !important;
+}
+
+body.investor-fund-layout .investors.investor-home-section,
+body.investor-fund-layout .fund-page,
+body.investor-fund-layout .investor-doc-viewer {
+    background: #E4E2DA !important;
+}
+
+body.investor-fund-layout .investor-home-section .investor-card::after {
+    display: none !important;
+    content: none !important;
+}
+
+body.investor-fund-layout .footer {
+    margin-top: 0;
+    box-shadow: none;
+}
+
 /* Investor document viewer pages */
 .investor-doc-page .investor-doc-viewer {
-    padding: 5rem 0 1.5rem;
+    padding: 5rem 0 2rem;
     background: #E4E2DA;
-    flex: 1;
 }
 
 .investor-doc-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background: #E4E2DA;
 }
 
 .investor-doc-page .investor-doc-container {
@@ -3315,10 +3342,10 @@ a.investor-home-card .investor-icon-badge {
 }
 
 .investor-doc-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 600;
-    color: var(--pp-charcoal);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #4F555A;
     margin: 0 0 0.75rem;
     line-height: 1.25;
 }
@@ -3331,16 +3358,17 @@ a.investor-home-card .investor-icon-badge {
 .investor-doc-viewer iframe {
     display: block;
     width: 100%;
-    height: calc(100vh - 22rem);
+    height: calc(100vh - 20rem);
     min-height: 560px;
-    border: 1px solid rgba(209, 173, 92, 0.25);
-    border-radius: 8px;
-    background: #fff;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 @media (min-width: 1200px) {
     .investor-doc-viewer iframe {
-        height: calc(100vh - 20rem);
+        height: calc(100vh - 18rem);
         min-height: 640px;
     }
 }
