@@ -2802,7 +2802,7 @@ body.team-page .footer {
 }
 
 .team-card .team-title {
-    color: #FFFFFF;
+    color: var(--pp-hearth-gold);
 }
 
 .team-card .team-description {
@@ -3089,6 +3089,10 @@ body.team-page .footer {
 }
 
 @media (max-width: 768px) {
+    body.team-page .team-badge {
+        display: none !important;
+    }
+
     .team-grid {
         display: flex;
         flex-direction: column;
@@ -3226,7 +3230,7 @@ body.team-page .footer {
 }
 
 .investor-home-section .investor-home-card .investor-icon-badge i {
-    color: #FFFFFF;
+    color: var(--pp-hearth-gold);
 }
 
 a.investor-home-card {
