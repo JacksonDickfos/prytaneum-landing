@@ -359,7 +359,11 @@ a.hero-fund-link:focus-visible {
 }
 
 .our-fund-bubble-wrap {
-    margin: 0.5rem auto 1.75rem;
+    margin: 0.25rem auto 1.75rem;
+}
+
+.our-fund-lead {
+    margin-bottom: 1.5rem;
 }
 
 .hero-cta {
