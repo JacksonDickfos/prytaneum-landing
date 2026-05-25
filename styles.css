@@ -3195,9 +3195,9 @@ a.investor-home-card .investor-icon-badge {
 
 .data-room-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 640px;
+    max-width: 280px;
     margin: 0 auto 2rem;
 }
 
@@ -3401,9 +3401,6 @@ body.investor-fund-layout .footer {
         gap: 1.25rem;
     }
 
-    .data-room-cards {
-        grid-template-columns: 1fr;
-    }
 
     .data-room-modal-content {
         padding: 1.5rem;
