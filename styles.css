@@ -1189,6 +1189,12 @@ body {
     outline-offset: 4px;
 }
 
+.fund-bubble-amount {
+    font-size: 1.65rem;
+    color: var(--pp-hearth-gold);
+    font-weight: 700;
+}
+
 .fund-page-back {
     display: block;
     text-align: center;
