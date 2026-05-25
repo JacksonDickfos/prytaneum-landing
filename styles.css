@@ -3168,6 +3168,70 @@ body.team-page .footer {
     margin-bottom: 3rem;
 }
 
+/* Fund I cards — match team page card styling */
+.investor-home-section .investor-home-card {
+    background: #484b4d;
+    border-radius: 12px;
+    border: 1px solid rgba(209, 173, 92, 0.2);
+    box-shadow: none !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.investor-home-section .investor-home-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(209, 173, 92, 0.1), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.investor-home-section .investor-home-card::after {
+    display: none !important;
+    content: none !important;
+    box-shadow: none !important;
+}
+
+.investor-home-section a.investor-home-card:hover,
+.investor-home-section button.investor-home-card:hover {
+    transform: translateY(-27.5px);
+    border-color: var(--pp-hearth-gold);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2) !important;
+    z-index: 2;
+}
+
+.investor-home-section .investor-home-card:hover::before {
+    left: 100%;
+}
+
+.investor-home-section .investor-home-card h3 {
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.35;
+    white-space: normal;
+    position: relative;
+    z-index: 1;
+}
+
+.investor-home-section .investor-home-card .investor-icon-badge {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+a.investor-home-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 /* Slightly compact document bubbles */
 .investor-home-section .investor-home-grid .investor-home-card {
     padding: 1.5rem 1rem;
@@ -3185,28 +3249,6 @@ body.team-page .footer {
 
 .investor-home-section .investor-home-grid .investor-home-card h3 {
     font-size: 0.9rem;
-}
-
-a.investor-home-card {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-a.investor-home-card:hover {
-    transform: translateY(-27.5px);
-    border-color: var(--pp-hearth-gold);
-    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
-}
-
-a.investor-home-card .investor-icon-badge {
-    pointer-events: none;
-}
-
-.investor-home-card h3 {
-    font-size: 1rem;
-    line-height: 1.35;
-    white-space: normal;
 }
 
 .data-room-section {
@@ -3235,7 +3277,6 @@ a.investor-home-card .investor-icon-badge {
 button.data-room-card {
     cursor: pointer;
     pointer-events: auto;
-    opacity: 1;
     appearance: none;
     -webkit-appearance: none;
     font: inherit;
@@ -3299,12 +3340,6 @@ button.data-room-card h3 {
     button.data-room-card h3 {
         font-size: 1.25rem;
     }
-}
-
-button.data-room-card:hover {
-    transform: translateY(-27.5px);
-    border-color: var(--pp-hearth-gold);
-    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
 button.data-room-card:focus-visible {
@@ -3406,10 +3441,6 @@ body.investor-fund-layout .investor-doc-viewer {
     background: #E4E2DA !important;
 }
 
-body.investor-fund-layout .investor-home-section .investor-card::after {
-    display: none !important;
-    content: none !important;
-}
 
 body.investor-fund-layout .footer {
     margin-top: 0;
