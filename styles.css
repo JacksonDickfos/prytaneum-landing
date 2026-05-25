@@ -2709,12 +2709,21 @@ body:not(.at-top) .navbar::after {
 }
 
 body.team-page {
-    background: #2e3235;
+    background: #E4E2DA;
 }
 
 body.team-page .team {
+    background: #E4E2DA !important;
     min-height: auto;
     padding-bottom: 3rem;
+}
+
+body.team-page .team .section-header h2 {
+    color: var(--pp-charcoal);
+}
+
+body.team-page .team .section-header p {
+    color: var(--pp-charcoal);
 }
 
 body.team-page .team-grid {
@@ -3217,7 +3226,7 @@ body.team-page .footer {
 }
 
 .investor-home-section .investor-home-card .investor-icon-badge i {
-    color: var(--pp-hearth-gold);
+    color: #FFFFFF;
 }
 
 a.investor-home-card {
