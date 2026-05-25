@@ -1188,10 +1188,14 @@ a.hero-fund-link:focus-visible {
 }
 
 .fund-bubble {
-    position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
     width: 150px;
     height: 150px;
+    padding: 1.35rem 0.75rem 1.1rem;
     box-sizing: border-box;
     border-radius: 50%;
     border: 3px solid var(--pp-hearth-gold);
@@ -1206,13 +1210,6 @@ a.hero-fund-link:focus-visible {
 }
 
 .fund-bubble-label {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: 0 0.5rem;
-    box-sizing: border-box;
     font-size: 1.5rem;
     font-weight: 600;
     color: #FFFFFF;
@@ -1230,16 +1227,11 @@ a.hero-fund-link:focus-visible {
 }
 
 .fund-bubble-amount {
-    position: absolute;
-    left: 50%;
-    bottom: 1.1rem;
-    transform: translateX(-50%);
     font-size: 1rem;
     color: var(--pp-hearth-gold);
     font-weight: 700;
     line-height: 1;
-    margin: 0;
-    white-space: nowrap;
+    margin-top: auto;
 }
 
 .fund-page-back {
