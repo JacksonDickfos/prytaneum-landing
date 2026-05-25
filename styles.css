@@ -1157,6 +1157,11 @@ a.hero-fund-link:focus-visible {
 
 .fund-page-header .our-fund-subtitle-link {
     margin-bottom: 0;
+    cursor: default;
+}
+
+.fund-page-header .our-fund-subtitle-link:hover {
+    opacity: 1;
 }
 
 .fund-page-intro {
