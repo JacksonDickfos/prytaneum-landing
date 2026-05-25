@@ -3144,12 +3144,22 @@ body.team-page .footer {
     background: #E4E2DA !important;
 }
 
-.investor-home-section .section-header h2 {
-    color: var(--pp-charcoal);
+.investor-home-section .fund-page-header {
+    margin-bottom: 1.25rem;
 }
 
-.investor-home-section .section-header p {
+.investor-home-section .fund-page-header .our-fund-logo {
+    width: 88px;
+    height: 88px;
+}
+
+.investor-home-tagline {
+    text-align: center;
+    font-size: 1.2rem;
     color: var(--pp-charcoal);
+    margin: 0 auto 2.5rem;
+    max-width: 640px;
+    line-height: 1.5;
 }
 
 .investor-home-grid {
