@@ -70,7 +70,7 @@
             <!-- Data Room Section -->
             <div class="data-room-section">
                 <p class="data-room-intro">For investors seeking full diligence materials and current pipeline:</p>
-                <button type="button" class="btn-primary data-room-access-btn" id="requestDataRoomBtn">Request Access to Investor Data Room</button>
+                <button type="button" class="btn-primary data-room-access-btn" id="requestDataRoomBtn">Request Access to Data Room</button>
                 <div class="data-room-cards">
                     <div class="investor-card investor-home-card data-room-card">
                         <div class="investor-icon-badge">
@@ -96,7 +96,7 @@
         <div class="data-room-modal-content">
             <button type="button" class="modal-close" id="dataRoomModalClose" aria-label="Close">&times;</button>
             <div class="section-header">
-                <h2>Request Access to Investor Data Room</h2>
+                <h2>Request Access to Data Room</h2>
                 <p>Fill out the form below to request access to our data room materials.</p>
             </div>
             <div class="contact-form">
@@ -109,25 +109,6 @@
                         <div class="form-group">
                             <label for="dataRoomPhone">Phone Number</label>
                             <input type="tel" id="dataRoomPhone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="dataRoomAvailableCapital">Available Capital</label>
-                            <input type="text" id="dataRoomAvailableCapital" name="availableCapital" inputmode="numeric" pattern="[0-9,]*" placeholder="0">
-                        </div>
-                        <div class="form-group">
-                            <label for="dataRoomInvestorType">Type of Investor</label>
-                            <select id="dataRoomInvestorType" name="investorType">
-                                <option value="">Select an option</option>
-                                <option value="Angel Investor">Angel Investor</option>
-                                <option value="High net-worth individual">High net-worth individual</option>
-                                <option value="Family Office">Family Office</option>
-                                <option value="Venture Capital">Venture Capital</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="dataRoomMessage">Message *</label>
-                            <textarea id="dataRoomMessage" name="message" rows="5" required placeholder="Request access to the data room"></textarea>
                         </div>
                         <button type="submit" class="btn-primary">Request Data Room Access</button>
                     </form>
@@ -210,37 +191,6 @@
         });
     });
 
-    // Available Capital formatting for Data Room form
-    function formatNumberWithCommas(value) {
-        const numericValue = String(value).replace(/\D/g, '');
-        return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    }
-    function parseFormattedNumber(value) {
-        return parseInt(String(value).replace(/,/g, ''), 10) || 0;
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        const input = document.getElementById('dataRoomAvailableCapital');
-        if (input) {
-            input.addEventListener('input', function() {
-                const cursorPosition = this.selectionStart;
-                const oldValue = this.value;
-                const newValue = formatNumberWithCommas(oldValue);
-                this.value = newValue;
-                const addedCommas = (newValue.match(/,/g) || []).length - (oldValue.match(/,/g) || []).length;
-                this.setSelectionRange(cursorPosition + addedCommas, cursorPosition + addedCommas);
-            });
-            input.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    const currentValue = parseFormattedNumber(this.value);
-                    const increment = 500000;
-                    const newValue = e.key === 'ArrowUp' ? currentValue + increment : Math.max(0, currentValue - increment);
-                    this.value = formatNumberWithCommas(newValue.toString());
-                }
-            });
-        }
-    });
-
     // Data Room form submission
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('dataRoomContactForm');
@@ -250,14 +200,15 @@
             const formData = new FormData(this);
             const email = formData.get('email');
             const phone = formData.get('phone');
-            const availableCapitalInput = document.getElementById('dataRoomAvailableCapital');
-            const availableCapital = availableCapitalInput ? parseFormattedNumber(availableCapitalInput.value).toString() : '';
-            const investorType = formData.get('investorType');
-            const message = formData.get('message');
             fetch('https://formspree.io/f/mblzgbyy', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, name: '', phone, availableCapital, investorType, message })
+                body: JSON.stringify({
+                    email: email,
+                    name: '',
+                    phone: phone,
+                    message: 'Data room access request'
+                })
             })
             .then(function(response) {
                 if (response.ok) {
