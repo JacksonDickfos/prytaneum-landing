@@ -225,12 +225,16 @@ body {
     100% { stroke-dashoffset: 0; }
 }
 
+.hero {
+    --hero-stack-gap: 0.4rem;
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: 0;
     width: 100%;
     max-width: min(720px, 92vw);
     margin: 0 auto;
@@ -243,9 +247,9 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    gap: 1rem;
-    margin-top: 1rem;
-    transform: translateY(-140px);
+    gap: var(--hero-stack-gap);
+    margin-top: 0.2rem;
+    transform: translateY(-158px);
 }
 
 /* Ensure proper spacing for description text */
@@ -257,7 +261,7 @@ body {
 
 /* CTA button spacing */
 .hero-text .hero-cta { 
-    margin-top: 1.15rem; 
+    margin-top: var(--hero-stack-gap);
 }
 
 .hero-title {
@@ -281,7 +285,7 @@ body {
 }
 
 .hero-text .hero-title {
-    margin-bottom: 0.35rem;
+    margin-bottom: 0;
 }
 
 .hero-operating-line {
@@ -310,7 +314,7 @@ body {
     width: 0.5cm;
     height: 1px;
     border: none;
-    margin: 0.65rem auto;
+    margin: var(--hero-stack-gap) auto;
     padding: 0;
     background: var(--pp-hearth-gold);
     opacity: 1;
@@ -320,9 +324,17 @@ body {
 .rotating-logo .hero-divider--tagline {
     position: absolute;
     left: 50%;
-    bottom: 22px;
+    bottom: 34px;
     margin: 0;
     transform: translateX(-50%);
+}
+
+.hero-headline-desktop-only {
+    display: inline;
+}
+
+.hero-headline-mobile-only {
+    display: none;
 }
 
 .hero-subtitle {
@@ -442,7 +454,7 @@ a.hero-fund-link:focus-visible {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.15rem;
     transform: translateY(-105px);
 }
 
@@ -1906,7 +1918,7 @@ button.fund-bubble {
 }}
 
 /* Ensure spacing applies regardless of overrides */
-.hero .hero-cta { margin-top: 1.15rem; padding-top: 0.25rem; }
+.hero .hero-cta { margin-top: var(--hero-stack-gap); padding-top: 0; }
 .hero .hero-cta .btn-primary { margin-top: 0; }
 
 /* Parallax Effects */
@@ -2408,8 +2420,16 @@ body:not(.at-top) .navbar::after {
         transform: none;
         font-size: clamp(1.15rem, 3.5vw, 1.4rem);
         max-width: 22em;
-        margin-top: 0.25rem;
+        margin-top: 0;
         white-space: normal;
+    }
+
+    .hero-headline-desktop-only {
+        display: none;
+    }
+
+    .hero-headline-mobile-only {
+        display: block;
     }
 
     .hero-operating-line + .hero-description,
@@ -2418,12 +2438,16 @@ body:not(.at-top) .navbar::after {
     }
 
     /* Move tagline below logo and tighten gap to title */
-    .hero-visual { margin-bottom: 0.25rem; }
+    .hero {
+        --hero-stack-gap: 0.35rem;
+    }
+
+    .hero-visual { margin-bottom: 0.1rem; }
     .hero-tagline { bottom: -10px; }
-    .rotating-logo .hero-divider--tagline { bottom: -28px; }
+    .rotating-logo .hero-divider--tagline { bottom: -20px; }
 
     .hero-text {
-        transform: translateY(-50px);
+        transform: translateY(-68px);
     }
 
     .hero-visual {
@@ -2453,11 +2477,17 @@ body:not(.at-top) .navbar::after {
 }
 
 .hero .hero-text {
-    transform: translateY(-140px) !important;
+    transform: translateY(-158px) !important;
 }
 
 .hero .hero-visual {
     transform: translateY(-105px) !important;
+}
+
+@media (max-width: 768px) {
+    .hero .hero-text {
+        transform: translateY(-68px) !important;
+    }
 }
 
 
@@ -2673,6 +2703,14 @@ body:not(.at-top) .navbar::after {
 @media (min-width: 769px) {
     .hero-headline-line {
         white-space: nowrap;
+    }
+
+    .hero-headline-line.hero-headline-mobile-only {
+        display: none !important;
+    }
+
+    .hero-headline-line.hero-headline-desktop-only {
+        display: block;
     }
 
     .hero .hero-operating-line {
