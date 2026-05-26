@@ -2008,7 +2008,10 @@ body {
     color: var(--pp-charcoal);
 }
 
-.our-fund .section-header h2,
+.our-fund .section-header h2 {
+    color: #4F555A;
+}
+
 .our-fund-lead {
     color: var(--pp-charcoal);
 }
