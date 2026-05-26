@@ -312,9 +312,17 @@ body {
     border: none;
     margin: 0.65rem auto;
     padding: 0;
-    background: #ccccc9;
-    opacity: 0.85;
+    background: var(--pp-hearth-gold);
+    opacity: 1;
     flex-shrink: 0;
+}
+
+.rotating-logo .hero-divider--tagline {
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    margin: 0;
+    transform: translateX(-50%);
 }
 
 .hero-subtitle {
@@ -2412,6 +2420,7 @@ body:not(.at-top) .navbar::after {
     /* Move tagline below logo and tighten gap to title */
     .hero-visual { margin-bottom: 0.25rem; }
     .hero-tagline { bottom: -10px; }
+    .rotating-logo .hero-divider--tagline { bottom: -28px; }
 
     .hero-text {
         transform: translateY(-50px);
