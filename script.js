@@ -167,33 +167,57 @@ function initAnimations() {
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    
+
     if (!hamburger || !mobileMenu) return;
-    
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-    });
-    
-    // Close menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
+
+    if (!hamburger.getAttribute('role')) {
+        hamburger.setAttribute('role', 'button');
+    }
+    if (!hamburger.hasAttribute('tabindex')) {
+        hamburger.setAttribute('tabindex', '0');
+    }
+    if (!hamburger.getAttribute('aria-label')) {
+        hamburger.setAttribute('aria-label', 'Open menu');
+    }
+    hamburger.setAttribute('aria-controls', 'mobile-menu');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+
+    const setMenuOpen = (open) => {
+        hamburger.classList.toggle('active', open);
+        mobileMenu.classList.toggle('active', open);
+        document.body.classList.toggle('menu-open', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    };
+
+    const toggleMenu = (e) => {
+        if (e) e.stopPropagation();
+        setMenuOpen(!mobileMenu.classList.contains('active'));
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu(e);
         }
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.classList.contains('active')) return;
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+            setMenuOpen(false);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setMenuOpen(false);
     });
 }
 
