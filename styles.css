@@ -542,6 +542,10 @@ a.hero-fund-link:focus-visible {
     line-height: 1.7;
 }
 
+.about-team + p {
+    margin-top: 3rem;
+}
+
 .about-team {
     display: flex;
     flex-wrap: wrap;
