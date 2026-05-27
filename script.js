@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initScrollEffects();
     initFireCursorTracking();
+    initFundPageVideos();
 });
 
 // Parallax Effects
@@ -218,6 +219,30 @@ function initMobileMenu() {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') setMenuOpen(false);
+    });
+}
+
+// Fund page / Leadership section sizzle videos
+function initFundPageVideos() {
+    document.querySelectorAll('.fund-page-video-wrap').forEach(function (wrap) {
+        const video = wrap.querySelector('.fund-page-sizzle');
+        const soundBtn = wrap.querySelector('.fund-page-sound-btn');
+        if (!video) return;
+
+        video.muted = true;
+        const playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') {
+            playAttempt.catch(function () {});
+        }
+
+        if (!soundBtn || soundBtn.dataset.bound === 'true') return;
+
+        soundBtn.dataset.bound = 'true';
+        soundBtn.addEventListener('click', function () {
+            video.muted = false;
+            video.volume = 1;
+            soundBtn.hidden = true;
+        });
     });
 }
 

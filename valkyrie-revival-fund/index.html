@@ -53,11 +53,11 @@
             </div>
             <div class="fund-page-video">
                 <div class="fund-page-video-wrap">
-                    <video id="fundPageSizzle" class="fund-page-sizzle" controls autoplay muted playsinline preload="auto">
+                    <video class="fund-page-sizzle" controls autoplay muted playsinline preload="auto">
                         <source src="../images/30sec.mp4?v=20260526" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <button type="button" class="fund-page-sound-btn" id="fundPageSoundBtn" aria-label="Enable sound">Tap for sound</button>
+                    <button type="button" class="fund-page-sound-btn" aria-label="Enable sound">Tap for sound</button>
                 </div>
             </div>
         </div>
@@ -133,26 +133,5 @@
 
     <script src="../script.js"></script>
     <script src="../fund-i-access.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var video = document.getElementById('fundPageSizzle');
-        var soundBtn = document.getElementById('fundPageSoundBtn');
-        if (!video) return;
-
-        video.muted = true;
-        var playAttempt = video.play();
-        if (playAttempt && typeof playAttempt.catch === 'function') {
-            playAttempt.catch(function () {});
-        }
-
-        if (!soundBtn) return;
-
-        soundBtn.addEventListener('click', function () {
-            video.muted = false;
-            video.volume = 1;
-            soundBtn.hidden = true;
-        });
-    });
-    </script>
 </body>
 </html>

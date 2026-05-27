@@ -546,6 +546,11 @@ a.hero-fund-link:focus-visible {
     margin-top: 3rem;
 }
 
+.about-leadership-video {
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
 .about-team {
     display: flex;
     flex-wrap: wrap;
