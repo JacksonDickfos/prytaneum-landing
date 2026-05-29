@@ -1320,6 +1320,10 @@ a.fund-bubble-cta {
     padding: 0 1rem;
 }
 
+.doctrine-framework-video {
+    margin-top: 2.5rem;
+}
+
 .fund-page-video-wrap {
     position: relative;
 }
@@ -2535,6 +2539,29 @@ body:not(.at-top) .navbar::after {
 
 .hero .hero-visual {
     transform: translateY(-105px) !important;
+}
+
+@media (max-width: 768px) {
+    .navbar::after {
+        display: none !important;
+        opacity: 0 !important;
+        content: none !important;
+        height: 0 !important;
+        background: none !important;
+    }
+
+    .hero {
+        padding-top: 40px;
+        align-items: flex-start;
+    }
+
+    .hero .hero-visual {
+        transform: translateY(-65px) !important;
+    }
+
+    .hero .hero-text {
+        transform: translateY(-100px) !important;
+    }
 }
 
 
