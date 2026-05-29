@@ -1257,7 +1257,7 @@ button.fund-bubble {
 
 .fund-bubble-amount {
     font-size: 1rem;
-    color: var(--pp-hearth-gold);
+    color: #FFFFFF;
     font-weight: 700;
     line-height: 1;
 }
