@@ -490,15 +490,6 @@ document.addEventListener('DOMContentLoaded', function() {
 })();
 </script>
 <script>
-// Force-set hero description copy in case of CDN/HTML cache
-(function(){
-  var els = document.querySelectorAll('.hero-fund-link');
-  if (els.length >= 1) {
-    els[0].innerHTML = 'Valkyrie Revival Fund I - Open Now';
-  }
-})();
-</script>
-<script>
 // Handle form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
