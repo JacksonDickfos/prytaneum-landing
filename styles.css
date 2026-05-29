@@ -366,6 +366,10 @@ a.hero-fund-link:focus-visible {
     border-radius: 4px;
 }
 
+.hero-fund-link-line {
+    display: block;
+}
+
 .our-fund-bubble-wrap {
     margin: 0.25rem auto 1.75rem;
 }
@@ -1205,7 +1209,9 @@ a.hero-fund-link:focus-visible {
 
 .fund-bubble-wrap {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
     margin: 2.5rem 0 1rem;
 }
 
@@ -1214,9 +1220,9 @@ a.hero-fund-link:focus-visible {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.35rem;
-    width: 150px;
-    height: 150px;
+    gap: 0.15rem;
+    width: 158px;
+    height: 158px;
     border-radius: 50%;
     border: 3px solid var(--pp-hearth-gold);
     background: #484b4d;
@@ -1253,6 +1259,51 @@ button.fund-bubble {
 .fund-bubble:focus-visible {
     outline: 2px solid var(--pp-hearth-gold);
     outline-offset: 4px;
+}
+
+.fund-bubble-open {
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.fund-bubble-size {
+    font-size: 0.9rem;
+    color: var(--pp-hearth-gold);
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 0.1rem;
+}
+
+.fund-bubble-cta {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--pp-hearth-gold-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a.fund-bubble-cta {
+    display: inline-block;
+}
+
+.fund-bubble-cta:hover {
+    color: var(--pp-charcoal);
+    opacity: 0.9;
+}
+
+.fund-bubble-cta:focus-visible {
+    outline: 2px solid var(--pp-hearth-gold);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .fund-bubble-amount {

@@ -36,11 +36,11 @@
 
     function bindFundOneAccessModal() {
         var modal = document.getElementById('fundOneAccessModal');
-        var trigger = document.getElementById('fundOneAccessTrigger');
+        var triggers = document.querySelectorAll('#fundOneAccessTrigger, #fundOneAccessHint');
         var closeBtn = document.getElementById('fundOneAccessModalClose');
         var form = document.getElementById('fundOneAccessForm');
 
-        if (!modal || !trigger || !form) {
+        if (!modal || !form || triggers.length === 0) {
             return;
         }
 
@@ -54,7 +54,9 @@
             document.body.style.overflow = '';
         }
 
-        trigger.addEventListener('click', openModal);
+        triggers.forEach(function (trigger) {
+            trigger.addEventListener('click', openModal);
+        });
 
         if (closeBtn) {
             closeBtn.addEventListener('click', closeModal);
