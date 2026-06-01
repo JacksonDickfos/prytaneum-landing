@@ -548,7 +548,7 @@ a.hero-fund-link:focus-visible {
 }
 
 .about-text > p strong {
-    color: var(--pp-hearth-gold);
+    color: var(--pp-hearth-gold-deep);
     font-weight: 600;
 }
 
