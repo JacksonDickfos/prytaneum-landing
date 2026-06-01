@@ -548,8 +548,8 @@ a.hero-fund-link:focus-visible {
 }
 
 .about-text > p strong {
-    color: var(--pp-hearth-gold-deep);
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
 }
 
 .about-team-bios-link {
