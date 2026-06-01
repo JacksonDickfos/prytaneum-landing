@@ -547,6 +547,11 @@ a.hero-fund-link:focus-visible {
     max-width: none;
 }
 
+.about-text > p strong {
+    color: var(--pp-hearth-gold);
+    font-weight: 600;
+}
+
 .about-team-bios-link {
     display: inline-block;
     margin-top: 2rem;
@@ -2094,6 +2099,11 @@ body {
 .about .stat,
 .about .stat-label {
     color: var(--pp-charcoal);
+}
+
+.about .about-text > p strong {
+    color: var(--pp-hearth-gold);
+    font-weight: 600;
 }
 
 /* Who We Are team previews — must beat .about-text paragraph styles */
