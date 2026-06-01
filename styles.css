@@ -526,7 +526,7 @@ a.hero-fund-link:focus-visible {
 /* About Section */
 .about {
     padding: 6rem 0;
-    background: #E4E2DA;
+    background: #FFFFFF;
     position: relative;
 }
 
@@ -573,7 +573,7 @@ a.hero-fund-link:focus-visible {
 /* Unfair Advantage Section */
 .unfair-advantage {
     padding: 6rem 0;
-    background: #FFFFFF;
+    background: #E4E2DA;
 }
 
 .unfair-advantage .section-header {
@@ -2072,15 +2072,15 @@ body {
     font-weight: 400;
 }
 
-/* 2) About: cream */
+/* 2) About: white */
 .about {
-    background: #E4E2DA;
+    background: #FFFFFF;
     color: var(--pp-charcoal);
 }
 
-/* Unfair Advantage: white */
+/* Unfair Advantage: cream */
 .unfair-advantage {
-    background: #FFFFFF;
+    background: #E4E2DA;
     color: var(--pp-charcoal);
 }
 
