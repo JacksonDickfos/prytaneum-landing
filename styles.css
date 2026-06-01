@@ -2102,8 +2102,8 @@ body {
 }
 
 .about .about-text > p strong {
-    color: var(--pp-hearth-gold-deep);
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
 }
 
 /* Who We Are team previews — must beat .about-text paragraph styles */
