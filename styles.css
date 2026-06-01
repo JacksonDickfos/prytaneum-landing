@@ -1213,6 +1213,11 @@ a.hero-fund-link:focus-visible {
     margin-bottom: 0;
 }
 
+.our-fund-lead strong {
+    color: #000000;
+    font-weight: 700;
+}
+
 .our-fund-amount {
     color: var(--pp-hearth-gold-deep);
     font-weight: 700;
@@ -2162,6 +2167,12 @@ body {
 .our-fund-lead {
     color: var(--pp-charcoal);
 }
+
+.our-fund-lead strong {
+    color: #000000;
+    font-weight: 700;
+}
+
 .resources .section-header p,
 .resources .linkedin-embed,
 .resources .fund-links,
