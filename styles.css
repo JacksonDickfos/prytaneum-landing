@@ -827,6 +827,11 @@ a.hero-fund-link:focus-visible {
     max-width: none;
 }
 
+.unfair-advantage .section-header p strong {
+    color: #000000;
+    font-weight: 700;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2120,6 +2125,11 @@ body {
 .unfair-advantage .section-header h2,
 .unfair-advantage .section-header p {
     color: var(--pp-charcoal);
+}
+
+.unfair-advantage .section-header p strong {
+    color: #000000;
+    font-weight: 700;
 }
 
 .about .about-text > p,
