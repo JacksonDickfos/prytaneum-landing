@@ -550,6 +550,34 @@ a.hero-fund-link:focus-visible {
     margin-top: 3rem;
 }
 
+/* Unfair Advantage Section */
+.unfair-advantage {
+    padding: 6rem 0;
+    background: #FFFFFF;
+}
+
+.unfair-advantage .section-header {
+    margin-bottom: 2rem;
+}
+
+.unfair-advantage-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.unfair-advantage-content > p {
+    color: var(--pp-charcoal);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.unfair-advantage-video {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .about-leadership-video {
     margin-top: 3rem;
     margin-bottom: 0;
@@ -2034,6 +2062,18 @@ body {
     background: #E4E2DA;
     color: var(--pp-charcoal);
 }
+
+/* Unfair Advantage: white */
+.unfair-advantage {
+    background: #FFFFFF;
+    color: var(--pp-charcoal);
+}
+
+.unfair-advantage .section-header h2,
+.unfair-advantage-content > p {
+    color: var(--pp-charcoal);
+}
+
 .about .about-text > p,
 .about .section-header p,
 .about .stat,
