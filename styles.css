@@ -584,12 +584,12 @@ a.hero-fund-link:focus-visible {
 }
 
 .unfair-advantage .section-header {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-.unfair-advantage-video {
-    margin-top: 0;
-    margin-bottom: 0;
+.unfair-advantage-video,
+.doctrine-framework-video {
+    margin-top: 2.5rem;
 }
 
 .about-team {
@@ -1398,10 +1398,6 @@ a.fund-bubble-cta {
         margin-right: auto;
         box-sizing: border-box;
     }
-}
-
-.doctrine-framework-video {
-    margin-top: 2.5rem;
 }
 
 .fund-page-video-wrap {
