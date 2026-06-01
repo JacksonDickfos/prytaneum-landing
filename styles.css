@@ -13,6 +13,8 @@
     --pp-cream-2: #F9F1E6; /* mid cream */
     --pp-cream-3: #F3E6D6; /* deeper cream */
     --pp-navy-blue: #1B2951; /* deep navy for investor section */
+    --pp-home-video-max: 900px;
+    --pp-home-video-pad-x: 1rem;
 }
 
 /* Reset and Base Styles */
@@ -1372,9 +1374,25 @@ a.fund-bubble-cta {
 }
 
 .fund-page-video {
-    max-width: 900px;
+    max-width: var(--pp-home-video-max);
     margin: 2rem auto 0;
-    padding: 0 1rem;
+    padding: 0 var(--pp-home-video-pad-x);
+}
+
+/* Homepage section intro copy — laptop width matches video blocks */
+@media (min-width: 769px) {
+    .about .about-text > p,
+    .unfair-advantage .section-header p,
+    .services .section-header p,
+    .our-fund .section-header .our-fund-lead {
+        width: 100%;
+        max-width: var(--pp-home-video-max);
+        padding-left: var(--pp-home-video-pad-x);
+        padding-right: var(--pp-home-video-pad-x);
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
 }
 
 .doctrine-framework-video {
