@@ -1286,8 +1286,7 @@ button.fund-bubble {
     font-weight: 600;
     line-height: 1.7;
     color: var(--pp-hearth-gold-deep);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    text-decoration: none;
     cursor: pointer;
     transition: color 0.2s ease, opacity 0.2s ease;
 }
