@@ -106,7 +106,7 @@
                     }
 
                     grantFundOneAccess();
-                    window.location.href = '../valkyrie-revival-fund-I/';
+                    window.location.href = '/valkyrie-revival-fund-I/';
                 })
                 .catch(function () {
                     alert('There was an error submitting the form. Please try again.');

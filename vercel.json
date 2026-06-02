@@ -1,0 +1,15 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/valkyrie-revival-fund-1",
+      "destination": "/valkyrie-revival-fund-I/",
+      "permanent": true
+    },
+    {
+      "source": "/valkyrie-revival-fund-1/:path*",
+      "destination": "/valkyrie-revival-fund-I/:path*",
+      "permanent": true
+    }
+  ]
+}
