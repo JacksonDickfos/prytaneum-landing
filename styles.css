@@ -2119,7 +2119,7 @@ body {
 }
 
 .unfair-advantage .section-header h2 {
-    color: #4F555A;
+    color: var(--pp-charcoal);
 }
 
 .unfair-advantage .section-header p {
@@ -2188,7 +2188,7 @@ body {
 }
 
 .our-fund .section-header h2 {
-    color: #4F555A;
+    color: var(--pp-charcoal);
 }
 
 .our-fund-lead {
