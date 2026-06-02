@@ -2118,7 +2118,10 @@ body {
     color: var(--pp-charcoal);
 }
 
-.unfair-advantage .section-header h2,
+.unfair-advantage .section-header h2 {
+    color: #4F555A;
+}
+
 .unfair-advantage .section-header p {
     color: var(--pp-charcoal);
 }
