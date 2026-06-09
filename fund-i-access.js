@@ -1,38 +1,5 @@
 (function () {
-    var ACCESS_KEY = 'vrf-fund-i-access';
     var FORMSPREE_URL = 'https://formspree.io/f/mblzgbyy';
-
-    function hasFundOneAccess() {
-        try {
-            return localStorage.getItem(ACCESS_KEY) === 'true';
-        } catch (error) {
-            return false;
-        }
-    }
-
-    function grantFundOneAccess() {
-        try {
-            localStorage.setItem(ACCESS_KEY, 'true');
-        } catch (error) {
-            /* ignore storage failures */
-        }
-    }
-
-    function isFundOneSectionPath() {
-        return window.location.pathname.indexOf('valkyrie-revival-fund-I') !== -1;
-    }
-
-    function enforceFundOneGate() {
-        if (!isFundOneSectionPath() || hasFundOneAccess()) {
-            return;
-        }
-
-        var redirectPath = window.location.pathname.indexOf('/valkyrie-revival-fund-I/') === 0
-            ? '../valkyrie-revival-fund/'
-            : 'valkyrie-revival-fund/';
-
-        window.location.replace(redirectPath);
-    }
 
     function bindFundOneAccessModal() {
         var modal = document.getElementById('fundOneAccessModal');
@@ -105,7 +72,6 @@
                         throw new Error('Form submission failed');
                     }
 
-                    grantFundOneAccess();
                     window.location.href = '/valkyrie-revival-fund-I/';
                 })
                 .catch(function () {
@@ -116,8 +82,6 @@
                 });
         });
     }
-
-    enforceFundOneGate();
 
     document.addEventListener('DOMContentLoaded', bindFundOneAccessModal);
 })();
