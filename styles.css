@@ -3624,6 +3624,22 @@ a.investor-home-card {
     margin: 0 auto 2rem;
 }
 
+.investor-home-videos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: calc(2 * var(--pp-home-video-max) + 1.5rem);
+    margin: 0 auto 2rem;
+    padding: 0 var(--pp-home-video-pad-x);
+    box-sizing: border-box;
+}
+
+.investor-home-videos .fund-page-video {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+}
+
 .investor-home-section button.data-room-card {
     cursor: pointer;
     pointer-events: auto;
@@ -3858,6 +3874,11 @@ body.investor-fund-layout .footer {
     .investor-home-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
+    }
+
+    .investor-home-videos {
+        grid-template-columns: 1fr;
+        max-width: var(--pp-home-video-max);
     }
 
     .data-room-cards {
