@@ -3640,6 +3640,10 @@ a.investor-home-card {
     padding: 0;
 }
 
+.fund-page .fund-page-videos {
+    margin-top: 2.5rem;
+}
+
 .investor-home-section button.data-room-card {
     cursor: pointer;
     pointer-events: auto;
