@@ -186,6 +186,7 @@ body {
 
 /* ECG background */
 .ecg-background {
+    display: none; /* temporarily hidden */
     position: absolute;
     top: 50%;
     left: 0;
