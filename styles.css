@@ -1505,21 +1505,28 @@ a.fund-bubble-cta {
     grid-template-columns: 120px 1fr;
     gap: 1.15rem;
     align-items: center;
+    width: 100%;
     padding: 1rem 1.15rem 1rem 1rem;
+    border: none;
     border-radius: 16px;
     background: #E4E2DA;
     text-decoration: none;
+    text-align: left;
     color: inherit;
+    font: inherit;
     overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-a.movement-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(46, 50, 53, 0.12);
+.movement-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(209, 173, 92, 0.25);
 }
 
-a.movement-item:focus-visible {
+.movement-item:focus-visible {
     outline: 2px solid var(--pp-hearth-gold);
     outline-offset: 4px;
 }
@@ -1604,6 +1611,25 @@ a.movement-item:focus-visible {
     margin-bottom: 0.35rem;
 }
 
+.movement-item-keynote {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-bottom: 0.35rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--pp-hearth-gold-deep);
+    opacity: 0.85;
+}
+
+.movement-item-keynote::before {
+    content: '·';
+    margin-right: 0.45rem;
+    opacity: 0.7;
+}
+
 .movement-item-title {
     font-family: 'Cinzel', serif;
     font-size: 1.15rem;
@@ -1618,8 +1644,157 @@ a.movement-item:focus-visible {
     font-size: 0.85rem;
     line-height: 1.45;
     color: var(--pp-charcoal);
+    margin: 0 0 0.2rem;
+    opacity: 0.85;
+}
+
+.movement-item-date {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--pp-charcoal);
     margin: 0;
     opacity: 0.85;
+}
+
+/* Movement event modal */
+.movement-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.movement-modal.active {
+    display: flex;
+}
+
+.movement-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.movement-modal-content {
+    position: relative;
+    z-index: 1;
+    width: min(640px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--pp-white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.movement-modal-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    color: var(--pp-charcoal);
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.movement-modal-close:hover {
+    color: var(--pp-hearth-gold-deep);
+}
+
+.movement-modal-media {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.movement-modal-media span {
+    font-size: 1.5rem;
+}
+
+.movement-modal-labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.movement-modal-labels .movement-item-keynote {
+    margin-left: 0.35rem;
+}
+
+.movement-modal-status {
+    margin-left: auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+}
+
+.movement-modal-status.is-attended {
+    color: #FFFFFF;
+    background: #484b4d;
+}
+
+.movement-modal-status.is-attending {
+    color: #2e3235;
+    background: var(--pp-hearth-gold);
+}
+
+.movement-modal-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: var(--pp-charcoal);
+    margin: 0 0 0.75rem;
+    line-height: 1.25;
+}
+
+.movement-modal-meta,
+.movement-modal-venue,
+.movement-modal-date {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--pp-charcoal);
+    margin: 0 0 0.35rem;
+}
+
+.movement-modal-venue:empty,
+.movement-modal-date:empty {
+    display: none;
+}
+
+.movement-modal-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--pp-charcoal);
+    margin: 1.15rem 0 0;
+}
+
+@media (max-width: 520px) {
+    .movement-modal-content {
+        padding: 1.5rem;
+    }
+
+    .movement-modal-media {
+        height: 160px;
+    }
+
+    .movement-modal-title {
+        font-size: 1.35rem;
+    }
 }
 
 @media (max-width: 768px) {
