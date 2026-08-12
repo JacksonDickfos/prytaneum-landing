@@ -68,7 +68,7 @@
             statusEl.classList.toggle('is-attending', status === 'Attending');
             statusEl.classList.toggle('is-published', status === 'Published');
             statusEl.hidden = !status;
-            keynoteEl.hidden = !isKeynote;
+            keynoteEl.hidden = kind === 'podcast' ? true : !isKeynote;
 
             if (kind === 'podcast') {
                 eventFields.hidden = true;

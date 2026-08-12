@@ -1612,8 +1612,6 @@ a.fund-bubble-cta {
 
 .hero-movement-marquee-viewport {
     overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
 }
 
 .hero-movement-marquee-track {
@@ -1736,6 +1734,10 @@ a.fund-bubble-cta {
     text-transform: uppercase;
     color: var(--pp-hearth-gold-deep);
     opacity: 0.85;
+}
+
+.movement-item-keynote[hidden] {
+    display: none !important;
 }
 
 .movement-item-keynote::before {
