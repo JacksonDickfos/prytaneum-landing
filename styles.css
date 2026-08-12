@@ -1898,6 +1898,18 @@ a.fund-bubble-cta {
     display: none;
 }
 
+.movement-modal-description-list {
+    margin: 1.15rem 0 0;
+}
+
+.movement-modal-description-list .movement-modal-description {
+    margin: 0 0 0.9rem;
+}
+
+.movement-modal-description-list .movement-modal-description:last-child {
+    margin-bottom: 0;
+}
+
 .movement-modal-description {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 1rem;

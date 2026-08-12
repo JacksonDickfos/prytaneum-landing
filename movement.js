@@ -75,7 +75,13 @@
                 locationEl.textContent = '';
                 venueEl.textContent = '';
                 datesEl.textContent = '';
-                descriptionEl.textContent = subtitle;
+                descriptionEl.textContent = '';
+                if (subtitle) {
+                    var subtitleEl = document.createElement('p');
+                    subtitleEl.className = 'movement-modal-description';
+                    subtitleEl.textContent = subtitle;
+                    descriptionEl.appendChild(subtitleEl);
+                }
                 linksEl.hidden = false;
                 linksEl.innerHTML = '';
                 try {
@@ -97,7 +103,19 @@
                 locationEl.textContent = location;
                 venueEl.textContent = venue;
                 datesEl.textContent = dates;
-                descriptionEl.textContent = description;
+                descriptionEl.textContent = '';
+                var paragraphs = description.split(/\n\s*\n/).map(function (part) {
+                    return part.trim();
+                }).filter(Boolean);
+                if (!paragraphs.length && description.trim()) {
+                    paragraphs = [description.trim()];
+                }
+                paragraphs.forEach(function (part) {
+                    var p = document.createElement('p');
+                    p.className = 'movement-modal-description';
+                    p.textContent = part;
+                    descriptionEl.appendChild(p);
+                });
                 linksEl.hidden = true;
                 linksEl.innerHTML = '';
             }
