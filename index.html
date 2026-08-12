@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prytaneum Partners - Private Equity Innovation</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css?v=20260810-hide-ecg">
+    <link rel="stylesheet" href="styles.css?v=20260812-movement-marquee">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -92,6 +92,11 @@
                 <a href="valkyrie-revival-fund/" class="hero-description hero-fund-link">
                     Fund 1 is <strong>Open</strong>
                 </a>
+                <div class="hero-movement-marquee" aria-label="Movement activity">
+                    <div class="hero-movement-marquee-viewport">
+                        <div class="hero-movement-marquee-track" id="heroMovementTrack"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -256,6 +261,7 @@
                     data-location="Calgary, Alberta, Canada"
                     data-venue=""
                     data-dates="May 27–29, 2025"
+                    data-end-date="2025-05-29"
                     data-status="Attended"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
                     <span class="movement-item-banner movement-item-banner--attended">Attended</span>
@@ -275,6 +281,7 @@
                     data-location="Edinburgh, Scotland"
                     data-venue="The Balmoral Hotel"
                     data-dates="November 26, 2025"
+                    data-end-date="2025-11-26"
                     data-status="Attended"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">
                     <span class="movement-item-banner movement-item-banner--attended">Attended</span>
@@ -294,6 +301,7 @@
                     data-location="Halifax, Nova Scotia, Canada"
                     data-venue="Halifax Convention Centre"
                     data-dates="May 26–28, 2026"
+                    data-end-date="2026-05-28"
                     data-status="Attended"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident.">
                     <span class="movement-item-banner movement-item-banner--attended">Attended</span>
@@ -313,6 +321,7 @@
                     data-location="Berlin, Germany"
                     data-venue="InterContinental Hotel"
                     data-dates="June 8–12, 2026"
+                    data-end-date="2026-06-12"
                     data-status="Attended"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.">
                     <span class="movement-item-banner movement-item-banner--attended">Attended</span>
@@ -332,6 +341,7 @@
                     data-location="Los Angeles, California, US"
                     data-venue="Four Seasons Hotel"
                     data-dates="September 14–15, 2026"
+                    data-end-date="2026-09-15"
                     data-status="Attending"
                     data-keynote="true"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prytaneum Partners is a keynote speaker at this event. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.">
@@ -353,6 +363,7 @@
                     data-location="Singapore"
                     data-venue="Marina Bay Sands Convention Centre"
                     data-dates="September 28 – October 1, 2026"
+                    data-end-date="2026-10-01"
                     data-status="Attending"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">
                     <span class="movement-item-banner movement-item-banner--attending">Attending</span>
@@ -372,6 +383,7 @@
                     data-location="Amsterdam"
                     data-venue="Hotel Okura Amsterdam"
                     data-dates="November 3–6, 2026"
+                    data-end-date="2026-11-06"
                     data-status="Attending"
                     data-keynote="true"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prytaneum Partners is a keynote speaker at this event. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
@@ -393,6 +405,7 @@
                     data-location="Monte-Carlo, Monaco"
                     data-venue="Columbus Hotel"
                     data-dates="November 17, 2026"
+                    data-end-date="2026-11-17"
                     data-status="Attending"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
                     <span class="movement-item-banner movement-item-banner--attending">Attending</span>
@@ -412,6 +425,7 @@
                     data-location="Miami, Florida, US"
                     data-venue="Signia by Hilton"
                     data-dates="February 1–3, 2027"
+                    data-end-date="2027-02-03"
                     data-status="Attending"
                     data-keynote="true"
                     data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prytaneum Partners is a keynote speaker at this event. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.">
@@ -425,6 +439,21 @@
                         <h3 class="movement-item-title">SuperReturn North America</h3>
                         <p class="movement-item-meta">Miami, Florida, US</p>
                         <p class="movement-item-date">February 1–3, 2027</p>
+                    </div>
+                </button>
+                <button type="button" class="movement-item" data-movement-event
+                    data-type="podcast"
+                    data-title="Mission Matters Podcast"
+                    data-subtitle="Unlocking Value Where Others See Complexity"
+                    data-status="Published"
+                    data-city=""
+                    data-links='[{"label":"Full episode: Unlocking Value Where Others See Complexity","url":"https://missionmatters.com/unlocking-value-where-others-see-complexity"},{"label":"Spotify","url":"https://open.spotify.com/episode/6J99lOJy80EttlrTY6L7r1"},{"label":"Apple Podcasts","url":"https://podcasts.apple.com/us/podcast/unlocking-value-where-others-see-complexity/id1498253396?i=1000774363247"}]'>
+                    <span class="movement-item-banner movement-item-banner--published">Published</span>
+                    <div class="movement-item-media movement-item-media--placeholder" aria-hidden="true"></div>
+                    <div class="movement-item-body">
+                        <span class="movement-item-type">Podcast</span>
+                        <h3 class="movement-item-title">Mission Matters Podcast</h3>
+                        <p class="movement-item-byline">Unlocking Value Where Others See Complexity</p>
                     </div>
                 </button>
             </div>
@@ -441,15 +470,18 @@
             </div>
             <div class="movement-modal-body">
                 <div class="movement-modal-labels">
-                    <span class="movement-item-type">Event</span>
+                    <span class="movement-item-type" id="movementModalType">Event</span>
                     <span class="movement-item-keynote" id="movementModalKeynote" hidden>Keynote</span>
                     <span class="movement-modal-status" id="movementModalStatus"></span>
                 </div>
                 <h2 class="movement-modal-title" id="movementModalTitle"></h2>
-                <p class="movement-modal-meta" id="movementModalLocation"></p>
-                <p class="movement-modal-venue" id="movementModalVenue"></p>
-                <p class="movement-modal-date" id="movementModalDates"></p>
+                <div id="movementModalEventFields">
+                    <p class="movement-modal-meta" id="movementModalLocation"></p>
+                    <p class="movement-modal-venue" id="movementModalVenue"></p>
+                    <p class="movement-modal-date" id="movementModalDates"></p>
+                </div>
                 <p class="movement-modal-description" id="movementModalDescription"></p>
+                <div class="movement-modal-links" id="movementModalLinks" hidden></div>
             </div>
         </div>
     </div>
@@ -646,71 +678,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    var modal = document.getElementById('movementEventModal');
-    if (!modal) return;
-
-    var titleEl = document.getElementById('movementModalTitle');
-    var cityEl = document.getElementById('movementModalCity');
-    var locationEl = document.getElementById('movementModalLocation');
-    var venueEl = document.getElementById('movementModalVenue');
-    var datesEl = document.getElementById('movementModalDates');
-    var descriptionEl = document.getElementById('movementModalDescription');
-    var statusEl = document.getElementById('movementModalStatus');
-    var keynoteEl = document.getElementById('movementModalKeynote');
-
-    function openMovementModal(trigger) {
-        var title = trigger.getAttribute('data-title') || '';
-        var city = trigger.getAttribute('data-city') || '';
-        var location = trigger.getAttribute('data-location') || '';
-        var venue = trigger.getAttribute('data-venue') || '';
-        var dates = trigger.getAttribute('data-dates') || '';
-        var status = trigger.getAttribute('data-status') || '';
-        var description = trigger.getAttribute('data-description') || '';
-        var isKeynote = trigger.getAttribute('data-keynote') === 'true';
-
-        titleEl.textContent = title;
-        cityEl.textContent = city;
-        locationEl.textContent = location;
-        venueEl.textContent = venue;
-        datesEl.textContent = dates;
-        descriptionEl.textContent = description;
-
-        statusEl.textContent = status;
-        statusEl.classList.toggle('is-attended', status === 'Attended');
-        statusEl.classList.toggle('is-attending', status === 'Attending');
-
-        keynoteEl.hidden = !isKeynote;
-
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeMovementModal() {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    }
-
-    document.querySelectorAll('[data-movement-event]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            openMovementModal(btn);
-        });
-    });
-
-    modal.querySelectorAll('[data-movement-close]').forEach(function (el) {
-        el.addEventListener('click', closeMovementModal);
-    });
-
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeMovementModal();
-        }
-    });
-});
-</script>
+<script src="movement.js"></script>
 <script>
 // Remove any automatically injected "Open on LinkedIn" buttons while preserving "Follow on LinkedIn"
 (function () {
