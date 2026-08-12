@@ -165,7 +165,9 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     background: #2e3235;
     overflow: hidden;
@@ -1600,14 +1602,19 @@ a.fund-bubble-cta {
     text-decoration: underline;
 }
 
-/* Hero Movement marquee */
+/* Hero Movement marquee — full viewport width under Fund 1 */
 .hero-movement-marquee {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-top: 1.25rem;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    align-self: stretch;
+    width: 100%;
+    max-width: none;
+    margin-top: -1.5rem;
+    padding: 0;
     overflow: hidden;
     position: relative;
     z-index: 20;
+    transform: translateY(-140px);
 }
 
 .hero-movement-marquee-viewport {
@@ -3149,6 +3156,10 @@ body:not(.at-top) .navbar::after {
 
     .hero .hero-text {
         transform: translateY(-100px) !important;
+    }
+
+    .hero-movement-marquee {
+        transform: translateY(-100px);
     }
 }
 
