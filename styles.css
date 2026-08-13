@@ -1506,10 +1506,10 @@ a.fund-bubble-cta {
     position: relative;
     display: grid;
     grid-template-columns: 120px 1fr;
-    gap: 1.15rem;
-    align-items: center;
+    gap: 0.65rem;
+    align-items: stretch;
     width: 100%;
-    padding: 1rem 1.15rem 1rem 1rem;
+    padding: 0 1.15rem 0 0;
     border: none;
     border-radius: 16px;
     background: #E4E2DA;
@@ -1643,11 +1643,16 @@ a.fund-bubble-cta {
     flex: 0 0 340px;
     width: 340px;
     max-width: 340px;
+    grid-template-columns: 96px 1fr;
+    gap: 0.55rem;
+    padding: 0 1rem 0 0;
 }
 
 .hero-movement-marquee .movement-item-media {
     width: 96px;
-    height: 96px;
+    height: auto;
+    min-height: 96px;
+    border-radius: 16px 0 0 16px;
 }
 
 .hero-movement-marquee .movement-item-title {
@@ -1666,11 +1671,13 @@ a.fund-bubble-cta {
         width: 300px;
         max-width: 300px;
         grid-template-columns: 80px 1fr;
+        gap: 0.5rem;
     }
 
     .hero-movement-marquee .movement-item-media {
         width: 80px;
-        height: 80px;
+        min-height: 80px;
+        border-radius: 16px 0 0 16px;
     }
 
     .hero-movement-marquee-track {
@@ -1681,11 +1688,13 @@ a.fund-bubble-cta {
 .movement-item-media {
     position: relative;
     width: 120px;
-    height: 120px;
-    border-radius: 12px;
+    height: auto;
+    min-height: 120px;
+    border-radius: 16px 0 0 16px;
     overflow: hidden;
     background: #FFFFFF;
     flex-shrink: 0;
+    align-self: stretch;
 }
 
 .movement-item-media img {
@@ -1726,7 +1735,10 @@ a.fund-bubble-cta {
 .movement-item-body {
     min-width: 0;
     text-align: left;
-    padding-right: 1.75rem;
+    padding: 0.85rem 1.75rem 0.85rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .movement-item-type {
@@ -1972,13 +1984,15 @@ a.fund-bubble-cta {
 @media (max-width: 520px) {
     .movement-item {
         grid-template-columns: 96px 1fr;
-        gap: 0.9rem;
-        padding: 0.85rem;
+        gap: 0.5rem;
+        padding: 0 0.85rem 0 0;
     }
 
     .movement-item-media {
         width: 96px;
-        height: 96px;
+        height: auto;
+        min-height: 96px;
+        border-radius: 16px 0 0 16px;
     }
 
     .movement-item-title {
