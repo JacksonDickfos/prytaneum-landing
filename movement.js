@@ -39,6 +39,8 @@
         var typeEl = document.getElementById('movementModalType');
         var titleEl = document.getElementById('movementModalTitle');
         var cityEl = document.getElementById('movementModalCity');
+        var imageEl = document.getElementById('movementModalImage');
+        var mediaEl = document.getElementById('movementModalMedia');
         var locationEl = document.getElementById('movementModalLocation');
         var venueEl = document.getElementById('movementModalVenue');
         var datesEl = document.getElementById('movementModalDates');
@@ -47,6 +49,27 @@
         var keynoteEl = document.getElementById('movementModalKeynote');
         var linksEl = document.getElementById('movementModalLinks');
         var eventFields = document.getElementById('movementModalEventFields');
+
+        function setModalMedia(trigger, title, city) {
+            var sourceImg = trigger.querySelector('.movement-item-media img');
+            var isLogo = trigger.querySelector('.movement-item-media--logo');
+            mediaEl.classList.toggle('movement-item-media--logo', Boolean(isLogo));
+            if (sourceImg && sourceImg.getAttribute('src')) {
+                imageEl.src = sourceImg.getAttribute('src');
+                imageEl.alt = sourceImg.getAttribute('alt') || title;
+                imageEl.hidden = false;
+                cityEl.hidden = true;
+                cityEl.textContent = '';
+                mediaEl.classList.remove('movement-item-media--placeholder');
+            } else {
+                imageEl.removeAttribute('src');
+                imageEl.alt = '';
+                imageEl.hidden = true;
+                cityEl.hidden = !city;
+                cityEl.textContent = city;
+                mediaEl.classList.add('movement-item-media--placeholder');
+            }
+        }
 
         function openMovementModal(trigger) {
             var kind = trigger.getAttribute('data-type') || 'event';
@@ -62,7 +85,7 @@
 
             typeEl.textContent = kind === 'podcast' ? 'Podcast' : 'Event';
             titleEl.textContent = title;
-            cityEl.textContent = city;
+            setModalMedia(trigger, title, city);
             statusEl.textContent = status;
             statusEl.classList.toggle('is-attended', status === 'Attended');
             statusEl.classList.toggle('is-attending', status === 'Attending');
