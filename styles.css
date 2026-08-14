@@ -1621,7 +1621,7 @@ a.fund-bubble-cta {
     overflow: hidden;
     position: relative;
     z-index: 20;
-    transform: translateY(-125px);
+    transform: translateY(-115px);
 }
 
 .hero-movement-marquee-viewport {
