@@ -3212,7 +3212,7 @@ body:not(.at-top) .navbar::after {
     }
 
     .hero-movement-marquee {
-        transform: translateY(-100px);
+        transform: translateY(-85px);
     }
 }
 
