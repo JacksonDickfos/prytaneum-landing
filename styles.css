@@ -1511,8 +1511,10 @@ a.fund-bubble-cta {
     display: grid;
     grid-template-columns: 120px 1fr;
     gap: 0.65rem;
-    align-items: stretch;
+    align-items: center;
     width: 100%;
+    height: 120px;
+    min-height: 120px;
     padding: 0 1.15rem 0 0;
     border: none;
     border-radius: 16px;
@@ -1526,6 +1528,7 @@ a.fund-bubble-cta {
     appearance: none;
     -webkit-appearance: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .movement-item:hover {
@@ -1647,7 +1650,9 @@ a.fund-bubble-cta {
     flex: 0 0 var(--movement-card-width, 468px);
     width: var(--movement-card-width, 468px);
     max-width: var(--movement-card-width, 468px);
-    min-height: 148px;
+    height: 120px;
+    min-height: 120px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -1665,7 +1670,7 @@ a.fund-bubble-cta {
 .movement-item-media {
     position: relative;
     width: 120px;
-    height: auto;
+    height: 120px;
     min-height: 120px;
     border-radius: 16px 0 0 16px;
     overflow: hidden;
@@ -1712,7 +1717,7 @@ a.fund-bubble-cta {
 .movement-item-body {
     min-width: 0;
     text-align: left;
-    padding: 0.85rem 1.75rem 0.85rem 0;
+    padding: 0.65rem 1.75rem 0.65rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1972,13 +1977,19 @@ a.fund-bubble-cta {
         grid-template-columns: 96px 1fr;
         gap: 0.5rem;
         padding: 0 0.85rem 0 0;
+        min-height: 96px;
     }
 
     .movement-item-media {
         width: 96px;
-        height: auto;
+        height: 96px;
         min-height: 96px;
         border-radius: 16px 0 0 16px;
+    }
+
+    .hero-movement-marquee .movement-item {
+        height: 96px;
+        min-height: 96px;
     }
 
     .movement-item-title {
