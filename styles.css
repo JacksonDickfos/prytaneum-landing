@@ -1502,6 +1502,10 @@ a.fund-bubble-cta {
     margin: 0 auto;
 }
 
+:root {
+    --movement-card-width: calc((960px - 1.5rem) / 2);
+}
+
 .movement-item {
     position: relative;
     display: grid;
@@ -1640,44 +1644,17 @@ a.fund-bubble-cta {
 }
 
 .hero-movement-marquee .movement-item {
-    flex: 0 0 340px;
-    width: 340px;
-    max-width: 340px;
-    grid-template-columns: 96px 1fr;
-    gap: 0.55rem;
-    padding: 0 1rem 0 0;
-}
-
-.hero-movement-marquee .movement-item-media {
-    width: 96px;
-    height: auto;
-    min-height: 96px;
-    border-radius: 16px 0 0 16px;
-}
-
-.hero-movement-marquee .movement-item-title {
-    font-size: 1rem;
-}
-
-.hero-movement-marquee .movement-item-meta,
-.hero-movement-marquee .movement-item-date,
-.hero-movement-marquee .movement-item-byline {
-    font-size: 0.8rem;
+    flex: 0 0 var(--movement-card-width, 468px);
+    width: var(--movement-card-width, 468px);
+    max-width: var(--movement-card-width, 468px);
+    min-height: 148px;
 }
 
 @media (max-width: 768px) {
     .hero-movement-marquee .movement-item {
-        flex-basis: 300px;
-        width: 300px;
-        max-width: 300px;
-        grid-template-columns: 80px 1fr;
-        gap: 0.5rem;
-    }
-
-    .hero-movement-marquee .movement-item-media {
-        width: 80px;
-        min-height: 80px;
-        border-radius: 16px 0 0 16px;
+        flex-basis: min(468px, calc(100vw - 2rem));
+        width: min(468px, calc(100vw - 2rem));
+        max-width: min(468px, calc(100vw - 2rem));
     }
 
     .hero-movement-marquee-track {
