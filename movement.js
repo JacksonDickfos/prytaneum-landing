@@ -173,7 +173,7 @@
 
     function initHeroMovementMarquee() {
         var track = document.getElementById('heroMovementTrack');
-        var sourceGrid = document.querySelector('#movement .movement-grid');
+        var sourceGrid = document.querySelector('#momentum .movement-grid');
         if (!track || !sourceGrid) return;
 
         var items = sourceGrid.querySelectorAll('.movement-item');
