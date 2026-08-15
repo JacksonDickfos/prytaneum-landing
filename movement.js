@@ -38,6 +38,7 @@
 
         var typeEl = document.getElementById('movementModalType');
         var titleEl = document.getElementById('movementModalTitle');
+        var bylineEl = document.getElementById('movementModalByline');
         var cityEl = document.getElementById('movementModalCity');
         var imageEl = document.getElementById('movementModalImage');
         var mediaEl = document.getElementById('movementModalMedia');
@@ -71,6 +72,17 @@
             }
         }
 
+        function setModalByline(text) {
+            if (!bylineEl) return;
+            if (text) {
+                bylineEl.textContent = text;
+                bylineEl.hidden = false;
+            } else {
+                bylineEl.textContent = '';
+                bylineEl.hidden = true;
+            }
+        }
+
         function openMovementModal(trigger) {
             var kind = trigger.getAttribute('data-type') || 'event';
             var title = trigger.getAttribute('data-title') || '';
@@ -81,6 +93,7 @@
             var status = trigger.getAttribute('data-status') || '';
             var description = trigger.getAttribute('data-description') || '';
             var subtitle = trigger.getAttribute('data-subtitle') || '';
+            var episodeTitle = trigger.getAttribute('data-episode-title') || '';
             var isKeynote = trigger.getAttribute('data-keynote') === 'true';
 
             typeEl.textContent = kind === 'podcast' ? 'Podcast' : 'Event';
@@ -98,14 +111,14 @@
                 locationEl.textContent = '';
                 venueEl.textContent = '';
                 datesEl.textContent = '';
+                setModalByline(episodeTitle || subtitle);
                 descriptionEl.textContent = '';
-                var podcastCopy = description || subtitle;
-                if (podcastCopy) {
-                    var paragraphs = podcastCopy.split(/\n\s*\n/).map(function (part) {
+                if (description) {
+                    var paragraphs = description.split(/\n\s*\n/).map(function (part) {
                         return part.trim();
                     }).filter(Boolean);
-                    if (!paragraphs.length && podcastCopy.trim()) {
-                        paragraphs = [podcastCopy.trim()];
+                    if (!paragraphs.length && description.trim()) {
+                        paragraphs = [description.trim()];
                     }
                     paragraphs.forEach(function (part) {
                         var p = document.createElement('p');
@@ -132,6 +145,7 @@
                 }
             } else {
                 eventFields.hidden = false;
+                setModalByline('');
                 locationEl.textContent = location;
                 venueEl.textContent = venue;
                 datesEl.textContent = dates;
