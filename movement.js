@@ -15,6 +15,62 @@
         return new Date(year, month, day);
     }
 
+    function getItemEndDate(item) {
+        return parseEndDate(item.getAttribute('data-end-date'));
+    }
+
+    function getItemStartDate(item) {
+        return parseEndDate(item.getAttribute('data-start-date')) || getItemEndDate(item);
+    }
+
+    function isItemUpcomingOrCurrent(item, today) {
+        var endDate = getItemEndDate(item);
+        if (!endDate) return false;
+        return today <= endDate;
+    }
+
+    function sortMomentumItemsByDate() {
+        var grid = document.querySelector('#momentum .movement-grid');
+        if (!grid) return;
+
+        var today = startOfToday();
+        var items = Array.prototype.slice.call(grid.querySelectorAll('.movement-item'));
+        if (!items.length) return;
+
+        items.sort(function (a, b) {
+            var aUpcoming = isItemUpcomingOrCurrent(a, today);
+            var bUpcoming = isItemUpcomingOrCurrent(b, today);
+
+            if (aUpcoming && !bUpcoming) return -1;
+            if (!aUpcoming && bUpcoming) return 1;
+
+            var aStart = getItemStartDate(a);
+            var bStart = getItemStartDate(b);
+            var aEnd = getItemEndDate(a);
+            var bEnd = getItemEndDate(b);
+
+            if (aUpcoming && bUpcoming) {
+                // Soonest upcoming/current first
+                if (aStart && bStart && aStart.getTime() !== bStart.getTime()) {
+                    return aStart - bStart;
+                }
+                if (aEnd && bEnd) return aEnd - bEnd;
+                return 0;
+            }
+
+            // Past items: most recently ended first
+            if (aEnd && bEnd && aEnd.getTime() !== bEnd.getTime()) {
+                return bEnd - aEnd;
+            }
+            if (aStart && bStart) return bStart - aStart;
+            return 0;
+        });
+
+        items.forEach(function (item) {
+            grid.appendChild(item);
+        });
+    }
+
     function syncEventAttendanceStatus() {
         var today = startOfToday();
         document.querySelectorAll('[data-movement-event][data-end-date]').forEach(function (item) {
@@ -292,6 +348,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         syncEventAttendanceStatus();
+        sortMomentumItemsByDate();
         initHeroMovementMarquee();
         initMomentumPagination();
         initMovementModal();
