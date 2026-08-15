@@ -209,7 +209,9 @@
             items.forEach(function (item) {
                 var clone = item.cloneNode(true);
                 clone.removeAttribute('id');
+                clone.classList.remove('movement-item--paginated-out');
                 clone.classList.add('movement-item--marquee');
+                clone.hidden = false;
                 fragment.appendChild(clone);
             });
         }
@@ -219,9 +221,78 @@
         track.appendChild(fragment);
     }
 
+    function initMomentumPagination() {
+        var grid = document.querySelector('#momentum .movement-grid');
+        var nav = document.getElementById('momentumPagination');
+        var pagesEl = document.getElementById('momentumPaginationPages');
+        if (!grid || !nav || !pagesEl) return;
+
+        var items = Array.prototype.slice.call(grid.querySelectorAll('.movement-item'));
+        var perPage = 4;
+        var totalPages = Math.ceil(items.length / perPage) || 1;
+        var current = 1;
+        var firstBtn = nav.querySelector('[data-momentum-page="first"]');
+        var lastBtn = nav.querySelector('[data-momentum-page="last"]');
+
+        if (totalPages <= 1) {
+            nav.hidden = true;
+            items.forEach(function (item) {
+                item.classList.remove('movement-item--paginated-out');
+            });
+            return;
+        }
+
+        nav.hidden = false;
+
+        function renderPageButtons() {
+            pagesEl.innerHTML = '';
+            for (var i = 1; i <= totalPages; i++) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'movement-pagination-page' + (i === current ? ' is-active' : '');
+                btn.textContent = String(i);
+                btn.setAttribute('aria-label', 'Page ' + i);
+                if (i === current) {
+                    btn.setAttribute('aria-current', 'page');
+                }
+                btn.addEventListener('click', (function (page) {
+                    return function () {
+                        goTo(page);
+                    };
+                })(i));
+                pagesEl.appendChild(btn);
+            }
+        }
+
+        function goTo(page) {
+            current = Math.max(1, Math.min(totalPages, page));
+            items.forEach(function (item, index) {
+                var pageIndex = Math.floor(index / perPage) + 1;
+                item.classList.toggle('movement-item--paginated-out', pageIndex !== current);
+            });
+            renderPageButtons();
+            if (firstBtn) firstBtn.disabled = current === 1;
+            if (lastBtn) lastBtn.disabled = current === totalPages;
+        }
+
+        if (firstBtn) {
+            firstBtn.addEventListener('click', function () {
+                goTo(1);
+            });
+        }
+        if (lastBtn) {
+            lastBtn.addEventListener('click', function () {
+                goTo(totalPages);
+            });
+        }
+
+        goTo(1);
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         syncEventAttendanceStatus();
         initHeroMovementMarquee();
+        initMomentumPagination();
         initMovementModal();
     });
 })();

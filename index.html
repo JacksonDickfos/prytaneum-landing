@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prytaneum Partners - Private Equity Innovation</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css?v=20260815-fund-bubble-200">
+    <link rel="stylesheet" href="styles.css?v=20260815-momentum-pagination">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -523,10 +523,13 @@ From fundraising and portfolio strategy to liquidity solutions and new allocatio
                     </div>
                 </button>
             </div>
+            <nav class="movement-pagination" id="momentumPagination" aria-label="Momentum pages" hidden>
+                <button type="button" class="movement-pagination-edge" data-momentum-page="first" aria-label="First page">First</button>
+                <div class="movement-pagination-pages" id="momentumPaginationPages"></div>
+                <button type="button" class="movement-pagination-edge" data-momentum-page="last" aria-label="Last page">Last</button>
+            </nav>
         </div>
     </section>
-
-    <!-- Movement Event Modal -->
     <div id="movementEventModal" class="movement-modal" aria-hidden="true">
         <div class="movement-modal-overlay" data-movement-close></div>
         <div class="movement-modal-content" role="dialog" aria-modal="true" aria-labelledby="movementModalTitle">
@@ -746,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-<script src="movement.js?v=20260815-podcast-byline"></script>
+<script src="movement.js?v=20260815-momentum-pagination"></script>
 <script>
 // Remove any automatically injected "Open on LinkedIn" buttons while preserving "Follow on LinkedIn"
 (function () {
