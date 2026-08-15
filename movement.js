@@ -18,6 +18,7 @@
     function syncEventAttendanceStatus() {
         var today = startOfToday();
         document.querySelectorAll('[data-movement-event][data-end-date]').forEach(function (item) {
+            if ((item.getAttribute('data-type') || 'event') === 'podcast') return;
             var endDate = parseEndDate(item.getAttribute('data-end-date'));
             if (!endDate) return;
             if (today <= endDate) return;
@@ -107,10 +108,10 @@
             keynoteEl.hidden = kind === 'podcast' ? true : !isKeynote;
 
             if (kind === 'podcast') {
-                eventFields.hidden = true;
                 locationEl.textContent = '';
                 venueEl.textContent = '';
-                datesEl.textContent = '';
+                datesEl.textContent = dates;
+                eventFields.hidden = !dates;
                 setModalByline(episodeTitle || subtitle);
                 descriptionEl.textContent = '';
                 if (description) {

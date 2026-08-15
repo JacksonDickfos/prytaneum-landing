@@ -2025,6 +2025,7 @@ a.fund-bubble-cta {
     margin: 0 0 0.35rem;
 }
 
+.movement-modal-meta:empty,
 .movement-modal-venue:empty,
 .movement-modal-date:empty {
     display: none;
