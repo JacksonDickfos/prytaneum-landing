@@ -99,11 +99,20 @@
                 venueEl.textContent = '';
                 datesEl.textContent = '';
                 descriptionEl.textContent = '';
-                if (subtitle) {
-                    var subtitleEl = document.createElement('p');
-                    subtitleEl.className = 'movement-modal-description';
-                    subtitleEl.textContent = subtitle;
-                    descriptionEl.appendChild(subtitleEl);
+                var podcastCopy = description || subtitle;
+                if (podcastCopy) {
+                    var paragraphs = podcastCopy.split(/\n\s*\n/).map(function (part) {
+                        return part.trim();
+                    }).filter(Boolean);
+                    if (!paragraphs.length && podcastCopy.trim()) {
+                        paragraphs = [podcastCopy.trim()];
+                    }
+                    paragraphs.forEach(function (part) {
+                        var p = document.createElement('p');
+                        p.className = 'movement-modal-description';
+                        p.textContent = part;
+                        descriptionEl.appendChild(p);
+                    });
                 }
                 linksEl.hidden = false;
                 linksEl.innerHTML = '';
