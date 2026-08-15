@@ -105,6 +105,7 @@
         var descriptionEl = document.getElementById('movementModalDescription');
         var statusEl = document.getElementById('movementModalStatus');
         var keynoteEl = document.getElementById('movementModalKeynote');
+        var panelEl = document.getElementById('movementModalPanel');
         var linksEl = document.getElementById('movementModalLinks');
         var eventFields = document.getElementById('movementModalEventFields');
 
@@ -152,6 +153,7 @@
             var subtitle = trigger.getAttribute('data-subtitle') || '';
             var episodeTitle = trigger.getAttribute('data-episode-title') || '';
             var isKeynote = trigger.getAttribute('data-keynote') === 'true';
+            var isPanel = trigger.getAttribute('data-panel') === 'true';
 
             typeEl.textContent = kind === 'podcast' ? 'Podcast' : 'Event';
             titleEl.textContent = title;
@@ -162,6 +164,9 @@
             statusEl.classList.toggle('is-published', status === 'Published');
             statusEl.hidden = !status;
             keynoteEl.hidden = kind === 'podcast' ? true : !isKeynote;
+            if (panelEl) {
+                panelEl.hidden = kind === 'podcast' ? true : !isPanel;
+            }
 
             if (kind === 'podcast') {
                 locationEl.textContent = '';

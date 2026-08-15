@@ -1843,7 +1843,24 @@ a.fund-bubble-cta {
     opacity: 1;
 }
 
-.movement-item-keynote[hidden] {
+.movement-item-panel {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0.12rem 0.45rem;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #2e3235;
+    opacity: 1;
+}
+
+.movement-item-keynote[hidden],
+.movement-item-panel[hidden] {
     display: none !important;
 }
 
@@ -1967,7 +1984,8 @@ a.fund-bubble-cta {
     margin-bottom: 0.5rem;
 }
 
-.movement-modal-labels .movement-item-keynote {
+.movement-modal-labels .movement-item-keynote,
+.movement-modal-labels .movement-item-panel {
     margin-left: 0;
 }
 
