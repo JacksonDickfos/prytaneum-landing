@@ -1827,22 +1827,7 @@ a.fund-bubble-cta {
     margin: 0;
 }
 
-.movement-item-keynote {
-    display: inline-flex;
-    align-items: center;
-    margin: 0;
-    padding: 0.12rem 0.45rem;
-    border-radius: 4px;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #2e3235;
-    background: var(--pp-hearth-gold);
-    opacity: 1;
-}
-
+.movement-item-keynote,
 .movement-item-panel {
     display: inline-flex;
     align-items: center;
