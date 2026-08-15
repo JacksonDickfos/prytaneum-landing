@@ -1509,12 +1509,12 @@ a.fund-bubble-cta {
 .movement-item {
     position: relative;
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 144px 1fr;
     gap: 0.65rem;
     align-items: center;
     width: 100%;
-    height: 120px;
-    min-height: 120px;
+    height: 144px;
+    min-height: 144px;
     padding: 0 1.15rem 0 0;
     border: none;
     border-radius: 16px;
@@ -1650,16 +1650,6 @@ a.fund-bubble-cta {
     flex: 0 0 var(--movement-card-width, 468px);
     width: var(--movement-card-width, 468px);
     max-width: var(--movement-card-width, 468px);
-    height: 144px;
-    min-height: 144px;
-    box-sizing: border-box;
-    grid-template-columns: 144px 1fr;
-}
-
-.hero-movement-marquee .movement-item-media {
-    width: 144px;
-    height: 144px;
-    min-height: 144px;
 }
 
 @media (max-width: 768px) {
@@ -1676,9 +1666,9 @@ a.fund-bubble-cta {
 
 .movement-item-media {
     position: relative;
-    width: 120px;
-    height: 120px;
-    min-height: 120px;
+    width: 144px;
+    height: 144px;
+    min-height: 144px;
     border-radius: 16px 0 0 16px;
     overflow: hidden;
     background: #FFFFFF;
@@ -1995,29 +1985,18 @@ a.fund-bubble-cta {
 
 @media (max-width: 520px) {
     .movement-item {
-        grid-template-columns: 96px 1fr;
+        grid-template-columns: 115px 1fr;
         gap: 0.5rem;
         padding: 0 0.85rem 0 0;
-        min-height: 96px;
+        height: 115px;
+        min-height: 115px;
     }
 
     .movement-item-media {
-        width: 96px;
-        height: 96px;
-        min-height: 96px;
-        border-radius: 16px 0 0 16px;
-    }
-
-    .hero-movement-marquee .movement-item {
-        height: 115px;
-        min-height: 115px;
-        grid-template-columns: 115px 1fr;
-    }
-
-    .hero-movement-marquee .movement-item-media {
         width: 115px;
         height: 115px;
         min-height: 115px;
+        border-radius: 16px 0 0 16px;
     }
 
     .movement-item-title {
