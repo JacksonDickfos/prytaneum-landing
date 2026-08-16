@@ -1271,7 +1271,12 @@ a.hero-fund-link:focus-visible {
 }
 
 .fund-page .fund-page-logo .tagline-word {
-    font-size: 0.96rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: 1.4rem; /* 80% of hero 1.75rem */
+    text-transform: none;
+    letter-spacing: 0.04em;
+    color: var(--pp-charcoal);
 }
 
 @media (max-width: 768px) {
@@ -1286,7 +1291,7 @@ a.hero-fund-link:focus-visible {
     }
 
     .fund-page .fund-page-logo .tagline-word {
-        font-size: 0.72rem;
+        font-size: 1rem; /* 80% of hero mobile 1.25rem */
     }
 
     .fund-page .fund-page-logo .hero-tagline {
