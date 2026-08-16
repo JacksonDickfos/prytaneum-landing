@@ -1249,13 +1249,50 @@ a.hero-fund-link:focus-visible {
     margin-bottom: 2.5rem;
 }
 
-.fund-page-header .our-fund-subtitle-link {
-    margin-bottom: 0;
-    cursor: default;
+.fund-page-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.fund-page-header .our-fund-subtitle-link:hover {
-    opacity: 1;
+/* Same hero logo stack, 20% smaller than homepage */
+.fund-page .fund-page-logo.rotating-logo {
+    width: 400px;
+    height: 400px;
+}
+
+.fund-page .fund-page-logo .logo-core-img {
+    width: 240px;
+    height: 240px;
+}
+
+.fund-page .fund-page-logo .tagline-word {
+    font-size: 0.96rem;
+}
+
+@media (max-width: 768px) {
+    .fund-page .fund-page-logo.rotating-logo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .fund-page .fund-page-logo .logo-core-img {
+        width: 96px;
+        height: 96px;
+    }
+
+    .fund-page .fund-page-logo .tagline-word {
+        font-size: 0.72rem;
+    }
+
+    .fund-page .fund-page-logo .hero-tagline {
+        bottom: -10px;
+    }
+
+    .fund-page .fund-page-logo .hero-divider--tagline {
+        bottom: -28px;
+    }
 }
 
 .fund-page-intro {
