@@ -269,7 +269,7 @@ body {
     font-family: 'Cinzel', serif;
     font-size: clamp(2rem, 4.5vw, 3.5rem);
     white-space: normal;
-    font-weight: 400;
+    font-weight: 700;
     margin: 0 auto 1rem;
     padding: 0;
     line-height: 1.15;
@@ -3584,7 +3584,7 @@ body.menu-open {
 .hero .hero-title,
 .hero .hero-headline-line {
     font-family: 'Cinzel', serif !important;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
     letter-spacing: 0.04em;
     text-transform: none;
 }
