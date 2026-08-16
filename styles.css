@@ -1276,7 +1276,14 @@ a.hero-fund-link:focus-visible {
     font-size: 1.4rem; /* 80% of hero 1.75rem */
     text-transform: none;
     letter-spacing: 0.04em;
-    color: var(--pp-charcoal);
+}
+
+.fund-page .fund-page-logo .hero-tagline {
+    bottom: 22px;
+}
+
+.fund-page .fund-page-logo .hero-divider--tagline {
+    bottom: 4px;
 }
 
 @media (max-width: 768px) {
@@ -1295,11 +1302,11 @@ a.hero-fund-link:focus-visible {
     }
 
     .fund-page .fund-page-logo .hero-tagline {
-        bottom: -10px;
+        bottom: -22px;
     }
 
     .fund-page .fund-page-logo .hero-divider--tagline {
-        bottom: -28px;
+        bottom: -40px;
     }
 }
 
