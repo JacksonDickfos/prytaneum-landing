@@ -1224,6 +1224,42 @@ a.hero-fund-link:focus-visible {
     margin-bottom: 0;
 }
 
+.our-fund-lead-line {
+    display: block;
+}
+
+.our-fund-lead-desktop-only {
+    display: block;
+}
+
+.our-fund-lead-mobile-only {
+    display: none;
+}
+
+.our-fund-lead a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.our-fund-lead a:hover {
+    color: var(--pp-hearth-gold-deep);
+}
+
+.our-fund-lead a strong {
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .our-fund-lead-desktop-only {
+        display: none !important;
+    }
+
+    .our-fund-lead-mobile-only {
+        display: block !important;
+    }
+}
+
 .our-fund-lead strong {
     color: #000000;
     font-weight: 700;
