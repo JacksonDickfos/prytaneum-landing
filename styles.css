@@ -1238,8 +1238,7 @@ a.hero-fund-link:focus-visible {
 
 .our-fund-lead a {
     color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 0.15em;
+    text-decoration: none;
 }
 
 .our-fund-lead a:hover {
