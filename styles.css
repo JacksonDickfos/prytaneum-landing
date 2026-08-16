@@ -1239,14 +1239,14 @@ a.hero-fund-link:focus-visible {
 
 /* Valkyrie Revival Fund landing page */
 .fund-page {
-    padding: 7rem 0 6rem;
+    padding: 0 0 6rem;
     background: #E4E2DA;
     min-height: 60vh;
 }
 
 .fund-page-header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .fund-page-brand {
@@ -1254,6 +1254,8 @@ a.hero-fund-link:focus-visible {
     justify-content: center;
     align-items: center;
     width: 100%;
+    /* Align logo top with homepage hero: ~70px below nav (80px box inset − 10px) */
+    margin-top: -10px;
 }
 
 /* Same hero logo stack, 20% smaller than homepage */
