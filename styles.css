@@ -3645,12 +3645,21 @@ body.menu-open {
 
 /* Hero headline / byline breaks by viewport */
 @media (min-width: 769px) {
+    .hero-content {
+        max-width: min(960px, 94vw);
+    }
+
     .hero-break-desktop-only {
         display: inline;
     }
 
     .hero-break-mobile-only {
         display: none !important;
+    }
+
+    .hero-title-line-2 {
+        display: inline-block;
+        white-space: nowrap;
     }
 
     .hero .hero-operating-line {
