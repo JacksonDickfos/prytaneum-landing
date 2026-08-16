@@ -3645,10 +3645,6 @@ body.menu-open {
 
 /* Hero headline / byline breaks by viewport */
 @media (min-width: 769px) {
-    .hero .hero-title {
-        white-space: nowrap;
-    }
-
     .hero-break-desktop-only {
         display: inline;
     }
