@@ -184,6 +184,13 @@ function initMobileMenu() {
     hamburger.setAttribute('aria-expanded', 'false');
     mobileMenu.setAttribute('aria-hidden', 'true');
 
+    // Single source of nav links: clone desktop menu into mobile drawer
+    const desktopNav = document.querySelector('.nav-menu');
+    const mobileList = mobileMenu.querySelector('ul');
+    if (desktopNav && mobileList) {
+        mobileList.innerHTML = desktopNav.innerHTML;
+    }
+
     const setMenuOpen = (open) => {
         hamburger.classList.toggle('active', open);
         mobileMenu.classList.toggle('active', open);

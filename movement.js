@@ -274,6 +274,8 @@
                 clone.classList.remove('movement-item--paginated-out');
                 clone.classList.add('movement-item--marquee');
                 clone.hidden = false;
+                clone.setAttribute('aria-hidden', 'true');
+                clone.setAttribute('tabindex', '-1');
                 fragment.appendChild(clone);
             });
         }
