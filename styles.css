@@ -3295,6 +3295,11 @@ body:not(.at-top) .navbar::after {
         text-shadow: none !important;  /* ensure no shadow on mobile */
     }
 
+    .hero .hero-title {
+        white-space: normal !important;
+        display: block !important;
+    }
+
     .hero-break-mobile-only {
         display: inline !important;
     }
@@ -3333,12 +3338,10 @@ body:not(.at-top) .navbar::after {
 /* Final overrides (placed late to win cascade) */
 .hero .hero-title {
     text-shadow: none !important;
-    white-space: normal !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    white-space: nowrap !important;
+    display: block !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: none !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
@@ -3650,11 +3653,12 @@ body.menu-open {
 /* Hero headline / byline breaks by viewport */
 @media (min-width: 769px) {
     .hero-content {
-        max-width: min(960px, 94vw);
+        max-width: min(1200px, 96vw);
     }
 
     .hero .hero-title {
-        white-space: nowrap;
+        white-space: nowrap !important;
+        font-size: clamp(2rem, 3.1vw, 2.85rem);
     }
 
     .hero-break-desktop-only {
@@ -3688,8 +3692,9 @@ body.menu-open {
 
 @media (min-width: 769px) and (max-width: 1440px) {
     .hero .hero-title {
-        font-size: clamp(2.35rem, 3.4vw, 3.15rem);
+        font-size: clamp(1.85rem, 2.7vw, 2.5rem);
         line-height: 1.08;
+        white-space: nowrap !important;
     }
 }
 
