@@ -3653,6 +3653,10 @@ body.menu-open {
         max-width: min(960px, 94vw);
     }
 
+    .hero .hero-title {
+        white-space: nowrap;
+    }
+
     .hero-break-desktop-only {
         display: inline;
     }
