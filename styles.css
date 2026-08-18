@@ -364,6 +364,10 @@ a.hero-fund-link {
     transition: opacity 0.2s ease;
 }
 
+.hero-fund-sep {
+    font-weight: 400;
+}
+
 a.hero-fund-link:hover {
     opacity: 0.88;
 }
