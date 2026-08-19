@@ -3739,33 +3739,39 @@ body.menu-open {
     box-shadow: 0 6px 18px rgba(209, 173, 92, 0.45);
 }
 
-/* Footer gold sheen text (match logo) */
+/* Footer text — solid light gold (no gradient) */
 .footer .company-name {
     font-family: 'Cinzel', serif;
     font-weight: 600;
-}
-
-.footer .company-name,
-.footer .footer-nav a {
-    background: linear-gradient(90deg, var(--pp-hearth-gold) 0%, var(--pp-hearth-gold-deep) 50%, var(--pp-hearth-gold) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    color: var(--pp-hearth-gold) !important;
 }
 
 .footer .company-slogan {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: 0.04em;
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    color: var(--pp-hearth-gold) !important;
+}
+
+.footer .footer-nav a {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    color: var(--pp-hearth-gold) !important;
+}
+
+.footer .footer-nav a:hover {
     background: none;
     -webkit-background-clip: border-box;
     background-clip: border-box;
     color: #FFFFFF !important;
-    font-size: calc(0.85rem + 5px);
-}
-
-.footer .footer-nav a:hover {
-    background: linear-gradient(90deg, var(--pp-hearth-gold-deep) 0%, var(--pp-hearth-gold) 50%, var(--pp-hearth-gold-deep) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
 /* Hidden sections (kept in DOM for easy restore) */
