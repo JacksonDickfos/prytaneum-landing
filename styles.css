@@ -3746,12 +3746,19 @@ body.menu-open {
 }
 
 .footer .company-name,
-.footer .company-slogan,
 .footer .footer-nav a {
     background: linear-gradient(90deg, var(--pp-hearth-gold) 0%, var(--pp-hearth-gold-deep) 50%, var(--pp-hearth-gold) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.footer .company-slogan {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    color: #FFFFFF !important;
+    font-size: calc(0.85rem + 5px);
 }
 
 .footer .footer-nav a:hover {
