@@ -154,6 +154,8 @@
             var episodeTitle = trigger.getAttribute('data-episode-title') || '';
             var isKeynote = trigger.getAttribute('data-keynote') === 'true';
             var isPanel = trigger.getAttribute('data-panel') === 'true';
+            var badgeLabel = trigger.getAttribute('data-badge-label') || 'Keynote';
+            var leadBold = trigger.getAttribute('data-lead-bold') === 'true';
 
             typeEl.textContent = kind === 'podcast' ? 'Podcast' : 'Event';
             titleEl.textContent = title;
@@ -163,6 +165,7 @@
             statusEl.classList.toggle('is-attending', status === 'Attending');
             statusEl.classList.toggle('is-published', status === 'Published');
             statusEl.hidden = !status;
+            keynoteEl.textContent = badgeLabel;
             keynoteEl.hidden = kind === 'podcast' ? true : !isKeynote;
             if (panelEl) {
                 panelEl.hidden = kind === 'podcast' ? true : !isPanel;
@@ -218,10 +221,16 @@
                 if (!paragraphs.length && description.trim()) {
                     paragraphs = [description.trim()];
                 }
-                paragraphs.forEach(function (part) {
+                paragraphs.forEach(function (part, index) {
                     var p = document.createElement('p');
                     p.className = 'movement-modal-description';
-                    p.textContent = part;
+                    if (leadBold && index === 0) {
+                        var strong = document.createElement('strong');
+                        strong.textContent = part;
+                        p.appendChild(strong);
+                    } else {
+                        p.textContent = part;
+                    }
                     descriptionEl.appendChild(p);
                 });
                 linksEl.hidden = true;
