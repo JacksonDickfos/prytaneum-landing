@@ -4069,15 +4069,16 @@ body.team-page .footer {
 }
 
 .team-card[data-member] .team-info::after {
-    content: 'see more';
-    display: block;
+    content: 'see more' !important;
+    display: block !important;
     margin-top: 0.45rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     line-height: 1.2;
-    color: var(--pp-hearth-gold);
+    color: var(--pp-hearth-gold) !important;
     letter-spacing: 0.02em;
+    box-shadow: none !important;
 }
 
 .team-card[data-member] {
