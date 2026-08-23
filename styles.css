@@ -4068,6 +4068,18 @@ body.team-page .footer {
     text-overflow: ellipsis;
 }
 
+.team-card[data-member] .team-info::after {
+    content: 'see more';
+    display: block;
+    margin-top: 0.45rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--pp-hearth-gold);
+    letter-spacing: 0.02em;
+}
+
 .team-card[data-member] {
     cursor: pointer;
 }
