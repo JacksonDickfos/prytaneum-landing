@@ -1,0 +1,14 @@
+---
+description: After completing requested site changes, commit and deploy without waiting to be asked
+alwaysApply: true
+---
+
+# Commit and deploy
+
+After finishing requested work on this site, commit the relevant files and push to `origin` so production deploys. Do not wait for a separate "commit and deploy" request.
+
+- Commit only files related to the requested change (HTML, assets, and supporting files that the change needs).
+- Do not stage unrelated untracked images, leftover PDFs, or local deletions.
+- Never amend a commit that has already been pushed.
+- Deploy by pushing the current branch to `origin` (this repo deploys from `main`).
+- After pushing, report the commit and that it was pushed.
