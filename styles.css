@@ -4637,11 +4637,51 @@ body.investor-fund-layout .footer {
     margin: 0;
 }
 
+.investor-doc-page {
+    overflow-x: hidden;
+}
+
 .investor-doc-frame {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgba(209, 173, 92, 0.2);
+    background: #111;
+}
+
+.investor-doc-pages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    background: #111;
+}
+
+.investor-doc-page-slide {
+    width: 100%;
+    line-height: 0;
     background: #fff;
+    overflow: hidden;
+}
+
+.investor-doc-page-slide canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.investor-doc-loading {
+    margin: 0;
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+    color: #4F555A;
+    background: #fff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+}
+
+.investor-doc-loading a {
+    color: #9a7b32;
 }
 
 .investor-doc-viewer iframe {
@@ -4659,6 +4699,36 @@ body.investor-fund-layout .footer {
     .investor-doc-viewer iframe {
         height: calc(100vh - 18rem);
         min-height: 640px;
+    }
+}
+
+@media (max-width: 768px) {
+    .investor-doc-page .investor-doc-viewer {
+        padding: 4.75rem 0 1.5rem;
+    }
+
+    .investor-doc-page .investor-doc-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 0.75rem;
+    }
+
+    .investor-doc-header {
+        margin-bottom: 0.85rem;
+    }
+
+    .investor-doc-title {
+        font-size: 1.35rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .investor-doc-pages {
+        gap: 0.6rem;
+    }
+
+    .investor-doc-frame {
+        overflow-x: hidden;
+        overflow-y: visible;
     }
 }
 
