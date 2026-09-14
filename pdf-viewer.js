@@ -2,6 +2,7 @@
     'use strict';
 
     var WORKER_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    var MAX_CANVAS_PIXELS = 16 * 1024 * 1024;
 
     function ready(fn) {
         if (document.readyState === 'loading') {
@@ -63,16 +64,33 @@
             }
         }
 
-        function renderPage(pageNumber, canvas, width) {
+        function pageSize(page) {
+            var viewport = page.getViewport({ scale: 1 });
+            return { width: viewport.width, height: viewport.height };
+        }
+
+        function renderPage(pageNumber, canvas, slide, width) {
             return pdfDoc.getPage(pageNumber).then(function (page) {
+                var base = pageSize(page);
+                slide.style.aspectRatio = base.width + ' / ' + base.height;
+
                 var dpr = Math.min(window.devicePixelRatio || 1, 2);
-                var base = page.getViewport({ scale: 1 });
                 var scale = width / base.width;
+                var pixelWidth = Math.floor(base.width * scale * dpr);
+                var pixelHeight = Math.floor(base.height * scale * dpr);
+                if (pixelWidth * pixelHeight > MAX_CANVAS_PIXELS) {
+                    var factor = Math.sqrt(MAX_CANVAS_PIXELS / (pixelWidth * pixelHeight));
+                    pixelWidth = Math.max(1, Math.floor(pixelWidth * factor));
+                    pixelHeight = Math.max(1, Math.floor(pixelHeight * factor));
+                    dpr = pixelWidth / (base.width * scale);
+                }
+
                 var viewport = page.getViewport({ scale: scale * dpr });
                 canvas.width = viewport.width;
                 canvas.height = viewport.height;
                 canvas.style.width = '100%';
                 canvas.style.height = 'auto';
+
                 var ctx = canvas.getContext('2d', { alpha: false });
                 return page.render({ canvasContext: ctx, viewport: viewport }).promise;
             });
@@ -82,9 +100,20 @@
             if (!pdfDoc || generation !== renderGeneration) return Promise.resolve();
             clearObserver();
 
-            return pdfDoc.getPage(1).then(function (firstPage) {
+            var jobs = [];
+            for (var i = 1; i <= pdfDoc.numPages; i++) {
+                jobs.push(pdfDoc.getPage(i).then(function (page) {
+                    var size = pageSize(page);
+                    return {
+                        pageNumber: page.pageNumber,
+                        width: size.width,
+                        height: size.height
+                    };
+                }));
+            }
+
+            return Promise.all(jobs).then(function (sizes) {
                 if (generation !== renderGeneration) return;
-                var base = firstPage.getViewport({ scale: 1 });
                 var width = containerWidth();
                 viewer.innerHTML = '';
 
@@ -96,27 +125,27 @@
                         slide.setAttribute('data-rendered', '1');
                         var canvas = slide.querySelector('canvas');
                         var pageNumber = Number(slide.getAttribute('data-page'));
-                        renderPage(pageNumber, canvas, width).catch(function () {
+                        renderPage(pageNumber, canvas, slide, width).catch(function () {
                             slide.setAttribute('data-rendered', '0');
                         });
                     });
                 }, {
                     root: null,
-                    rootMargin: '400px 0px',
+                    rootMargin: '800px 0px',
                     threshold: 0.01
                 });
 
-                for (var i = 1; i <= pdfDoc.numPages; i++) {
+                sizes.forEach(function (size) {
                     var slide = document.createElement('div');
                     slide.className = 'investor-doc-page-slide';
-                    slide.setAttribute('data-page', String(i));
-                    slide.style.aspectRatio = base.width + ' / ' + base.height;
+                    slide.setAttribute('data-page', String(size.pageNumber));
+                    slide.style.aspectRatio = size.width + ' / ' + size.height;
                     var canvas = document.createElement('canvas');
-                    canvas.setAttribute('aria-label', 'Page ' + i);
+                    canvas.setAttribute('aria-label', 'Page ' + size.pageNumber);
                     slide.appendChild(canvas);
                     viewer.appendChild(slide);
                     observer.observe(slide);
-                }
+                });
             });
         }
 

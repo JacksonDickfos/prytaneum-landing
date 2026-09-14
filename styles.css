@@ -4658,9 +4658,10 @@ body.investor-fund-layout .footer {
 
 .investor-doc-page-slide {
     width: 100%;
+    height: auto;
     line-height: 0;
     background: #fff;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .investor-doc-page-slide canvas {
