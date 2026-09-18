@@ -4657,11 +4657,13 @@ body.investor-fund-layout .footer {
 }
 
 .investor-doc-page-slide {
+    position: relative;
     width: 100%;
     height: auto;
     line-height: 0;
     background: #fff;
-    overflow: visible;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .investor-doc-page-slide canvas {
@@ -4669,6 +4671,24 @@ body.investor-fund-layout .footer {
     width: 100%;
     height: auto;
     max-width: 100%;
+    pointer-events: none;
+}
+
+.investor-doc-link-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.investor-doc-link {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    background: transparent;
+    cursor: pointer;
+    margin: -10px -8px;
+    padding: 10px 8px;
+    box-sizing: content-box;
 }
 
 .investor-doc-loading {

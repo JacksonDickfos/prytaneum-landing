@@ -52,6 +52,7 @@
         var pdfDoc = null;
         var renderGeneration = 0;
         var observer = null;
+        var scrollHandler = null;
 
         function containerWidth() {
             return Math.max(Math.floor(frame.clientWidth), 280);
@@ -62,11 +63,103 @@
                 observer.disconnect();
                 observer = null;
             }
+            if (scrollHandler) {
+                window.removeEventListener('scroll', scrollHandler);
+                scrollHandler = null;
+            }
         }
 
         function pageSize(page) {
             var viewport = page.getViewport({ scale: 1 });
             return { width: viewport.width, height: viewport.height };
+        }
+
+        function isSiteLink(url) {
+            try {
+                var host = new URL(url, window.location.href).hostname.replace(/^www\./, '');
+                return host === window.location.hostname.replace(/^www\./, '') ||
+                    host === 'prytaneumpartners.com';
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function toLocalSiteUrl(url) {
+            try {
+                var parsed = new URL(url, window.location.href);
+                if (parsed.hostname.replace(/^www\./, '') === 'prytaneumpartners.com') {
+                    return parsed.pathname + parsed.search + parsed.hash;
+                }
+                return url;
+            } catch (e) {
+                return url;
+            }
+        }
+
+        function goToDestination(dest) {
+            var destPromise = typeof dest === 'string'
+                ? pdfDoc.getDestination(dest)
+                : Promise.resolve(dest);
+            destPromise.then(function (explicit) {
+                if (!explicit || !explicit[0]) return;
+                return pdfDoc.getPageIndex(explicit[0]);
+            }).then(function (index) {
+                if (index == null) return;
+                var target = viewer.querySelector('[data-page="' + (index + 1) + '"]');
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }).catch(function () {});
+        }
+
+        function addLinkOverlays(page, slide) {
+            return page.getAnnotations().then(function (annotations) {
+                var existing = slide.querySelector('.investor-doc-link-layer');
+                if (existing) existing.remove();
+
+                var links = annotations.filter(function (annot) {
+                    return annot.subtype === 'Link' && (annot.url || annot.unsafeUrl || annot.dest);
+                });
+                if (!links.length) return;
+
+                var viewport = page.getViewport({ scale: 1 });
+                var layer = document.createElement('div');
+                layer.className = 'investor-doc-link-layer';
+
+                links.forEach(function (annot) {
+                    var raw = viewport.convertToViewportRectangle(annot.rect);
+                    var x1 = Math.min(raw[0], raw[2]);
+                    var y1 = Math.min(raw[1], raw[3]);
+                    var x2 = Math.max(raw[0], raw[2]);
+                    var y2 = Math.max(raw[1], raw[3]);
+
+                    var url = annot.url || annot.unsafeUrl;
+                    var link = document.createElement('a');
+                    link.className = 'investor-doc-link';
+                    link.setAttribute('aria-label', url ? 'Open linked page' : 'Go to page');
+                    link.style.left = (x1 / viewport.width * 100) + '%';
+                    link.style.top = (y1 / viewport.height * 100) + '%';
+                    link.style.width = ((x2 - x1) / viewport.width * 100) + '%';
+                    link.style.height = ((y2 - y1) / viewport.height * 100) + '%';
+                    if (url) {
+                        link.href = toLocalSiteUrl(url);
+                        if (isSiteLink(url)) {
+                            link.target = '_self';
+                        } else {
+                            link.target = '_blank';
+                            link.rel = 'noopener noreferrer';
+                        }
+                    } else {
+                        link.href = '#';
+                        link.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            goToDestination(annot.dest);
+                        });
+                    }
+
+                    layer.appendChild(link);
+                });
+
+                slide.appendChild(layer);
+            });
         }
 
         function renderPage(pageNumber, canvas, slide, width) {
@@ -92,7 +185,10 @@
                 canvas.style.height = 'auto';
 
                 var ctx = canvas.getContext('2d', { alpha: false });
-                return page.render({ canvasContext: ctx, viewport: viewport }).promise;
+                return Promise.all([
+                    page.render({ canvasContext: ctx, viewport: viewport }).promise,
+                    addLinkOverlays(page, slide)
+                ]);
             });
         }
 
@@ -117,22 +213,34 @@
                 var width = containerWidth();
                 viewer.innerHTML = '';
 
+                function startRender(slide) {
+                    if (slide.getAttribute('data-rendered') === '1') return;
+                    slide.setAttribute('data-rendered', '1');
+                    var canvas = slide.querySelector('canvas');
+                    var pageNumber = Number(slide.getAttribute('data-page'));
+                    renderPage(pageNumber, canvas, slide, width).catch(function () {
+                        slide.setAttribute('data-rendered', '0');
+                    });
+                }
+
+                function revealVisible() {
+                    var extra = 1200;
+                    viewer.querySelectorAll('.investor-doc-page-slide').forEach(function (slide) {
+                        var rect = slide.getBoundingClientRect();
+                        if (rect.bottom >= -extra && rect.top <= window.innerHeight + extra) {
+                            startRender(slide);
+                        }
+                    });
+                }
+
                 observer = new IntersectionObserver(function (entries) {
                     entries.forEach(function (entry) {
-                        if (!entry.isIntersecting) return;
-                        var slide = entry.target;
-                        if (slide.getAttribute('data-rendered') === '1') return;
-                        slide.setAttribute('data-rendered', '1');
-                        var canvas = slide.querySelector('canvas');
-                        var pageNumber = Number(slide.getAttribute('data-page'));
-                        renderPage(pageNumber, canvas, slide, width).catch(function () {
-                            slide.setAttribute('data-rendered', '0');
-                        });
+                        if (entry.isIntersecting) startRender(entry.target);
                     });
                 }, {
                     root: null,
-                    rootMargin: '800px 0px',
-                    threshold: 0.01
+                    rootMargin: '1200px 0px',
+                    threshold: 0
                 });
 
                 sizes.forEach(function (size) {
@@ -146,6 +254,10 @@
                     viewer.appendChild(slide);
                     observer.observe(slide);
                 });
+
+                revealVisible();
+                scrollHandler = revealVisible;
+                window.addEventListener('scroll', scrollHandler, { passive: true });
             });
         }
 
