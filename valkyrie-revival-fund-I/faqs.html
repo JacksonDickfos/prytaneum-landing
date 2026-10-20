@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQs | Valkyrie Revival Fund I</title>
     <link rel="icon" type="image/png" href="../logo.png">
-    <link rel="stylesheet" href="../styles.css?v=20260917-pdflinks">
+    <link rel="stylesheet" href="../styles.css?v=20261020-faq-flow">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -36,13 +36,81 @@
         <div class="container investor-doc-container">
             <div class="investor-doc-header">
                 <h1 class="investor-doc-title">FAQs</h1>
-                <a href="index.html" class="fund-page-back investor-doc-back">&larr; Back to Investor Home</a>
+            </div>
+            <div class="investor-doc-flow">
+                <div class="investor-doc-flow-item">
+                    <span class="investor-doc-flow-label">Previous</span>
+                    <a href="appendix.html" class="investor-card investor-home-card">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Track Record</h3>
+                    </a>
+                </div>
+                <div class="investor-doc-flow-item">
+                    <span class="investor-doc-flow-label">Next</span>
+                    <button type="button" class="investor-card investor-home-card data-room-card" aria-label="Request access to Data Room">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Data Room</h3>
+                    </button>
+                </div>
             </div>
             <div class="investor-doc-frame" data-pdf="../documents/faq-final.pdf">
                 <p class="investor-doc-loading">Loading document…</p>
             </div>
+            <div class="investor-doc-flow investor-doc-flow-below">
+                <div class="investor-doc-flow-item">
+                    <span class="investor-doc-flow-label">Previous</span>
+                    <a href="appendix.html" class="investor-card investor-home-card">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Track Record</h3>
+                    </a>
+                </div>
+                <div class="investor-doc-flow-item">
+                    <span class="investor-doc-flow-label">Next</span>
+                    <button type="button" class="investor-card investor-home-card data-room-card" aria-label="Request access to Data Room">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Data Room</h3>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
+
+    <div id="dataRoomModal" class="data-room-modal">
+        <div class="data-room-modal-content">
+            <button type="button" class="modal-close" id="dataRoomModalClose" aria-label="Close">&times;</button>
+            <div class="section-header">
+                <h2>Data Room Access</h2>
+                <p>Fill out the form below so we can share with you.</p>
+            </div>
+            <div class="contact-form">
+                <div class="form-card">
+                    <form id="dataRoomContactForm">
+                        <div class="form-group">
+                            <label for="dataRoomEmail">Email Address *</label>
+                            <input type="email" id="dataRoomEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomPhone">Phone Number</label>
+                            <input type="tel" id="dataRoomPhone" name="phone">
+                        </div>
+                        <button type="submit" class="btn-primary">Request Data Room Access</button>
+                    </form>
+                    <div id="dataRoomSuccessMessage" class="success-message" style="display: none;">
+                        <h3>Thank you</h3>
+                        <p>Your request was submitted successfully. We will be in touch with you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -81,5 +149,75 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="../pdf-viewer.js?v=20260917-pdflinks"></script>
     <script src="../script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('dataRoomModal');
+        const openTriggers = document.querySelectorAll('.data-room-card');
+        const closeBtn = document.getElementById('dataRoomModalClose');
+
+        function openDataRoomModal() {
+            if (!modal) return;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        openTriggers.forEach(function(trigger) {
+            trigger.addEventListener('click', openDataRoomModal);
+        });
+        if (closeBtn && modal) {
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('dataRoomContactForm');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            fetch('https://formspree.io/f/mblzgbyy', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    name: '',
+                    phone: phone,
+                    message: 'Data room access request'
+                })
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    const successMsg = document.getElementById('dataRoomSuccessMessage');
+                    if (successMsg) successMsg.style.display = 'flex';
+                } else {
+                    alert('There was an error submitting the form. Please try again.');
+                }
+            })
+            .catch(function() {
+                alert('There was an error submitting the form. Please try again.');
+            });
+        });
+    });
+    </script>
 </body>
 </html>

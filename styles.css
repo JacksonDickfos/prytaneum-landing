@@ -4358,6 +4358,15 @@ body.team-page .footer {
     box-sizing: border-box;
 }
 
+.investor-fund-layout button.investor-home-card {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+}
+
 .investor-fund-layout .investor-home-card::before,
 .investor-fund-layout .investor-home-card::after {
     display: none !important;
