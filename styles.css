@@ -4317,6 +4317,28 @@ body.team-page .footer {
     margin-bottom: 3rem;
 }
 
+.investor-home-track-only {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
+.investor-home-track-below {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.investor-home-deck {
+    max-width: min(85vw, 1500px);
+    width: min(85vw, 1500px);
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
 /* Fund I cards — match Fund page $200M bubble */
 .investor-home-section .investor-home-card {
     background: #484b4d;
@@ -4754,6 +4776,12 @@ body.investor-fund-layout .footer {
 }
 
 @media (max-width: 768px) {
+    .investor-home-deck {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 0.75rem;
+    }
+
     .investor-home-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;

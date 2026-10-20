@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fund I | $200M | Prytaneum Partners</title>
     <link rel="icon" type="image/png" href="../logo.png">
-    <link rel="stylesheet" href="../styles.css?v=20261020-three-cards">
+    <link rel="stylesheet" href="../styles.css?v=20261020-inline-deck">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -41,24 +41,27 @@
                 </div>
             </div>
             <p class="investor-home-tagline">Please review our 8-slide investment deck before progressing.</p>
-            <div class="investors-grid investor-home-grid">
-                <a href="/valkyrie-revival-fund-I/presentation-deck.html" class="investor-card investor-home-card">
-                    <div class="investor-icon-badge">
-                        <i class="fas fa-file-powerpoint"></i>
-                    </div>
-                    <h3>Investment Deck</h3>
-                </a>
+            <div class="investors-grid investor-home-grid investor-home-track-only">
                 <a href="/valkyrie-revival-fund-I/appendix.html" class="investor-card investor-home-card">
                     <div class="investor-icon-badge">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Track Record</h3>
                 </a>
-                <a href="/valkyrie-revival-fund-I/faqs.html" class="investor-card investor-home-card">
+            </div>
+        </div>
+        <div class="investor-home-deck">
+            <div class="investor-doc-frame" data-pdf="../documents/deck.pdf">
+                <p class="investor-doc-loading">Loading document…</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="investors-grid investor-home-grid investor-home-track-only investor-home-track-below">
+                <a href="/valkyrie-revival-fund-I/appendix.html" class="investor-card investor-home-card">
                     <div class="investor-icon-badge">
-                        <i class="fas fa-question-circle"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>FAQs</h3>
+                    <h3>Track Record</h3>
                 </a>
             </div>
 
@@ -144,6 +147,8 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="../pdf-viewer.js?v=20260917-pdflinks"></script>
     <script src="../script.js"></script>
     <script>
     // Data Room Modal
