@@ -4285,7 +4285,7 @@ body.team-page .footer {
 
 /* Investor Home (Fund I) */
 .investor-home-section {
-    padding: 7rem 0 4rem;
+    padding: 5rem 0 2rem;
     background: #E4E2DA !important;
 }
 
@@ -4325,12 +4325,12 @@ body.team-page .footer {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .investor-home-track-below {
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0;
 }
 
 .investor-home-deck {
@@ -4795,6 +4795,10 @@ body.investor-fund-layout .footer {
 }
 
 @media (max-width: 768px) {
+    .investor-home-section {
+        padding: 4.75rem 0 1.5rem;
+    }
+
     .investor-home-deck {
         max-width: 100%;
         width: 100%;
