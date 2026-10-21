@@ -26,8 +26,10 @@
         if (!src) return;
 
         function fallbackMessage(message) {
+            frame.classList.remove('is-waiting');
+            frame.classList.add('is-ready');
             frame.innerHTML =
-                '<p class="investor-doc-loading">' +
+                '<p class="investor-doc-error">' +
                 message +
                 ' <a href="' + src + '" target="_blank" rel="noopener">Open PDF</a></p>';
         }
@@ -39,15 +41,13 @@
 
         pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_SRC;
 
+        frame.classList.add('is-waiting');
+        frame.classList.remove('is-ready');
+
         var viewer = document.createElement('div');
         viewer.className = 'investor-doc-pages';
         frame.innerHTML = '';
         frame.appendChild(viewer);
-
-        var loading = document.createElement('p');
-        loading.className = 'investor-doc-loading';
-        loading.textContent = 'Loading document…';
-        viewer.appendChild(loading);
 
         var pdfDoc = null;
         var renderGeneration = 0;
@@ -213,12 +213,20 @@
                 var width = containerWidth();
                 viewer.innerHTML = '';
 
+                function markReady() {
+                    frame.classList.remove('is-waiting');
+                    frame.classList.add('is-ready');
+                }
+
                 function startRender(slide) {
                     if (slide.getAttribute('data-rendered') === '1') return;
                     slide.setAttribute('data-rendered', '1');
                     var canvas = slide.querySelector('canvas');
                     var pageNumber = Number(slide.getAttribute('data-page'));
-                    renderPage(pageNumber, canvas, slide, width).catch(function () {
+                    renderPage(pageNumber, canvas, slide, width).then(function () {
+                        slide.classList.add('is-painted');
+                        markReady();
+                    }).catch(function () {
                         slide.setAttribute('data-rendered', '0');
                     });
                 }
@@ -255,6 +263,7 @@
                     observer.observe(slide);
                 });
 
+                frame.classList.remove('is-waiting');
                 revealVisible();
                 scrollHandler = revealVisible;
                 window.addEventListener('scroll', scrollHandler, { passive: true });

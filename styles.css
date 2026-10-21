@@ -4685,8 +4685,16 @@ body.investor-fund-layout .footer {
 .investor-doc-frame {
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid rgba(209, 173, 92, 0.2);
-    background: #111;
+    border: 1px solid transparent;
+    background: #E4E2DA;
+}
+
+.investor-doc-frame.is-ready {
+    border-color: rgba(209, 173, 92, 0.2);
+}
+
+.investor-doc-frame.is-waiting {
+    aspect-ratio: 16 / 10;
 }
 
 .investor-doc-pages {
@@ -4694,7 +4702,7 @@ body.investor-fund-layout .footer {
     flex-direction: column;
     gap: 0.75rem;
     width: 100%;
-    background: #111;
+    background: transparent;
 }
 
 .investor-doc-page-slide {
@@ -4702,9 +4710,13 @@ body.investor-fund-layout .footer {
     width: 100%;
     height: auto;
     line-height: 0;
-    background: #fff;
+    background: #E4E2DA;
     overflow: hidden;
     z-index: 0;
+}
+
+.investor-doc-page-slide.is-painted {
+    background: #fff;
 }
 
 .investor-doc-page-slide canvas {
@@ -4713,6 +4725,12 @@ body.investor-fund-layout .footer {
     height: auto;
     max-width: 100%;
     pointer-events: none;
+    opacity: 0;
+}
+
+.investor-doc-page-slide.is-painted canvas {
+    opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
 .investor-doc-link-layer {
@@ -4733,16 +4751,20 @@ body.investor-fund-layout .footer {
 }
 
 .investor-doc-loading {
+    display: none;
+}
+
+.investor-doc-error {
     margin: 0;
     padding: 2.5rem 1.25rem;
     text-align: center;
     color: #4F555A;
-    background: #fff;
+    background: #E4E2DA;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 0.95rem;
 }
 
-.investor-doc-loading a {
+.investor-doc-error a {
     color: #9a7b32;
 }
 
