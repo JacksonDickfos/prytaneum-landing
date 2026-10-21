@@ -4293,11 +4293,13 @@ body.team-page .footer {
     background: #E4E2DA !important;
 }
 
-.investor-home-section .fund-page-header {
+.investor-home-section .fund-page-header,
+.investor-doc-page .fund-page-header {
     margin-bottom: 1.25rem;
 }
 
-.investor-home-section .fund-page-header .our-fund-logo {
+.investor-home-section .fund-page-header .our-fund-logo,
+.investor-doc-page .fund-page-header .our-fund-logo {
     width: 88px;
     height: 88px;
 }
