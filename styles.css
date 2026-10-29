@@ -47,7 +47,7 @@ body {
 .navbar {
     position: static;
     width: 100%;
-    background: #2e3235;
+    background: #1c1f21;
     backdrop-filter: none;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -2538,7 +2538,7 @@ a.fund-bubble-cta {
 
 /* Footer */
 .footer {
-    background: #2e3235;
+    background: #1c1f21;
     color: var(--pp-charcoal);
     padding: 3rem 0 1rem;
     margin-top: 0;
@@ -2975,7 +2975,7 @@ body {
 }
 /* 7) Footer: white */
 .footer {
-    background: #2e3235;
+    background: #1c1f21;
     color: var(--pp-charcoal);
 }
 .footer .footer-nav a {
@@ -3419,7 +3419,7 @@ body:not(.at-top) .navbar::after {
     bottom: 0;
     z-index: 1101;
     padding: 4.75rem 1.5rem 2rem;
-    background: rgba(46, 50, 53, 0.98);
+    background: rgba(28, 31, 33, 0.98);
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
