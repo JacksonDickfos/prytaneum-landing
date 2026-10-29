@@ -169,7 +169,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: #2e3235;
+    background: #1c1f21;
     overflow: hidden;
 }
 
@@ -2428,7 +2428,7 @@ a.fund-bubble-cta {
 /* Contact Section */
 .contact {
     padding: 6rem 0 4rem 0;
-    background: #2e3235;
+    background: #1c1f21;
     color: #ccccc9;
 }
 
@@ -2809,7 +2809,7 @@ body {
 
 /* 1) Hero: charcoal */
 .hero {
-    background: #2e3235;
+    background: #1c1f21;
     color: #FFFFFF;
 }
 .hero .hero-text,
@@ -2947,7 +2947,7 @@ body {
 
 /* 6) Contact: charcoal (matches hero) */
 .contact {
-    background: #2e3235;
+    background: #1c1f21;
     color: #ccccc9;
 }
 .contact .section-header h2 {
@@ -3040,7 +3040,7 @@ h1, h2, h3, h4, h5, h6,
     }
     
     .hero {
-        background: #2e3235;
+        background: #1c1f21;
     }
     
 .hero-title {
