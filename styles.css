@@ -1749,6 +1749,16 @@ a.fund-bubble-cta {
     background: var(--pp-hearth-gold);
 }
 
+.movement-item-banner--hosting {
+    color: #1c1f21;
+    background: #6BB8D9;
+}
+
+.movement-item-banner--hosted {
+    color: #FFFFFF;
+    background: #3E7A96;
+}
+
 .movement-item-banner--published {
     color: #FFFFFF;
     background: #2e3235;
@@ -2085,6 +2095,16 @@ a.fund-bubble-cta {
 .movement-modal-status.is-attending {
     color: #2e3235;
     background: var(--pp-hearth-gold);
+}
+
+.movement-modal-status.is-hosting {
+    color: #1c1f21;
+    background: #6BB8D9;
+}
+
+.movement-modal-status.is-hosted {
+    color: #FFFFFF;
+    background: #3E7A96;
 }
 
 .movement-modal-title {

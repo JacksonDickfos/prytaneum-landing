@@ -79,11 +79,22 @@
             if (!endDate) return;
             if (today <= endDate) return;
 
-            item.setAttribute('data-status', 'Attended');
             var banner = item.querySelector('.movement-item-banner');
+            var currentStatus = item.getAttribute('data-status') || '';
+            if (currentStatus === 'Hosting' || currentStatus === 'Hosted') {
+                item.setAttribute('data-status', 'Hosted');
+                if (banner) {
+                    banner.textContent = 'Hosted';
+                    banner.classList.remove('movement-item-banner--hosting', 'movement-item-banner--attending');
+                    banner.classList.add('movement-item-banner--hosted');
+                }
+                return;
+            }
+
+            item.setAttribute('data-status', 'Attended');
             if (banner) {
                 banner.textContent = 'Attended';
-                banner.classList.remove('movement-item-banner--attending');
+                banner.classList.remove('movement-item-banner--attending', 'movement-item-banner--hosting');
                 banner.classList.add('movement-item-banner--attended');
             }
         });
@@ -163,6 +174,8 @@
             statusEl.textContent = status;
             statusEl.classList.toggle('is-attended', status === 'Attended');
             statusEl.classList.toggle('is-attending', status === 'Attending');
+            statusEl.classList.toggle('is-hosting', status === 'Hosting');
+            statusEl.classList.toggle('is-hosted', status === 'Hosted');
             statusEl.classList.toggle('is-published', status === 'Published');
             statusEl.hidden = !status;
             keynoteEl.textContent = badgeLabel;
