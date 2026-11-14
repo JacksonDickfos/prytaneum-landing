@@ -4294,12 +4294,35 @@ body.team-page .footer {
     color: var(--pp-hearth-gold-deep) !important;
 }
 
-/* Desktop only: cluster team row without forcing mobile overflow */
+/* Desktop: 3-up until the row is wide enough for all six */
 @media (min-width: 769px) {
     .about-team {
-        width: max-content;
+        width: 100%;
+        max-width: 38rem;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-team {
+        max-width: 100%;
+        gap: 1.25rem 0.85rem;
+    }
+
+    .about-team-member {
+        width: 148px;
+        max-width: 148px;
+        flex: 0 0 148px;
+    }
+
+    .about-team-name,
+    .about .about-team .about-team-name {
+        white-space: normal;
+    }
+
+    .about .about-team .about-team-title {
+        max-width: 148px;
     }
 }
 
